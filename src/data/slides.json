@@ -1,0 +1,64 @@
+{
+  "slides": [
+    {
+      "id": 1,
+      "image": "../../public/gpt.png",
+      "title": "Sightseeing tour of the Southwest",
+      "subtitle": "Luxury Yacht Charter in Mallorca | Rent the Exclusive EDENROC Yacht",
+      "description": "Explore the picturesque shores of Palma bay with stunning coastal views",
+      "price": "from €89 per person",
+      "duration": "4 hours",
+      "capacity": "up to 10 people",
+      "buttonText": "Book Southwest Tour",
+      "buttonLink": "/tours/southwest"
+    },
+    {
+      "id": 2,
+      "image": "../../public/gpt.png",
+      "title": "Sightseeing tour of the Southeast",
+      "subtitle": "RENT A LUXURY BOAT FOR A DAY AND TRAVEL ANYWHERE BY SEA!",
+      "description": "Discover hidden coves and crystal-clear waters of southeastern coast",
+      "price": "from €89 per person",
+      "duration": "4 hours",
+      "capacity": "up to 10 people",
+      "buttonText": "Book Southeast Tour",
+      "buttonLink": "/tours/southeast"
+    },
+    {
+      "id": 3,
+      "image": "../../public/gpt.png",
+      "title": "Cabrera Island National Park",
+      "subtitle": "Sea vacation on a luxury yacht!",
+      "description": "Visit the protected natural paradise of Cabrera Island archipelago",
+      "price": "from €89 per person",
+      "duration": "4 hours",
+      "capacity": "up to 10 people",
+      "buttonText": "Book Cabrera Tour",
+      "buttonLink": "/tours/cabrera"
+    },
+    {
+      "id": 4,
+      "image": "../../public/gpt.png",
+      "title": "Pink Sunset Cruise",
+      "subtitle": "Luxury Yacht Charter Experience in Mallorca",
+      "description": "Experience magical Mediterranean sunsets with champagne and snacks",
+      "price": "from €89 per person",
+      "duration": "4 hours",
+      "capacity": "up to 10 people",
+      "buttonText": "Book Sunset Tour",
+      "buttonLink": "/tours/sunset"
+    },
+    {
+      "id": 5,
+      "image": "../../public/gpt.png",
+      "title": "Private Yacht Charter",
+      "subtitle": "Exclusive EDENROC Experience",
+      "description": "Full yacht rental for custom routes and personalized service",
+      "price": "from €1000 (4 hours)",
+      "duration": "4-8 hours",
+      "capacity": "up to 10 people",
+      "buttonText": "Rent Private Yacht",
+      "buttonLink": "/private-charter"
+    }
+  ]
+}

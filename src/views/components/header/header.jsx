@@ -25,6 +25,11 @@ export const Header = () => {
               </a>
             </li>
             <li className="header__nav-item">
+              <a href="/tours" className="header__nav-link">
+                Tours
+              </a>
+            </li>
+            <li className="header__nav-item">
               <a href="/yacht" className="header__nav-link">
                 The Yacht
               </a>
@@ -58,10 +63,7 @@ export const Header = () => {
         </nav>
 
         <div className="header__actions">
-          <button className="header__cta">
-            <span className="header__cta-icon">⛵</span>
-            Rent a Yacht
-          </button>
+          <button className="header__cta">Charter Now</button>
           <button
             className={`header__hamburger ${
               isMenuOpen ? "header__hamburger--open" : ""

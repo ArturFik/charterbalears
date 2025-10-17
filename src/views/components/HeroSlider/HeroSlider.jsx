@@ -9,7 +9,7 @@ const HeroSlider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000); // Change slide every 5 seconds
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [slides.length]);
@@ -26,8 +26,23 @@ const HeroSlider = () => {
     setCurrentSlide(index);
   };
 
+  // Функция для обработки клика по сторонам слайдера
+  const handleSliderClick = (e) => {
+    if (window.innerWidth <= 768) {
+      const clickX = e.clientX;
+      const screenWidth = window.innerWidth;
+      const screenMiddle = screenWidth / 2;
+
+      if (clickX > screenMiddle) {
+        nextSlide();
+      } else {
+        prevSlide();
+      }
+    }
+  };
+
   return (
-    <div className="hero-slider">
+    <div className="hero-slider" onClick={handleSliderClick}>
       {slides.map((slide, index) => (
         <div
           key={slide.id}
@@ -60,40 +75,39 @@ const HeroSlider = () => {
                   {slide.buttonText}
                 </a>
                 <a href="tel:+34697726944" className="btn-secondary">
-                  📞 +34 (697) 726-944
+                  +34 (697) 726-944
                 </a>
               </div>
             </div>
           </div>
         </div>
       ))}
-      <div className="content__container">
-        {/* Navigation arrows */}
-        <button
-          className="hero-slider__nav hero-slider__nav--prev"
-          onClick={prevSlide}
-        >
-          ‹
-        </button>
-        <button
-          className="hero-slider__nav hero-slider__nav--next"
-          onClick={nextSlide}
-        >
-          ›
-        </button>
 
-        {/* Dots indicator */}
-        <div className="hero-slider__dots">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              className={`hero-slider__dot ${
-                index === currentSlide ? "hero-slider__dot--active" : ""
-              }`}
-              onClick={() => goToSlide(index)}
-            />
-          ))}
-        </div>
+      {/* Navigation arrows - скрываются на мобильных */}
+      <div
+        className="hero-slider__nav hero-slider__nav--prev"
+        onClick={prevSlide}
+      >
+        ‹
+      </div>
+      <div
+        className="hero-slider__nav hero-slider__nav--next"
+        onClick={nextSlide}
+      >
+        ›
+      </div>
+
+      {/* Dots indicator */}
+      <div className="hero-slider__dots">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            className={`hero-slider__dot ${
+              index === currentSlide ? "hero-slider__dot--active" : ""
+            }`}
+            onClick={() => goToSlide(index)}
+          />
+        ))}
       </div>
     </div>
   );

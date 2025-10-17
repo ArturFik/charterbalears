@@ -1,12 +1,11 @@
 .hero-slider {
   position: relative;
-  height: 100vh;
-  min-height: 600px;
+  min-height: 700px;
   overflow: hidden;
+  cursor: pointer; // Показываем, что можно кликать
 
   @media (max-width: 768px) {
-    height: 80vh;
-    min-height: 500px;
+    min-height: 600px;
   }
 }
 
@@ -24,6 +23,10 @@
   display: flex;
   align-items: center;
 
+  @media (max-width: 768px) {
+    align-items: start;
+  }
+
   &--active {
     opacity: 1;
   }
@@ -36,9 +39,9 @@
     height: 100%;
     background: linear-gradient(
       135deg,
-      rgba(30, 60, 114, 0.8) 0%,
-      rgba(42, 82, 152, 0.6) 50%,
-      rgba(0, 0, 0, 0.4) 100%
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0.2) 50%,
+      rgba(0, 0, 0, 0.1) 100%
     );
   }
 
@@ -47,9 +50,10 @@
     z-index: 2;
     color: white;
     max-width: 600px;
-    padding: 2rem 0;
-    margin-left: auto;
+    text-align: center;
     margin-right: auto;
+    margin-left: auto;
+
     @media (max-width: 768px) {
       text-align: center;
       max-width: 100%;
@@ -58,10 +62,8 @@
 
   &__title {
     font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    line-height: 1.2;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 300;
+    line-height: 1.1;
 
     @media (max-width: 1024px) {
       font-size: 3rem;
@@ -77,72 +79,86 @@
   }
 
   &__subtitle {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 300;
-    margin-bottom: 1.5rem;
-    color: #ffd700;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    color: #ccc;
+    letter-spacing: 1px;
 
     @media (max-width: 768px) {
-      font-size: 1.3rem;
-    }
-
-    @media (max-width: 480px) {
       font-size: 1.1rem;
     }
   }
 
   &__description {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #e5e5e5;
+    font-weight: 300;
+    margin-right: auto;
+    margin-left: auto;
 
     @media (max-width: 768px) {
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
   }
 
   &__details {
     display: flex;
-    gap: 2rem;
-    margin-bottom: 2.5rem;
-    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
 
     @media (max-width: 480px) {
-      gap: 1rem;
       justify-content: center;
+      flex-direction: column;
+      width: 100%;
     }
   }
 
   &__detail {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1rem 0;
+    position: relative;
+
+    @media (max-width: 768px) {
+      padding: 0;
+    }
+
+    &:not(:last-child)::after {
+      content: "•";
+      position: absolute;
+      right: -1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #666;
+    }
   }
 
   &__price {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #ffd700;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: white;
   }
 
   &__duration,
   &__capacity {
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 300;
+    color: #ccc;
   }
 
   &__actions {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     gap: 1.5rem;
     align-items: center;
-    flex-wrap: wrap;
 
     @media (max-width: 480px) {
       justify-content: center;
+      flex-direction: column;
     }
   }
 }
@@ -151,26 +167,20 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.2);
-  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: white;
-  font-size: 2rem;
-  padding: 1rem;
+  font-size: 1.5rem;
+  padding: 1.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
   z-index: 3;
   backdrop-filter: blur(10px);
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  &:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: translateY(-50%) scale(1.1);
-  }
 
   &--prev {
     left: 2rem;
@@ -180,10 +190,22 @@
     right: 2rem;
   }
 
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+
+  // Скрываем кнопки на мобильных устройствах
   @media (max-width: 768px) {
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
+    display: none;
+  }
+
+  // Показываем только на десктопе
+  @media (min-width: 769px) {
+    width: 30px;
+    height: 30px;
+    font-size: 1.6rem;
+    padding: 1rem;
 
     &--prev {
       left: 1rem;
@@ -197,7 +219,7 @@
 
 .hero-slider__dots {
   position: absolute;
-  bottom: 2rem;
+  bottom: 3rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -205,15 +227,15 @@
   z-index: 3;
 
   @media (max-width: 768px) {
-    bottom: 1rem;
+    bottom: 2rem;
   }
 }
 
 .hero-slider__dot {
   width: 5px;
-  height: 15px;
+  height: 13px;
   border-radius: 50%;
-  border: 2px solid white;
+  border: 1px solid white;
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -221,22 +243,40 @@
   &--active {
     background: white;
     border-color: white;
-    transform: scale(1.1);
   }
 
   &:hover {
-    background: rgba(68, 0, 255, 0.5);
+    background: rgba(255, 255, 255, 0.5);
   }
 }
 
-.content {
-  max-width: 1234px;
-  margin-left: auto;
-  margin-right: auto;
-  &__container {
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+.content__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+// Добавляем индикаторы для мобильных (опционально)
+@media (max-width: 768px) {
+  .hero-slider::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+    // Левая часть для навигации назад
+  }
+
+  .hero-slider::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+    // Правая часть для навигации вперед
   }
 }

@@ -1,0 +1,94 @@
+{
+  "tours": [
+    {
+      "id": 1,
+      "title": "Palma Bay Sea Cruise",
+      "shortDescription": "Perfect short cruise to discover the coast of Mallorca",
+      "duration": "3 hours",
+      "price": "€450",
+      "pricePerPerson": "€75",
+      "capacity": "6 people",
+      "type": "standard",
+      "season": "year-round",
+      "image": "/1.png",
+      "available": true,
+      "highlights": ["Cathedral views", "Photo opportunities", "Swimming"],
+      "departure": "Port of Palma"
+    },
+    {
+      "id": 2,
+      "title": "Luxury Sunset Cruise",
+      "shortDescription": "Unforgettable evening with champagne and Mediterranean sunset",
+      "duration": "4 hours",
+      "price": "€650",
+      "pricePerPerson": "€95",
+      "capacity": "7 people",
+      "type": "premium",
+      "season": "April-October",
+      "image": "/2.png",
+      "available": true,
+      "highlights": ["Champagne", "Sunset views", "Romantic atmosphere"],
+      "departure": "Port of Palma"
+    },
+    {
+      "id": 3,
+      "title": "Exclusive Cala Major Coves Tour",
+      "shortDescription": "Explore hidden coves and crystal-clear waters of the eastern coast",
+      "duration": "6 hours",
+      "price": "€890",
+      "pricePerPerson": "€130",
+      "capacity": "7 people",
+      "type": "premium",
+      "season": "May-September",
+      "image": "/3.png",
+      "available": true,
+      "highlights": ["Snorkeling", "Hidden coves", "Onboard lunch"],
+      "departure": "Port of Cala Major"
+    },
+    {
+      "id": 4,
+      "title": "Corporate Full-Day Charter",
+      "shortDescription": "Perfect solution for business events and corporate meetings",
+      "duration": "8 hours",
+      "price": "€1,200",
+      "pricePerPerson": "€175",
+      "capacity": "7 people",
+      "type": "business",
+      "season": "year-round",
+      "image": "/4.png",
+      "available": true,
+      "highlights": ["Business lunch", "Wi-Fi", "Conference area"],
+      "departure": "Upon request"
+    },
+    {
+      "id": 5,
+      "title": "Premium Fishing Experience",
+      "shortDescription": "Professional fishing in the best spots of Balearic Islands",
+      "duration": "5 hours",
+      "price": "€750",
+      "pricePerPerson": "€110",
+      "capacity": "5 people",
+      "type": "active",
+      "season": "March-November",
+      "image": "/5.png",
+      "available": false,
+      "highlights": [
+        "Professional equipment",
+        "Fishing guide",
+        "Catch processing"
+      ],
+      "departure": "Port of Palma"
+    }
+  ],
+  "filters": {
+    "types": ["all", "standard", "premium", "business", "active"],
+    "seasons": [
+      "all",
+      "year-round",
+      "April-October",
+      "May-September",
+      "March-November"
+    ],
+    "durations": ["all", "3 hours", "4 hours", "5 hours", "6 hours", "8 hours"]
+  }
+}

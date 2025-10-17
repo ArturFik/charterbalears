@@ -15,29 +15,28 @@ export const Home = () => {
         <div className="content-container">
           <div className="home__about-content">
             <div className="home__about-text">
-              <h2>Explore the Majesty of the EDENROC Yacht</h2>
-              <p>
-                The EDENROC yacht is not just any vessel; spanning an impressive
-                16 meters, it presents an amalgamation of luxury and
-                functionality. With three plush cabins accommodating up to seven
-                guests, two fully equipped washrooms, and a galley adorned with
-                high-end Italian furnishings, every corner of the EDENROC echoes
-                sophistication.
+              <h2>Discover the EDENROC Yacht</h2>
+              <p className="home__about-lead">
+                A 16-meter masterpiece of maritime engineering and luxury design
               </p>
               <p>
-                This yacht is designed to cater to both relaxation and
-                entertainment, allowing guests to soak up the sun on the
-                spacious deck or retreat into the cozy interiors.
+                The EDENROC yacht represents the pinnacle of nautical
+                sophistication. With three meticulously appointed cabins
+                accommodating up to seven guests, two elegant washrooms, and a
+                galley featuring bespoke Italian craftsmanship, every detail has
+                been curated for the discerning traveler.
+              </p>
+              <p>
+                Experience unparalleled comfort on the expansive sun deck or
+                retreat to the refined interiors designed for both intimate
+                gatherings and grand entertainment.
               </p>
               <a href="/yacht" className="btn-primary">
-                Discover EDENROC
+                Explore EDENROC
               </a>
             </div>
             <div className="home__about-image">
-              <img
-                src="/images/yacht-interior.jpg"
-                alt="EDENROC Yacht Interior"
-              />
+              <img src="/3.png" alt="EDENROC Yacht Interior" />
             </div>
           </div>
         </div>
@@ -46,34 +45,36 @@ export const Home = () => {
       {/* Activities Section */}
       <section className="home__activities">
         <div className="content-container">
-          <h2>Very Fun Activities on the Water</h2>
+          <div className="home__activities-header">
+            <h2>Exclusive Experiences</h2>
+            <p>Curated activities for the sophisticated traveler</p>
+          </div>
           <div className="home__activities-grid">
             <div className="activity-card">
-              <div className="activity-card__icon">🏄‍♂️</div>
-              <h3>Sea Scooter</h3>
+              <div className="activity-card__icon">→</div>
+              <h3>Underwater Exploration</h3>
               <p>
-                Immerse yourself in the exciting world of deep underwater
-                exploration with sea scooter! This amazing underwater scooter
-                provides incredibly smooth movement underwater reaching speeds
-                up to 6 km/h.
+                Discover the depths with our premium sea scooters, offering
+                graceful underwater movement at speeds up to 6 km/h.
+                Professional guidance included.
               </p>
             </div>
             <div className="activity-card">
-              <div className="activity-card__icon">🎣</div>
-              <h3>Fishing</h3>
+              <div className="activity-card__icon">→</div>
+              <h3>Sport Fishing</h3>
               <p>
-                Professional gear, a huge catch, and your best friends with whom
-                you can share a storm of emotions! Perfect for fishing
-                enthusiasts.
+                Engage in premium sport fishing with state-of-the-art equipment
+                and expert guidance. Exceptional catches in the most prestigious
+                fishing grounds.
               </p>
             </div>
             <div className="activity-card">
-              <div className="activity-card__icon">🎉</div>
-              <h3>Boat Party</h3>
+              <div className="activity-card__icon">→</div>
+              <h3>Private Events</h3>
               <p>
-                Hire the boat with a group of friends with your favorite drinks
-                and food, hot dancing and an endless fun. The perfect party
-                venue!
+                Host exclusive gatherings with bespoke catering and premium
+                service. The ultimate venue for sophisticated entertainment on
+                the water.
               </p>
             </div>
           </div>
@@ -84,17 +85,17 @@ export const Home = () => {
       <section className="home__contact">
         <div className="content-container">
           <div className="home__contact-content">
-            <h2>Ready for Your Luxury Yacht Experience?</h2>
-            <p>Contact us now to book your unforgettable journey</p>
+            <h2>Begin Your Luxury Journey</h2>
+            <p>Contact our charter specialists to reserve your experience</p>
             <div className="home__contact-actions">
               <a href="tel:+34697726944" className="btn-primary">
-                📞 Call +34 (697) 726-944
+                +34 (697) 726-944
               </a>
               <a
                 href="mailto:charterbalears@gmail.com"
                 className="btn-secondary"
               >
-                ✉️ Email Us
+                Contact Us
               </a>
             </div>
           </div>

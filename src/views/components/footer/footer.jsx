@@ -9,7 +9,7 @@ export const Footer = () => {
           <div className="footer__section">
             <div className="footer__brand">
               <h3 className="footer__title">CharterBalears</h3>
-              <div className="footer__yacht-name">Yacht EDENROC on Sea</div>
+              <div className="footer__yacht-name">Yacht EDENROC</div>
             </div>
             <p className="footer__description">
               For a unique maritime experience in the heart of Mallorca, turn to
@@ -26,8 +26,7 @@ export const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span className="footer__social-icon">📱</span>
-                <span>WhatsApp</span>
+                WhatsApp
               </a>
               <a
                 href="#"
@@ -35,8 +34,7 @@ export const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span className="footer__social-icon">📷</span>
-                <span>Instagram</span>
+                Instagram
               </a>
             </div>
           </div>
@@ -84,17 +82,14 @@ export const Footer = () => {
             <h4 className="footer__subtitle">Contact Info</h4>
             <div className="footer__contact">
               <div className="footer__contact-item">
-                <span className="footer__contact-icon">📞</span>
                 <a href="tel:+34697726944">+34 (697) 726-944</a>
               </div>
               <div className="footer__contact-item">
-                <span className="footer__contact-icon">✉️</span>
                 <a href="mailto:charterbalears@gmail.com">
                   charterbalears@gmail.com
                 </a>
               </div>
               <div className="footer__contact-item">
-                <span className="footer__contact-icon">⚓</span>
                 <div>
                   <div>MARINA PORT DE MALLORCA</div>
                   <div>Berth A44, Port de Mallorca</div>

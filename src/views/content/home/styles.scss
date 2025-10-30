@@ -195,44 +195,51 @@
 }
 
 // Updated button styles
-.btn-primary {
-  display: inline-block;
-  padding: 1rem 2.5rem;
-  background: #1a1a1a;
-  color: white;
-  text-decoration: none;
-  border: 1px solid #1a1a1a;
-  transition: all 0.3s ease;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-  @media (max-width: 768px) {
-    margin-top: 10px;
-    padding: 0.7rem 0;
-    width: 90%;
-  }
+// Переопределяем стили кнопок с большей специфичностью
+.home__contact .btn-primary,
+.home__contact .btn-secondary {
+  color: white !important;
+  border-color: white !important;
+  background: transparent !important;
+
   &:hover {
-    background: transparent;
-    color: white;
+    transform: scale(1.05) !important;
+    background: transparent !important;
+    color: white !important;
   }
 }
 
-.btn-secondary {
-  display: inline-block;
-  padding: 1rem 2.5rem;
-  background: transparent;
-  color: white;
-  text-decoration: none;
-  border: 1px solid white;
-  transition: all 0.3s ease;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-  @media (max-width: 768px) {
-    padding: 0.7rem 0;
-    width: 90%;
-  }
+// Специфично для кнопки с телефоном
+.home__contact .btn-primary {
+  background: #1a1a1a !important;
+  border-color: #1a1a1a !important;
+
   &:hover {
-    background: white;
-    color: #1a1a1a;
+    background: #1a1a1a !important;
+    transform: scale(1.05) !important;
+  }
+}
+
+// Специфично для второй кнопки
+.home__contact .btn-secondary {
+  background: transparent !important;
+  border-color: white !important;
+
+  &:hover {
+    background: transparent !important;
+    transform: scale(1.05) !important;
+  }
+}
+
+// Убираем возможные конфликты с глобальными стилями
+.home__contact-actions {
+  .btn-primary,
+  .btn-secondary {
+    color: white !important;
+
+    &:hover {
+      color: white !important;
+    }
   }
 }
 
@@ -240,4 +247,17 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+}
+// ОЧЕНЬ специфичные стили для кнопок в секции контактов
+.home .home__contact .home__contact-actions .btn-primary.contact-phone-btn {
+  color: white !important;
+  background-color: #1a1a1a !important;
+  border-color: #1a1a1a !important;
+
+  &:hover {
+    color: white !important;
+    background-color: #1a1a1a !important;
+    border-color: #1a1a1a !important;
+    transform: scale(1.05) !important;
+  }
 }

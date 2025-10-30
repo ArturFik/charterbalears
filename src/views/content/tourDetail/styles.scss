@@ -38,20 +38,269 @@
   }
 }
 
-.tour-detail__gallery {
+/* Стили для галереи бухт */
+.coves-gallery {
+  .gallery-main {
+    margin-bottom: 2rem;
+  }
+
   .main-image {
+    margin: 0;
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+
+    @media (max-width: 768px) {
+      height: 300px;
+    }
+
     img {
       width: 100%;
-      height: 500px;
+      height: 100%;
       object-fit: cover;
+      transition: opacity 0.3s ease;
+      opacity: 0;
 
-      @media (max-width: 768px) {
-        height: 300px;
+      &.loaded {
+        opacity: 1;
+      }
+    }
+
+    .image-loading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #666;
+      font-size: 1rem;
+    }
+  }
+
+  .next-button {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+
+    .next-button-icon {
+      font-size: 1.2rem;
+      transition: transform 0.3s ease;
+    }
+
+    .next-button-text {
+      transition: opacity 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+      bottom: 1rem;
+      right: 1rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 0.9rem;
+    }
+  }
+
+  .progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: 10;
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #1a1a1a, #2d5bff, #ff6b35);
+      transition: width 0.3s ease;
+      border-radius: 0 2px 2px 0;
+    }
+  }
+
+  .slide-counter {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(26, 26, 26, 0.8);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    backdrop-filter: blur(10px);
+    z-index: 10;
+
+    @media (max-width: 768px) {
+      top: 0.5rem;
+      right: 0.5rem;
+      font-size: 0.7rem;
+      padding: 0.25rem 0.75rem;
+    }
+  }
+
+  .cove-info {
+    background: white;
+    padding: 2rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+
+    .cove-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: #1a1a1a;
+        margin: 0;
+        flex: 1;
+      }
+
+      .cove-counter {
+        background: #f8f9fa;
+        color: #666;
+        padding: 0.25rem 0.75rem;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        font-weight: 300;
+        border: 1px solid #e9ecef;
+      }
+    }
+
+    .cove-description {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+    }
+
+    .cove-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+
+      .highlight-tag {
+        background: #f8f9fa;
+        color: #555;
+        padding: 0.25rem 0.75rem;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        border: 1px solid #e9ecef;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: #1a1a1a;
+          color: white;
+        }
+      }
+    }
+
+    .visit-type {
+      padding: 0.5rem 1rem;
+      background: #f8f9fa;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      color: #666;
+      border-left: 3px solid #1a1a1a;
+    }
+  }
+
+  .gallery-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    .thumbnail {
+      position: relative;
+      height: 100px;
+      cursor: pointer;
+      overflow: hidden;
+      padding: 0;
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+      border-radius: 6px;
+
+      &:hover {
+        border-color: #1a1a1a;
+
+        .thumbnail-overlay {
+          opacity: 1;
+          padding: 0;
+        }
+      }
+
+      &.active {
+        border-color: #1a1a1a;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .thumbnail-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(26, 26, 26, 0.8);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        padding: 0.5rem;
+
+        span {
+          color: white;
+          text-align: center;
+          line-height: 1.2;
+
+          &:first-child {
+            font-size: 0.7rem;
+            margin-bottom: 0.25rem;
+          }
+
+          &.thumbnail-count {
+            font-size: 0.6rem;
+            opacity: 0.8;
+          }
+        }
       }
     }
   }
 }
 
+/* Остальные стили */
 .tour-detail__info {
   .tour-header {
     margin-bottom: 2rem;
@@ -70,6 +319,7 @@
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    border-radius: 4px;
   }
 
   .tour-availability {
@@ -77,6 +327,7 @@
     color: white;
     padding: 0.5rem 1rem;
     font-size: 0.8rem;
+    border-radius: 4px;
 
     &.unavailable {
       background: #dc3545;
@@ -107,6 +358,7 @@
   padding: 2rem;
   margin-bottom: 2rem;
   border: 1px solid #e5e5e5;
+  border-radius: 8px;
 
   .price-section {
     text-align: center;
@@ -175,6 +427,7 @@
     padding: 1rem;
     background: #fafafa;
     border: 1px solid #e5e5e5;
+    border-radius: 6px;
 
     .highlight-icon {
       color: #1a1a1a;
@@ -205,6 +458,7 @@
     padding: 2rem;
     background: #f8f9fa;
     border: 1px solid #e9ecef;
+    border-radius: 8px;
 
     p {
       margin-bottom: 1rem;
@@ -217,6 +471,7 @@
   background: #fafafa;
   padding: 2rem;
   border: 1px solid #e5e5e5;
+  border-radius: 8px;
 
   h3 {
     font-size: 1.3rem;
@@ -244,6 +499,7 @@
     border: 1px solid #e5e5e5;
     background: white;
     transition: all 0.3s ease;
+    border-radius: 6px;
 
     &:hover {
       border-color: #1a1a1a;
@@ -272,6 +528,8 @@
   transition: all 0.3s ease;
   border: 1px solid;
   font-weight: 300;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 .btn-primary {

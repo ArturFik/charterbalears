@@ -64,21 +64,25 @@ export const Tours = () => {
 
   return (
     <div className="tours-page">
-      <div className="tours-hero">
+      <header className="tours-hero">
         <div className="content-container">
-          <h1>Exclusive Sea Tours</h1>
-          <p>Find your perfect journey aboard the EDENROC yacht</p>
+          <h1>Exclusive Sea Tours & Yacht Charter in Mallorca</h1>
+          <p>
+            Find your perfect luxury journey aboard the EDENROC yacht in
+            Balearic Islands
+          </p>
         </div>
-      </div>
+      </header>
 
-      <div className="content-container">
+      <main className="content-container">
         {/* Filters */}
-        <div className="tours-filters">
-          <h2>Find Your Tour</h2>
+        <section className="tours-filters" aria-labelledby="filters-heading">
+          <h2 id="filters-heading">Find Your Perfect Yacht Tour</h2>
           <div className="filters-grid">
             <div className="filter-group">
-              <label>Tour Type</label>
+              <label htmlFor="tour-type">Tour Type</label>
               <select
+                id="tour-type"
                 value={filters.type}
                 onChange={(e) => handleFilterChange("type", e.target.value)}
               >
@@ -91,13 +95,14 @@ export const Tours = () => {
             </div>
 
             <div className="filter-group">
-              <label>Season</label>
+              <label htmlFor="season">Season</label>
               <select
+                id="season"
                 value={filters.season}
                 onChange={(e) => handleFilterChange("season", e.target.value)}
               >
-                <option value="all">all</option>
-                <option value="year-round">year-round</option>
+                <option value="all">All Seasons</option>
+                <option value="year-round">Year-Round</option>
                 <option value="April-October">April-October</option>
                 <option value="May-September">May-September</option>
                 <option value="March-November">March-November</option>
@@ -105,8 +110,9 @@ export const Tours = () => {
             </div>
 
             <div className="filter-group">
-              <label>Duration</label>
+              <label htmlFor="duration">Duration</label>
               <select
+                id="duration"
                 value={filters.duration}
                 onChange={(e) => handleFilterChange("duration", e.target.value)}
               >
@@ -119,33 +125,43 @@ export const Tours = () => {
             </div>
 
             <div className="filter-group">
-              <label>Availability</label>
+              <label htmlFor="availability">Availability</label>
               <select
+                id="availability"
                 value={filters.availability}
                 onChange={(e) =>
                   handleFilterChange("availability", e.target.value)
                 }
               >
-                <option value="all">all</option>
-                <option value="available">available</option>
-                <option value="unavailable">unavailable</option>
+                <option value="all">All Tours</option>
+                <option value="available">Available Now</option>
+                <option value="unavailable">Currently Unavailable</option>
               </select>
             </div>
           </div>
 
           <button className="clear-filters" onClick={clearFilters}>
-            Clear Filters
+            Clear All Filters
           </button>
-        </div>
+        </section>
 
         {/* Tours List */}
-        <div className="tours-grid">
+        <section className="tours-grid" aria-label="Available yacht tours">
           {filteredTours.map((tour) => (
-            <div key={tour.id} className="tour-card">
+            <article key={tour.id} className="tour-card">
               <div className="tour-card__image">
-                <img src={tour.image} alt={tour.title} />
+                <img
+                  src={tour.image}
+                  alt={`${tour.title} - Luxury yacht tour in Mallorca`}
+                  loading="lazy"
+                />
                 {!tour.available && (
-                  <div className="tour-card__unavailable">Unavailable</div>
+                  <div
+                    className="tour-card__unavailable"
+                    aria-label="This tour is currently unavailable"
+                  >
+                    Unavailable
+                  </div>
                 )}
                 <div className="tour-card__type">{tour.type}</div>
               </div>
@@ -187,27 +203,37 @@ export const Tours = () => {
                 </div>
 
                 <div className="tour-card__actions">
-                  <Link to={`/tours/${tour.id}`} className="btn-primary">
-                    View Details
+                  <Link
+                    to={`/tours/${tour.id}`}
+                    className="btn-primary"
+                    aria-label={`View details for ${tour.title}`}
+                  >
+                    View Tour Details
                   </Link>
                   {tour.available && (
-                    <a href="tel:+34697726944" className="btn-secondary">
+                    <a
+                      href="tel:+34697726944"
+                      className="btn-secondary"
+                      aria-label="Book this yacht tour by phone"
+                    >
                       Book Now
                     </a>
                   )}
                 </div>
               </div>
-            </div>
+            </article>
           ))}
-        </div>
+        </section>
 
         {filteredTours.length === 0 && (
-          <div className="no-tours">
-            <h3>No Tours Found</h3>
-            <p>Try adjusting your filter criteria</p>
+          <div className="no-tours" role="status">
+            <h3>No Yacht Tours Found</h3>
+            <p>
+              Try adjusting your filter criteria to find available luxury tours
+            </p>
           </div>
         )}
-      </div>
+      </main>
     </div>
   );
 };

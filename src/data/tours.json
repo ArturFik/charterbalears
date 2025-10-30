@@ -2,82 +2,288 @@
   "tours": [
     {
       "id": 1,
-      "title": "Palma Bay Sea Cruise",
-      "shortDescription": "Perfect short cruise to discover the coast of Mallorca",
+      "title": "Southwest Coast Tour",
+      "shortDescription": "Обзорная экскурсия вдоль юго-западного побережья Майорки",
       "duration": "3 hours",
-      "price": "€450",
-      "pricePerPerson": "€75",
-      "capacity": "6 people",
+      "price": "€890",
+      "pricePerPerson": "€89",
+      "capacity": "10 people",
+      "minCapacity": "8 people",
+      "maxCapacity": "11 people",
       "type": "standard",
       "season": "year-round",
       "image": "/1.png",
       "available": true,
-      "highlights": ["Cathedral views", "Photo opportunities", "Swimming"],
-      "departure": "Port of Palma"
+      "highlights": [
+        "Scenic views",
+        "Swimming stops",
+        "Snacks & drinks",
+        "English/Spanish guide"
+      ],
+      "departure": "Real Club Náutico de Palma",
+      "fuelSurcharge": "€20-40 per person",
+      "included": [
+        "Snacks",
+        "Beer",
+        "Soft drinks",
+        "Coffee/tea",
+        "Snorkeling masks"
+      ],
+      "extraServices": [
+        {
+          "name": "Seascooter",
+          "price": "€50"
+        },
+        {
+          "name": "SUP",
+          "price": "€50"
+        },
+        {
+          "name": "Premium bar",
+          "price": "Upon request"
+        }
+      ],
+      "coves": [
+        {
+          "id": 1,
+          "name": "Isla de Sa Porrassa",
+          "description": "Небольшой скалистый островок, расположенный недалеко от курорта Магалуф. Этот остров служит великолепным природным ориентиром при выходе из залива Пальма-Нова. Он знаменует собой начало живописного юго-западного побережья. С моря открывается вид на его дикие, нетронутые скалы, что создает ощущение настоящего путешествия и отрыва от цивилизации.",
+          "images": ["/1.png", "/2.png", "/3.png"],
+          "highlights": ["Скалистый остров", "Дикая природа", "Фото ориентир"],
+          "visitType": "Pass by"
+        },
+        {
+          "id": 2,
+          "name": "Cala Portals Vells",
+          "description": "Одна из самых известных и фотогеничных бухт в этом районе, известная своей кристально чистой бирюзовой водой и окруженная сосновым лесом. Бухта славится своим спокойным морем и невероятно прозрачной водой, что делает ее идеальным местом для заплыва с маской и трубкой. Рядом с пляжем находятся высеченные в скалах пещеры, которые в средние века служили убежищем для моряков.",
+          "images": ["/4.png", "/5.png"],
+          "highlights": [
+            "Кристальная вода",
+            "Исторические пещеры",
+            "Идеальное купание"
+          ],
+          "visitType": "Swimming stop - 30-60 minutes"
+        },
+        {
+          "id": 3,
+          "name": "Isla Malgrats",
+          "description": "Небольшой необитаемый остров, который вместе с соседним островом Тортуга является частью морского заповедника. Воды вокруг острова находятся под защитой, что способствует сохранению богатой подводной жизни. Проплывая вокруг острова, можно с борта яхты разглядеть удивительно чистую воду и, если повезет, заметить стайки разноцветных рыб.",
+          "images": ["/6.png", "/7.jpg", "/8.jpg"],
+          "highlights": [
+            "Морской заповедник",
+            "Богатый подводный мир",
+            "Птичий заповедник"
+          ],
+          "visitType": "Pass by"
+        },
+        {
+          "id": 4,
+          "name": "Cala Fornells",
+          "description": "Спокойная и элитная бухта, расположенная в муниципалитете Андрач. Она более широкая и открытая, чем Cala Portals Vells. Берега бухты усеяны виллами и частными владениями, что создает аристократическую атмосферу. Бухта хорошо защищена от ветров, поэтому море здесь обычно спокойное, что делает ее прекрасным местом для отдыха.",
+          "images": ["/9.jpg", "/10.jpg", "/11.jpg"],
+          "highlights": ["Элитная бухта", "Спокойные воды", "Роскошные виллы"],
+          "visitType": "Relax stop - 30 minutes"
+        },
+        {
+          "id": 5,
+          "name": "Sa Dragonera",
+          "description": "Небольшой, но впечатляющий остров-заповедник, вытянутый в длину и напоминающий своим профилем спящего дракона (отсюда и название). Весь остров является охраняемой природной территорией, известной своими крутыми скалами, пещерами и уникальной экосистемой. Вид на величественные скалы Драгонеры с моря — это финальный и один из самых запоминающихся аккордов экскурсии.",
+          "images": ["/12.jpg", "/13.jpg"],
+          "highlights": [
+            "Остров-дракон",
+            "Природный парк",
+            "Уникальная экосистема"
+          ],
+          "visitType": "Pass by"
+        }
+      ]
     },
     {
       "id": 2,
-      "title": "Luxury Sunset Cruise",
-      "shortDescription": "Unforgettable evening with champagne and Mediterranean sunset",
+      "title": "Coastal Landmarks Tour",
+      "shortDescription": "Морская прогулка с осмотром главных достопримечательностей побережья Майорки",
       "duration": "4 hours",
-      "price": "€650",
+      "price": "€950",
       "pricePerPerson": "€95",
-      "capacity": "7 people",
-      "type": "premium",
-      "season": "April-October",
-      "image": "/2.png",
+      "capacity": "10 people",
+      "minCapacity": "8 people",
+      "maxCapacity": "12 people",
+      "type": "standard",
+      "season": "year-round",
+      "image": "/Southeast/4CalaPi/4.jpeg",
       "available": true,
-      "highlights": ["Champagne", "Sunset views", "Romantic atmosphere"],
-      "departure": "Port of Palma"
+      "highlights": [
+        "Cathedral view from sea",
+        "Crystal clear coves",
+        "Snorkeling spots",
+        "Coastal landscapes"
+      ],
+      "departure": "Port de Palma",
+      "fuelSurcharge": "€20-40 per person",
+      "included": [
+        "Snacks",
+        "Beer",
+        "Soft drinks",
+        "Coffee/tea",
+        "Snorkeling masks"
+      ],
+      "extraServices": [
+        {
+          "name": "Seascooter",
+          "price": "€50"
+        },
+        {
+          "name": "SUP",
+          "price": "€50"
+        }
+      ],
+      "coves": [
+        {
+          "id": 1,
+          "name": "Кафедральный собор Пальмы (La Seu)",
+          "description": "Величественный готический кафедральный собор Пальмы-де-Майорки, одна из самых знаменитых достопримечательностей острова. Вид на собор с моря — это уникальная и захватывающая перспектива. С воды открывается панорама на его монументальные стены, контрфорсы и главный портал, что позволяет по-настоящему оценить масштаб и красоту этого архитектурного шедевра. Собор, строившийся веками, является символом Майорки.",
+          "images": ["/Southeast/1LaSeu/1.png", "/Southeast/1LaSeu/22.png"],
+          "highlights": [
+            "Величественный фасад",
+            "Исторический контекст",
+            "Панорамный вид с моря"
+          ],
+          "visitType": "Scenic pass by"
+        },
+        {
+          "id": 2,
+          "name": "Cala Blava",
+          "description": "Небольшая, но невероятно живописная бухта, известная своими бирюзовыми водами и скалистыми берегами. Бухта славится своей прозрачной водой изумрудного оттенка. Это идеальное место для первого погружения, чтобы освежиться и насладиться подводным миром. Берега Cala Blava состоят из гладких скал, с которых удобно заходить в воду, и небольших гротов, которые интересно исследовать с маской и трубкой.",
+          "images": [
+            "/Southeast/2CalaBlava/2.jpg",
+            "/Southeast/2CalaBlava/22.png"
+          ],
+          "highlights": [
+            "Кристально чистая вода",
+            "Скальные формации",
+            "Атмосфера уединения"
+          ],
+          "visitType": "Swimming stop - 45 minutes"
+        },
+        {
+          "id": 3,
+          "name": "Cala Vella",
+          "description": "Очаровательная бухта в районе Кала-Д'Ор, название которой переводится как 'Старая бухта'. Известна своим мелким белым песком и пологим входом в воду. Бухта хорошо защищена от ветров, поэтому море здесь почти всегда спокойное и прозрачное. Пологий песчаный дно делает ее прекрасным местом для плавания и отдыха в воде. Cala Vella окружена соснами и скалами, что создает потрясающий природный ансамбль.",
+
+          "images": [
+            "/Southeast/3CalaVella/3.jpg",
+            "/Southeast/3CalaVella/33.png",
+            "/Southeast/3CalaVella/333.png"
+          ],
+          "highlights": [
+            "Идеальная вода для купания",
+            "Живописное окружение",
+            "Уют и комфорт"
+          ],
+          "visitType": "Swimming & relaxation - 60 minutes"
+        },
+        {
+          "id": 4,
+          "name": "Cala Pi",
+          "description": "Узкая и длинная бухта, врезающаяся в скалистое побережье, одна из самых узнаваемых и фотографируемых бухт на юго-востоке Майорки. Бухта имеет характерную вытянутую форму, напоминающую фьорд, и обрамлена высокими обрывистыми скалами. Вид сверху или с моря на эту бирюзовую 'реку' среди скал просто завораживает. Благодаря своей защищенной форме и каменистому дну, вода в Cala Pi отличается особой прозрачностью.",
+
+          "images": [
+            "/Southeast/4CalaPi/4.jpeg",
+            "/Southeast/4CalaPi/4.png",
+            "/Southeast/4CalaPi/44.jpeg",
+            "/Southeast/4CalaPi/444.jpg"
+          ],
+          "highlights": [
+            "Уникальный ландшафт",
+            "Прозрачность воды",
+            "Завершение маршрута"
+          ],
+          "visitType": "Final swimming stop - 50 minutes"
+        }
+      ]
     },
     {
       "id": 3,
-      "title": "Exclusive Cala Major Coves Tour",
-      "shortDescription": "Explore hidden coves and crystal-clear waters of the eastern coast",
-      "duration": "6 hours",
-      "price": "€890",
-      "pricePerPerson": "€130",
-      "capacity": "7 people",
-      "type": "premium",
-      "season": "May-September",
-      "image": "/3.png",
-      "available": true,
-      "highlights": ["Snorkeling", "Hidden coves", "Onboard lunch"],
-      "departure": "Port of Cala Major"
-    },
-    {
-      "id": 4,
-      "title": "Corporate Full-Day Charter",
-      "shortDescription": "Perfect solution for business events and corporate meetings",
+      "title": "Cabrera National Park Expedition",
+      "shortDescription": "Экспедиция к заповедному архипелагу Кабрера - уникальному национальному парку Испании",
       "duration": "8 hours",
-      "price": "€1,200",
-      "pricePerPerson": "€175",
-      "capacity": "7 people",
-      "type": "business",
-      "season": "year-round",
-      "image": "/4.png",
+      "price": "€1200",
+      "pricePerPerson": "€150",
+      "capacity": "8 people",
+      "minCapacity": "6 people",
+      "maxCapacity": "10 people",
+      "type": "premium",
+      "season": "April-October",
+      "image": "/kabrera/1.png",
       "available": true,
-      "highlights": ["Business lunch", "Wi-Fi", "Conference area"],
-      "departure": "Upon request"
-    },
-    {
-      "id": 5,
-      "title": "Premium Fishing Experience",
-      "shortDescription": "Professional fishing in the best spots of Balearic Islands",
-      "duration": "5 hours",
-      "price": "€750",
-      "pricePerPerson": "€110",
-      "capacity": "5 people",
-      "type": "active",
-      "season": "March-November",
-      "image": "/5.png",
-      "available": false,
       "highlights": [
-        "Professional equipment",
-        "Fishing guide",
-        "Catch processing"
+        "National park visit",
+        "Wild archipelago",
+        "Pristine nature",
+        "Dolphin watching"
       ],
-      "departure": "Port of Palma"
+      "departure": "Port de Palma",
+      "fuelSurcharge": "€30-50 per person",
+      "included": [
+        "Lunch onboard",
+        "Snacks",
+        "Beer & wine",
+        "Soft drinks",
+        "Coffee/tea",
+        "Snorkeling equipment"
+      ],
+      "extraServices": [
+        {
+          "name": "Seascooter",
+          "price": "€60"
+        },
+        {
+          "name": "SUP",
+          "price": "€60"
+        },
+        {
+          "name": "Professional photos",
+          "price": "€80"
+        }
+      ],
+      "coves": [
+        {
+          "id": 1,
+          "name": "Маршрут до Национального парка Архипелаг Кабрера",
+          "description": "Морское путешествие к одному из самых уникальных и заповедных уголков Средиземноморья — целому архипелагу необитаемых островов, являющемуся Национальным парком Испании. По мере удаления от побережья Майорки вас будет окружать лишь бескрайний морской простор, а на горизонте постепенно будут проявляться очертания диких и таинственных островов архипелага. Вид на скалистые, почти лишенные растительности берега Кабреры, ее величественные утесы и невероятные оттенки бирюзовой воды вокруг создают ощущение настоящего открытия.",
+          "image": "/kabrera/1.png",
+          "highlights": [
+            "Ожидание чуда",
+            "Воплощение природной мощи",
+            "Морское приключение"
+          ],
+          "visitType": "Journey to archipelago - 2 hours"
+        },
+        {
+          "id": 2,
+          "name": "Archipiélago de Cabrera",
+          "description": "Национальный парк Испании, состоящий из 19 небольших островов. Это место сохранило свою первозданную природу благодаря статусу заповедника. Кристально чистая вода, богатый подводный мир и уникальные ландшафты делают это место настоящей жемчужиной Средиземноморья. Здесь можно наблюдать редкие виды птиц, морских обитателей и наслаждаться абсолютной тишиной и уединением.",
+          "image": "/kabrera/11.png",
+          "highlights": [
+            "Заповедная территория",
+            "Кристальные воды",
+            "Богатый подводный мир"
+          ],
+          "visitType": "Exploration & swimming - 3 hours"
+        },
+        {
+          "id": 3,
+          "name": "Обратный путь вдоль побережья Майорки",
+          "description": "После суровых пейзажей заповедного архипелага ваш путь будет пролегать вдоль живописного юго-восточного побережья Майорки. Вы сможете насладиться совершенно другими, но не менее захватывающими видами: уютными бухтами, золотистыми скалами, сосновыми рощами, спускающимися к воде, и очаровательными прибрежными пейзажами, которые являются визитной карточкой острова. Этот контраст впечатлений делает путешествие по-настоящему насыщенным и разнообразным.",
+          "image": "/kabrera/111.png",
+          "highlights": [
+            "Контраст впечатлений",
+            "Живописное побережье",
+            "Уютные бухты"
+          ],
+          "visitType": "Scenic return journey - 2 hours"
+        }
+      ]
     }
   ],
   "filters": {

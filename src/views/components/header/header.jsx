@@ -35,16 +35,6 @@ export const Header = () => {
               </a>
             </li>
             <li className="header__nav-item">
-              <a href="/routes" className="header__nav-link">
-                Routes
-              </a>
-            </li>
-            <li className="header__nav-item">
-              <a href="/services" className="header__nav-link">
-                Services
-              </a>
-            </li>
-            <li className="header__nav-item">
               <a href="/blog" className="header__nav-link">
                 Blog
               </a>
@@ -52,11 +42,6 @@ export const Header = () => {
             <li className="header__nav-item">
               <a href="/faq" className="header__nav-link">
                 FAQ
-              </a>
-            </li>
-            <li className="header__nav-item">
-              <a href="/contact" className="header__nav-link">
-                Contact
               </a>
             </li>
           </ul>

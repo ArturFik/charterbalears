@@ -4,6 +4,10 @@ import { Tours } from "../content/tours/Tours";
 import { TourDetail } from "../content/tourDetail/TourDetail";
 import { NotFound } from "../content/notFound/NotFound";
 import { Layout } from "../components/layout/layout";
+import { AboutYacht } from "../content/about/about";
+import { Blog } from "../content/blog/blog";
+import { BigFish } from "../content/bigFish/bigFish";
+import { FAQ } from "../content/faq/faq";
 
 export const appRoutesDefinition = [
   {
@@ -36,23 +40,19 @@ export const appRoutesDefinition = [
       },
       {
         path: "/yacht",
-        element: <div>Страница яхты</div>,
-      },
-      {
-        path: "/services",
-        element: <div>Услуги</div>,
+        element: <AboutYacht />,
       },
       {
         path: "/blog",
-        element: <div>Блог</div>,
+        element: <Blog />,
+      },
+      {
+        path: "/bigfish",
+        element: <BigFish />,
       },
       {
         path: "/faq",
-        element: <div>Вопросы</div>,
-      },
-      {
-        path: "/contact",
-        element: <div>Контакты</div>,
+        element: <FAQ />,
       },
     ],
   },

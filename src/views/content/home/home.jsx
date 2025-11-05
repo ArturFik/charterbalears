@@ -1,8 +1,14 @@
 import React from "react";
 import HeroSlider from "../../components/HeroSlider/HeroSlider";
 import "./styles.scss";
+import { useI18n } from "../../../i18n/I18nProvider";
 
 export const Home = () => {
+  const { t } = useI18n();
+  const about = t("home.about") || {};
+  const activities = t("home.activities") || {};
+  const activityCards = activities.cards || [];
+  const contact = t("home.contact") || {};
   return (
     <div className="home">
       {/* Hero Slider Section */}
@@ -15,38 +21,27 @@ export const Home = () => {
         <div className="content-container">
           <div className="home__about-content">
             <div className="home__about-text">
-              <h1 id="yacht-heading">
-                Luxury Yacht Charter EDENROC in Mallorca
-              </h1>
-              <p className="home__about-lead">
-                16-meter luxury yacht EDENROC - premium maritime engineering and
-                exclusive design in Balearic Islands
-              </p>
-              <p>
-                The EDENROC luxury yacht represents the pinnacle of nautical
-                sophistication in Mallorca. With three meticulously appointed
-                cabins accommodating up to seven guests, two elegant washrooms,
-                and a galley featuring bespoke Italian craftsmanship, every
-                detail has been curated for the discerning traveler.
-              </p>
-              <p>
-                Experience unparalleled comfort on the expansive sun deck or
-                retreat to the refined interiors designed for both intimate
-                gatherings and grand entertainment. Perfect for yacht charter in
-                Balearic Islands.
-              </p>
-              <a
-                href="/yacht"
-                className="btn-primary"
-                aria-label="Explore EDENROC luxury yacht details"
-              >
-                Explore EDENROC Yacht
-              </a>
+              <h1 id="yacht-heading">{about.title}</h1>
+              {about.lead ? (
+                <p className="home__about-lead">{about.lead}</p>
+              ) : null}
+              {about.paragraphs?.map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
+              {about.ctaLabel ? (
+                <a
+                  href={about.ctaLink}
+                  className="btn-primary"
+                  aria-label={about.ctaAria}
+                >
+                  {about.ctaLabel}
+                </a>
+              ) : null}
             </div>
             <div className="home__about-image">
               <img
                 src="/3.png"
-                alt="Luxury yacht EDENROC interior with Italian design and premium amenities"
+                alt={about.imageAlt || "Luxury yacht EDENROC interior"}
                 loading="lazy"
               />
             </div>
@@ -61,48 +56,19 @@ export const Home = () => {
       >
         <div className="content-container">
           <div className="home__activities-header">
-            <h2 id="activities-heading">
-              Exclusive Yacht Experiences in Mallorca
-            </h2>
-            <p>
-              Premium curated activities for sophisticated travelers in Balearic
-              Islands
-            </p>
+            <h2 id="activities-heading">{activities.heading}</h2>
+            {activities.description ? <p>{activities.description}</p> : null}
           </div>
           <div className="home__activities-grid">
-            <article className="activity-card">
-              <div className="activity-card__icon" aria-hidden="true">
-                →
-              </div>
-              <h3>Underwater Exploration & Snorkeling</h3>
-              <p>
-                Discover Mediterranean depths with premium sea scooters,
-                offering graceful underwater movement at speeds up to 6 km/h.
-                Professional guidance included for safe snorkeling adventures.
-              </p>
-            </article>
-            <article className="activity-card">
-              <div className="activity-card__icon" aria-hidden="true">
-                →
-              </div>
-              <h3>Premium Sport Fishing</h3>
-              <p>
-                Engage in exclusive sport fishing around Mallorca with
-                state-of-the-art equipment and expert guidance. Exceptional
-                catches in prestigious Mediterranean fishing grounds.
-              </p>
-            </article>
-            <article className="activity-card">
-              <div className="activity-card__icon" aria-hidden="true">
-                →
-              </div>
-              <h3>Private Yacht Events</h3>
-              <p>
-                Host exclusive gatherings and corporate events with bespoke
-                catering and premium service. The ultimate luxury venue for
-                sophisticated entertainment on Mediterranean waters.
-              </p>
-            </article>
+            {activityCards.map((card, index) => (
+              <article key={card.title || index} className="activity-card">
+                <div className="activity-card__icon" aria-hidden="true">
+                  →
+                </div>
+                <h3>{card.title}</h3>
+                <p>{card.description}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -111,28 +77,27 @@ export const Home = () => {
       <section className="home__contact" aria-labelledby="contact-heading">
         <div className="content-container">
           <div className="home__contact-content">
-            <h2 id="contact-heading">
-              Begin Your Luxury Yacht Journey in Mallorca
-            </h2>
-            <p>
-              Contact our charter specialists to reserve your premium experience
-              aboard EDENROC yacht
-            </p>
+            <h2 id="contact-heading">{contact.heading}</h2>
+            {contact.description ? <p>{contact.description}</p> : null}
             <div className="home__contact-actions">
-              <a
-                href="tel:+34697726944"
-                className="btn-primary"
-                aria-label="Call yacht charter phone number"
-              >
-                +34 (697) 726-944
-              </a>
-              <a
-                href="mailto:charterbalears@gmail.com"
-                className="btn-secondary"
-                aria-label="Send email to yacht charter"
-              >
-                Contact Yacht Charter
-              </a>
+              {contact.primary ? (
+                <a
+                  href={contact.primary.href}
+                  className="btn-primary"
+                  aria-label={contact.primary.ariaLabel}
+                >
+                  {contact.primary.label}
+                </a>
+              ) : null}
+              {contact.secondary ? (
+                <a
+                  href={contact.secondary.href}
+                  className="btn-secondary"
+                  aria-label={contact.secondary.ariaLabel}
+                >
+                  {contact.secondary.label}
+                </a>
+              ) : null}
             </div>
           </div>
         </div>

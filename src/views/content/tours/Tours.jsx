@@ -1,50 +1,63 @@
-import React, { useState, useEffect } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import toursData from "../../../data/tours.json";
 import "./styles.scss";
+import { useI18n } from "../../../i18n/I18nProvider";
+
+const availabilityFilterOptions = ["all", "available", "unavailable"];
 
 export const Tours = () => {
-  const [tours, setTours] = useState([]);
-  const [filteredTours, setFilteredTours] = useState([]);
-  const [filters, setFilters] = useState({
-    type: "all",
-    season: "all",
-    duration: "all",
-    availability: "all",
-  });
+  const { t } = useI18n();
+  const translations = t("tours") || {};
+  const tours = translations.list || [];
+  const filtersDefinition = translations.filters || {};
+  const labels = translations.labels || {};
+
+  const initialFilters = useMemo(
+    () => ({
+      type: filtersDefinition.type?.options?.[0]?.value ?? "all",
+      season: filtersDefinition.season?.options?.[0]?.value ?? "all",
+      duration: filtersDefinition.duration?.options?.[0]?.value ?? "all",
+      availability: availabilityFilterOptions[0],
+    }),
+    [filtersDefinition]
+  );
+
+  const [filters, setFilters] = useState(initialFilters);
+  const [filteredTours, setFilteredTours] = useState(tours);
 
   useEffect(() => {
-    setTours(toursData.tours);
-    setFilteredTours(toursData.tours);
-  }, []);
+    setFilters(initialFilters);
+  }, [initialFilters]);
 
   useEffect(() => {
+    const applyFilters = () => {
+      let result = [...tours];
+
+      if (filters.type !== "all") {
+        result = result.filter((tour) => tour.type === filters.type);
+      }
+
+      if (filters.season !== "all") {
+        result = result.filter((tour) => tour.season === filters.season);
+      }
+
+      if (filters.duration !== "all") {
+        result = result.filter((tour) => tour.duration === filters.duration);
+      }
+
+      if (filters.availability !== "all") {
+        result = result.filter((tour) =>
+          filters.availability === "available"
+            ? tour.available
+            : !tour.available
+        );
+      }
+
+      setFilteredTours(result);
+    };
+
     applyFilters();
   }, [filters, tours]);
-
-  const applyFilters = () => {
-    let result = [...tours];
-
-    if (filters.type !== "all") {
-      result = result.filter((tour) => tour.type === filters.type);
-    }
-
-    if (filters.season !== "all") {
-      result = result.filter((tour) => tour.season === filters.season);
-    }
-
-    if (filters.duration !== "all") {
-      result = result.filter((tour) => tour.duration === filters.duration);
-    }
-
-    if (filters.availability !== "all") {
-      result = result.filter((tour) =>
-        filters.availability === "available" ? tour.available : !tour.available
-      );
-    }
-
-    setFilteredTours(result);
-  };
 
   const handleFilterChange = (filterType, value) => {
     setFilters((prev) => ({
@@ -54,78 +67,74 @@ export const Tours = () => {
   };
 
   const clearFilters = () => {
-    setFilters({
-      type: "all",
-      season: "all",
-      duration: "all",
-      availability: "all",
-    });
+    setFilters(initialFilters);
   };
 
   return (
     <div className="tours-page">
       <header className="tours-hero">
         <div className="content-container">
-          <h1>Exclusive Sea Tours & Yacht Charter in Mallorca</h1>
-          <p>
-            Find your perfect luxury journey aboard the EDENROC yacht in
-            Balearic Islands
-          </p>
+          <h1>{translations.hero?.title}</h1>
+          <p>{translations.hero?.subtitle}</p>
         </div>
       </header>
 
       <main className="content-container">
         {/* Filters */}
         <section className="tours-filters" aria-labelledby="filters-heading">
-          <h2 id="filters-heading">Find Your Perfect Yacht Tour</h2>
+          <h2 id="filters-heading">{filtersDefinition.heading}</h2>
           <div className="filters-grid">
             <div className="filter-group">
-              <label htmlFor="tour-type">Tour Type</label>
+              <label htmlFor="tour-type">{filtersDefinition.type?.label}</label>
               <select
                 id="tour-type"
                 value={filters.type}
                 onChange={(e) => handleFilterChange("type", e.target.value)}
               >
-                {toursData.filters.types.map((type) => (
-                  <option key={type} value={type}>
-                    {type}
+                {filtersDefinition.type?.options?.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
                   </option>
                 ))}
               </select>
             </div>
 
             <div className="filter-group">
-              <label htmlFor="season">Season</label>
+              <label htmlFor="season">{filtersDefinition.season?.label}</label>
               <select
                 id="season"
                 value={filters.season}
                 onChange={(e) => handleFilterChange("season", e.target.value)}
               >
-                <option value="all">All Seasons</option>
-                <option value="year-round">Year-Round</option>
-                <option value="April-October">April-October</option>
-                <option value="May-September">May-September</option>
-                <option value="March-November">March-November</option>
-              </select>
-            </div>
-
-            <div className="filter-group">
-              <label htmlFor="duration">Duration</label>
-              <select
-                id="duration"
-                value={filters.duration}
-                onChange={(e) => handleFilterChange("duration", e.target.value)}
-              >
-                {toursData.filters.durations.map((duration) => (
-                  <option key={duration} value={duration}>
-                    {duration}
+                {filtersDefinition.season?.options?.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
                   </option>
                 ))}
               </select>
             </div>
 
             <div className="filter-group">
-              <label htmlFor="availability">Availability</label>
+              <label htmlFor="duration">
+                {filtersDefinition.duration?.label}
+              </label>
+              <select
+                id="duration"
+                value={filters.duration}
+                onChange={(e) => handleFilterChange("duration", e.target.value)}
+              >
+                {filtersDefinition.duration?.options?.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="filter-group">
+              <label htmlFor="availability">
+                {filtersDefinition.availability?.label}
+              </label>
               <select
                 id="availability"
                 value={filters.availability}
@@ -133,15 +142,17 @@ export const Tours = () => {
                   handleFilterChange("availability", e.target.value)
                 }
               >
-                <option value="all">All Tours</option>
-                <option value="available">Available Now</option>
-                <option value="unavailable">Currently Unavailable</option>
+                {filtersDefinition.availability?.options?.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
               </select>
             </div>
           </div>
 
           <button className="clear-filters" onClick={clearFilters}>
-            Clear All Filters
+            {labels.clear}
           </button>
         </section>
 
@@ -152,18 +163,18 @@ export const Tours = () => {
               <div className="tour-card__image">
                 <img
                   src={tour.image}
-                  alt={`${tour.title} - Luxury yacht tour in Mallorca`}
+                  alt={tour.imageAlt || `${tour.title} - Luxury yacht tour`}
                   loading="lazy"
                 />
                 {!tour.available && (
                   <div
                     className="tour-card__unavailable"
-                    aria-label="This tour is currently unavailable"
+                    aria-label={labels.unavailable}
                   >
-                    Unavailable
+                    {labels.unavailable}
                   </div>
                 )}
-                <div className="tour-card__type">{tour.type}</div>
+                <div className="tour-card__type">{tour.typeLabel}</div>
               </div>
 
               <div className="tour-card__content">
@@ -174,21 +185,27 @@ export const Tours = () => {
 
                 <div className="tour-card__details">
                   <div className="tour-card__detail">
-                    <span className="detail-label">Duration:</span>
-                    <span>{tour.duration}</span>
+                    <span className="detail-label">
+                      {translations.detailLabels?.duration ?? "Duration:"}
+                    </span>
+                    <span>{tour.durationLabel || tour.duration}</span>
                   </div>
                   <div className="tour-card__detail">
-                    <span className="detail-label">Capacity:</span>
-                    <span>{tour.capacity}</span>
+                    <span className="detail-label">
+                      {translations.detailLabels?.capacity ?? "Capacity:"}
+                    </span>
+                    <span>{tour.capacityLabel || tour.capacity}</span>
                   </div>
                   <div className="tour-card__detail">
-                    <span className="detail-label">Season:</span>
-                    <span>{tour.season}</span>
+                    <span className="detail-label">
+                      {translations.detailLabels?.season ?? "Season:"}
+                    </span>
+                    <span>{tour.seasonLabel || tour.season}</span>
                   </div>
                 </div>
 
                 <div className="tour-card__highlights">
-                  {tour.highlights.map((highlight, index) => (
+                  {tour.highlights?.map((highlight, index) => (
                     <span key={index} className="highlight-tag">
                       #{highlight}
                     </span>
@@ -198,7 +215,7 @@ export const Tours = () => {
                 <div className="tour-card__price">
                   <div className="price-main">{tour.price}</div>
                   <div className="price-per-person">
-                    {tour.pricePerPerson} per person
+                    {tour.pricePerPerson} {labels.perPersonSuffix}
                   </div>
                 </div>
 
@@ -206,17 +223,17 @@ export const Tours = () => {
                   <Link
                     to={`/tours/${tour.id}`}
                     className="btn-primary"
-                    aria-label={`View details for ${tour.title}`}
+                    aria-label={`${labels.viewDetails} ${tour.title}`}
                   >
-                    View Tour Details
+                    {labels.viewDetails}
                   </Link>
                   {tour.available && (
                     <a
-                      href="tel:+34697726944"
+                      href={tour.bookingPhoneHref || t("common.phoneHref")}
                       className="btn-secondary"
-                      aria-label="Book this yacht tour by phone"
+                      aria-label={labels.bookNow}
                     >
-                      Book Now
+                      {labels.bookNow}
                     </a>
                   )}
                 </div>
@@ -227,10 +244,8 @@ export const Tours = () => {
 
         {filteredTours.length === 0 && (
           <div className="no-tours" role="status">
-            <h3>No Yacht Tours Found</h3>
-            <p>
-              Try adjusting your filter criteria to find available luxury tours
-            </p>
+            <h3>{labels.noResultsTitle}</h3>
+            <p>{labels.noResultsDescription}</p>
           </div>
         )}
       </main>

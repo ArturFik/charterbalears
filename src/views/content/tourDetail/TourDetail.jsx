@@ -1,48 +1,62 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
-import toursData from "../../../data/tours.json";
 import "./styles.scss";
+import { useI18n } from "../../../i18n/I18nProvider";
+
+const DEFAULT_PLACEHOLDER = "/placeholder.jpg";
+
+const getCoveImages = (cove) => {
+  if (!cove) {
+    return [DEFAULT_PLACEHOLDER];
+  }
+  if (Array.isArray(cove.images) && cove.images.length > 0) {
+    return cove.images;
+  }
+  if (cove.image) {
+    return [cove.image];
+  }
+  return [DEFAULT_PLACEHOLDER];
+};
 
 export const TourDetail = () => {
   const { id } = useParams();
-  const [tour, setTour] = useState(null);
+  const numericId = Number.parseInt(id, 10);
+  const { t } = useI18n();
+  const copy = t("tourDetail") || {};
+  const tours = t("tours.list") || [];
+  const perPersonSuffix =
+    copy.perPersonSuffix || t("tours.labels.perPersonSuffix", "per guest");
+
+  const tour = useMemo(
+    () => tours.find((item) => item.id === numericId),
+    [tours, numericId]
+  );
+
   const [activeCove, setActiveCove] = useState(0);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
-    const foundTour = toursData.tours.find((t) => t.id === parseInt(id));
-    setTour(foundTour);
-    if (foundTour?.coves) {
+    if (tour?.coves) {
       setActiveCove(0);
       setActiveImageIndex(0);
     }
-  }, [id]);
+  }, [tour]);
 
   const handleImageLoad = () => {
     setImageLoaded(true);
   };
 
-  const getCoveImages = (cove) => {
-    if (cove.images && Array.isArray(cove.images) && cove.images.length > 0) {
-      return cove.images;
-    }
-    if (cove.image) {
-      return [cove.image];
-    }
-    return ["/placeholder.jpg"];
-  };
+  const currentCove = tour?.coves?.[activeCove];
+  const currentImages = currentCove ? getCoveImages(currentCove) : [];
 
   const nextSlide = () => {
-    if (!tour?.coves) return;
-
-    const currentCove = tour.coves[activeCove];
-    const currentImages = getCoveImages(currentCove);
+    if (!tour?.coves?.length) return;
 
     if (activeImageIndex < currentImages.length - 1) {
-      setActiveImageIndex(activeImageIndex + 1);
+      setActiveImageIndex((prev) => prev + 1);
     } else if (activeCove < tour.coves.length - 1) {
-      setActiveCove(activeCove + 1);
+      setActiveCove((prev) => prev + 1);
       setActiveImageIndex(0);
     } else {
       setActiveCove(0);
@@ -52,8 +66,6 @@ export const TourDetail = () => {
     setImageLoaded(false);
   };
 
-  const currentCove = tour?.coves?.[activeCove];
-  const currentImages = currentCove ? getCoveImages(currentCove) : [];
   const totalCoves = tour?.coves?.length || 0;
 
   const totalSlides =
@@ -85,9 +97,9 @@ export const TourDetail = () => {
       <div className="tour-detail">
         <div className="content-container">
           <div className="not-found">
-            <h2>Yacht Tour Not Found</h2>
+            <h2>{copy.notFound?.title}</h2>
             <Link to="/tours" className="btn-primary">
-              Back to Luxury Yacht Tours
+              {copy.notFound?.cta}
             </Link>
           </div>
         </div>
@@ -100,7 +112,7 @@ export const TourDetail = () => {
       <header className="tour-detail__hero">
         <div className="content-container">
           <nav className="breadcrumb" aria-label="Breadcrumb">
-            <Link to="/tours">Luxury Yacht Tours</Link>
+            <Link to="/tours">{copy.breadcrumbRoot}</Link>
             <span aria-hidden="true">/</span>
             <span>{tour.title}</span>
           </nav>
@@ -109,8 +121,10 @@ export const TourDetail = () => {
 
       <main className="content-container">
         <div className="tour-detail__content">
-          {/* Галерея бухт */}
-          <section className="tour-detail__gallery" aria-label="Tour gallery">
+          <section
+            className="tour-detail__gallery"
+            aria-label={copy.galleryAria || "Tour gallery"}
+          >
             {currentCove ? (
               <div className="coves-gallery">
                 <div className="gallery-main">
@@ -118,11 +132,9 @@ export const TourDetail = () => {
                     {currentImages.length > 0 && (
                       <img
                         src={currentImages[activeImageIndex]}
-                        alt={`${
-                          currentCove.name
-                        } - Luxury yacht destination in Mallorca - Image ${
-                          activeImageIndex + 1
-                        }`}
+                        alt={`${currentCove.name} - ${
+                          copy.photoLabel || "Photo"
+                        } ${activeImageIndex + 1}`}
                         onLoad={handleImageLoad}
                         className={imageLoaded ? "loaded" : ""}
                         loading={activeImageIndex === 0 ? "eager" : "lazy"}
@@ -130,19 +142,21 @@ export const TourDetail = () => {
                     )}
 
                     {!imageLoaded && (
-                      <div className="image-loading">Loading...</div>
+                      <div className="image-loading">{copy.loading}</div>
                     )}
 
                     <button
                       className="next-button"
                       onClick={nextSlide}
                       style={{ backgroundColor: getButtonColor() }}
-                      aria-label="Next slide"
+                      aria-label={copy.nextButtonAria}
                     >
                       <span className="next-button-icon" aria-hidden="true">
                         ›
                       </span>
-                      <span className="next-button-text">Next</span>
+                      <span className="next-button-text">
+                        {copy.nextButton}
+                      </span>
                     </button>
 
                     <div className="progress-bar">
@@ -159,9 +173,10 @@ export const TourDetail = () => {
 
                   <div className="cove-info">
                     <div className="cove-header">
-                      <h2>{currentCove.name} - Premium Yacht Destination</h2>
+                      <h2>{currentCove.name}</h2>
                       <div className="cove-counter">
-                        Photo {activeImageIndex + 1} of {currentImages.length}
+                        {copy.photoLabel} {activeImageIndex + 1} {copy.photoOf}{" "}
+                        {currentImages.length}
                       </div>
                     </div>
                     <p className="cove-description">
@@ -221,27 +236,24 @@ export const TourDetail = () => {
             )}
           </section>
 
-          {/* Информация о туре */}
           <section
             className="tour-detail__info"
             aria-labelledby="tour-info-heading"
           >
             <div className="tour-header">
               <div className="tour-meta">
-                <span className="tour-type">{tour.type}</span>
+                <span className="tour-type">{tour.typeLabel || tour.type}</span>
                 <span
                   className={`tour-availability ${
                     !tour.available ? "unavailable" : ""
                   }`}
                 >
                   {tour.available
-                    ? "Available for Booking"
-                    : "Currently Unavailable"}
+                    ? copy.availability?.available
+                    : copy.availability?.unavailable}
                 </span>
               </div>
-              <h1 id="tour-info-heading">
-                {tour.title} - Luxury Yacht Experience
-              </h1>
+              <h1 id="tour-info-heading">{tour.title}</h1>
               <p className="tour-description">{tour.shortDescription}</p>
             </div>
 
@@ -249,30 +261,38 @@ export const TourDetail = () => {
               <div className="price-section">
                 <div className="price-main">{tour.price}</div>
                 <div className="price-details">
-                  <span>{tour.pricePerPerson} per person</span>
+                  <span>
+                    {tour.pricePerPerson} {perPersonSuffix}
+                  </span>
                   <span aria-hidden="true">•</span>
-                  <span>{tour.capacity}</span>
+                  <span>{tour.capacityLabel || tour.capacity}</span>
                 </div>
               </div>
             </div>
 
             <div className="tour-features">
               <div className="feature">
-                <span className="feature-label">Tour Duration</span>
-                <span className="feature-value">{tour.duration}</span>
+                <span className="feature-label">{copy.features?.duration}</span>
+                <span className="feature-value">
+                  {tour.durationLabel || tour.duration}
+                </span>
               </div>
               <div className="feature">
-                <span className="feature-label">Best Season</span>
-                <span className="feature-value">{tour.season}</span>
+                <span className="feature-label">{copy.features?.season}</span>
+                <span className="feature-value">
+                  {tour.seasonLabel || tour.season}
+                </span>
               </div>
               <div className="feature">
-                <span className="feature-label">Departure Location</span>
+                <span className="feature-label">
+                  {copy.features?.departure}
+                </span>
                 <span className="feature-value">{tour.departure}</span>
               </div>
             </div>
 
             <div className="tour-highlights">
-              <h3>Premium Tour Highlights</h3>
+              <h3>{copy.highlightsTitle}</h3>
               <div className="highlights-grid">
                 {tour.highlights?.map((highlight, index) => (
                   <div key={index} className="highlight-item">
@@ -289,45 +309,39 @@ export const TourDetail = () => {
               {tour.available ? (
                 <div className="available-actions">
                   <a
-                    href="tel:+34697726944"
+                    href={t("common.phoneHref")}
                     className="btn-primary btn-large"
-                    aria-label="Book this yacht tour by phone"
+                    aria-label={copy.actions?.bookByPhone}
                   >
-                    Book Luxury Yacht Tour
+                    {copy.actions?.bookByPhone}
                   </a>
                   <a
-                    href="https://wa.me/34697726944"
+                    href={t("common.whatsappHref")}
                     className="btn-secondary"
-                    aria-label="Contact yacht charter on WhatsApp"
+                    aria-label={copy.actions?.whatsapp}
                   >
-                    Message on WhatsApp
+                    {copy.actions?.whatsapp}
                   </a>
                 </div>
               ) : (
                 <div className="unavailable-notice">
-                  <p>This luxury yacht tour is temporarily unavailable</p>
+                  <p>{copy.actions?.unavailableNotice}</p>
                   <Link to="/tours" className="btn-primary">
-                    View Available Yacht Tours
+                    {copy.actions?.viewAvailableTours}
                   </Link>
                 </div>
               )}
             </div>
 
             <div className="tour-contact">
-              <h3>Questions About This Yacht Tour?</h3>
-              <p>
-                Our luxury charter team will be happy to help you choose the
-                perfect yacht experience in Mallorca
-              </p>
+              <h3>{copy.contact?.title}</h3>
+              <p>{copy.contact?.description}</p>
               <div className="contact-methods">
-                <a href="tel:+34697726944" className="contact-link">
-                  📞 +34 (697) 726-944
+                <a href={t("common.phoneHref")} className="contact-link">
+                  📞 {copy.contact?.phoneLabel}
                 </a>
-                <a
-                  href="mailto:charterbalears@gmail.com"
-                  className="contact-link"
-                >
-                  ✉️ charterbalears@gmail.com
+                <a href={t("common.emailHref")} className="contact-link">
+                  ✉️ {copy.contact?.emailLabel}
                 </a>
               </div>
             </div>

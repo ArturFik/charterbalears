@@ -1,32 +1,46 @@
 import React, { useState, useEffect } from "react";
-import slidesData from "../../../data/slides.json";
 import "./styles.scss";
+import { useI18n } from "../../../i18n/I18nProvider";
 
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const { slides } = slidesData;
+  const { t } = useI18n();
+  const slides = t("heroSlider.slides") || [];
+  const slidesCount = slides.length;
+  const phoneHref = t("common.phoneHref");
+  const phoneLabel = t("common.phoneDisplay");
+  const phoneCta = t("heroSlider.phoneCta");
 
   useEffect(() => {
+    if (!slidesCount) {
+      return undefined;
+    }
+
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
+      setCurrentSlide((prev) => (prev + 1) % slidesCount);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [slides.length]);
+  }, [slidesCount]);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
+    if (!slidesCount) {
+      return;
+    }
+    setCurrentSlide((prev) => (prev + 1) % slidesCount);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    if (!slidesCount) {
+      return;
+    }
+    setCurrentSlide((prev) => (prev - 1 + slidesCount) % slidesCount);
   };
 
   const goToSlide = (index) => {
     setCurrentSlide(index);
   };
 
-  // Функция для обработки клика по сторонам слайдера
   const handleSliderClick = (e) => {
     if (window.innerWidth <= 768) {
       const clickX = e.clientX;
@@ -45,7 +59,7 @@ const HeroSlider = () => {
     <div className="hero-slider" onClick={handleSliderClick}>
       {slides.map((slide, index) => (
         <div
-          key={slide.id}
+          key={slide.id ?? index}
           className={`hero-slide ${
             index === currentSlide ? "hero-slide--active" : ""
           }`}
@@ -72,11 +86,17 @@ const HeroSlider = () => {
 
               <div className="hero-slide__actions">
                 <a href={slide.buttonLink} className="btn-primary">
-                  {slide.buttonText}
+                  {slide.buttonLabel || slide.buttonText}
                 </a>
-                <a href="tel:+34697726944" className="btn-secondary">
-                  +34 (697) 726-944
-                </a>
+                {phoneHref && phoneLabel && (
+                  <a
+                    href={phoneHref}
+                    className="btn-secondary"
+                    aria-label={phoneCta}
+                  >
+                    {phoneLabel}
+                  </a>
+                )}
               </div>
             </div>
           </div>
@@ -99,9 +119,9 @@ const HeroSlider = () => {
 
       {/* Dots indicator */}
       <div className="hero-slider__dots">
-        {slides.map((_, index) => (
+        {slides.map((slide, index) => (
           <button
-            key={index}
+            key={slide.id ?? index}
             className={`hero-slider__dot ${
               index === currentSlide ? "hero-slider__dot--active" : ""
             }`}

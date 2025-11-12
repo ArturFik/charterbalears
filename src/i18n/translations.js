@@ -537,9 +537,9 @@ const en = {
           "The charter covers yacht rental with full equipment, crew services, fuel for the planned route, insurance and port fees. Optional extras such as catering, specialist activities or extended fuel are available at additional cost.",
       },
       {
-        question: "Do I need sailing experience to charter a yacht?",
+        question: "If I have a motorboat licence, can I steer the yacht?",
         answer:
-          "No prior experience is required. Our professional crew handles navigation and operations. Bareboat charters are available only with the appropriate licence and sea-time evidence.",
+          "Yes, licensed guests may take the helm under the captain's supervision when conditions allow. Please send your certification in advance and our skipper will brief you, remaining ready to reassume control whenever necessary.",
       },
       {
         question: "What is the cancellation policy?",
@@ -547,9 +547,14 @@ const en = {
           "Cancellations 30+ days before departure receive a full refund. 15–29 days: 50% refund. Less than 15 days: no refund, though rescheduling is possible subject to availability. Weather cancellations are fully refundable.",
       },
       {
-        question: "How many people can the yacht accommodate?",
+        question: "How many guests can join the charter?",
         answer:
-          "EDENROC welcomes up to 10 guests on day charters and up to 7 guests for overnight stays across three cabins with ensuite facilities.",
+          "Our yacht is certified for 12 people including crew, so we can host up to 11 guests at once.",
+      },
+      {
+        question: "What is the minimum group size for 3–4 hour tours?",
+        answer:
+          "Shared tours of 3–4 hours depart once at least 7–8 guests confirm their booking. Private charters can run with smaller groups, but shared departures may be rescheduled until we reach the minimum.",
       },
       {
         question: "What should I bring for the fishing tour?",
@@ -1210,9 +1215,10 @@ es.faq.items = [
       "Incluye alquiler del yate con equipamiento completo, tripulación profesional, combustible del itinerario planificado, seguros y tasas portuarias. Servicios extra como catering o actividades especiales tienen suplemento.",
   },
   {
-    question: "¿Necesito experiencia náutica para alquilar?",
+    question:
+      "Si tengo licencia para embarcaciones a motor, ¿puedo gobernar el yate?",
     answer:
-      "No es necesario. Nuestra tripulación se encarga de la navegación y maniobras. Solo los charters sin tripulación requieren licencia y experiencia demostrable.",
+      "Sí, los invitados con licencia válida pueden tomar el timón bajo la supervisión del capitán cuando las condiciones lo permiten. Envíanos la acreditación con antelación y nuestro patrón te explicará el procedimiento, manteniendo el control en todo momento.",
   },
   {
     question: "¿Cuál es la política de cancelación?",
@@ -1220,9 +1226,14 @@ es.faq.items = [
       "Más de 30 días: reembolso completo. 15–29 días: 50% de reembolso. Menos de 15 días: no hay reembolso, pero podemos reprogramar según disponibilidad. Las cancelaciones por meteorología se reembolsan al 100%.",
   },
   {
-    question: "¿Cuántas personas pueden embarcar?",
+    question: "¿Cuántos invitados pueden embarcar?",
     answer:
-      "EDENROC admite hasta 10 invitados en salidas de día y hasta 7 pernoctando en tres cabinas con baños ensuite.",
+      "La embarcación está homologada para 12 personas incluyendo a la tripulación, por lo que podemos acoger hasta 11 invitados a la vez.",
+  },
+  {
+    question: "¿Cuál es el tamaño mínimo de grupo para tours de 3–4 horas?",
+    answer:
+      "Las salidas compartidas de 3–4 horas se confirman cuando hay al menos 7–8 invitados reservados. Los charters privados pueden realizarse con grupos más pequeños, pero las salidas estándar pueden reprogramarse hasta alcanzar el mínimo.",
   },
   {
     question: "¿Qué debo llevar a la excursión de pesca?",
@@ -1808,9 +1819,10 @@ de.faq.items = [
       "Der Preis umfasst Yachtmiete mit kompletter Ausstattung, professionelle Crew, Treibstoff für die geplante Route, Versicherung und Hafenabgaben. Zusatzleistungen wie Catering oder spezielle Aktivitäten sind optional buchbar.",
   },
   {
-    question: "Brauche ich Segelerfahrung?",
+    question:
+      "Wenn ich einen Motorbootführerschein habe, darf ich das Boot steuern?",
     answer:
-      "Nein. Unsere Crew übernimmt Navigation und Manöver. Nur Bareboat-Charter erfordern einen entsprechenden Schein und Erfahrung.",
+      "Ja, Gäste mit gültiger Lizenz dürfen das Steuer übernehmen, solange der Kapitän die Aufsicht behält und die Bedingungen passen. Senden Sie uns den Nachweis im Voraus; unser Skipper erläutert das Vorgehen und kann jederzeit wieder übernehmen.",
   },
   {
     question: "Wie lautet die Stornierungsregelung?",
@@ -1818,9 +1830,15 @@ de.faq.items = [
       "Mehr als 30 Tage vorher: volle Rückerstattung. 15–29 Tage: 50%. Weniger als 15 Tage: keine Rückerstattung, aber Verschiebung nach Verfügbarkeit möglich. Wetterbedingte Absagen werden vollständig erstattet.",
   },
   {
-    question: "Wie viele Personen können an Bord?",
+    question: "Wie viele Gäste können an Bord?",
     answer:
-      "Die EDENROC bietet Platz für bis zu 10 Gäste bei Tagestörns und bis zu 7 Gäste über Nacht in drei Kabinen mit Ensuite-Bädern.",
+      "Die Yacht ist für 12 Personen einschließlich Crew zugelassen, daher nehmen wir maximal 11 Gäste gleichzeitig mit.",
+  },
+  {
+    question:
+      "Wie groß muss die Gruppe für 3–4-stündige Touren mindestens sein?",
+    answer:
+      "Gemeinschaftstouren über 3–4 Stunden finden statt, sobald mindestens 7–8 Gäste gebucht haben. Private Charter können auch mit kleineren Gruppen fahren, doch Sammelausfahrten werden gegebenenfalls verschoben, bis die Mindestanzahl erreicht ist.",
   },
   {
     question: "Was sollte ich zur Angeltour mitbringen?",

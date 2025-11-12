@@ -2,7 +2,7 @@ import React, { useMemo, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./styles.scss";
 import { useI18n } from "../../../i18n/I18nProvider";
-
+import Seo from "../../components/seo/Seo";
 const availabilityFilterOptions = ["all", "available", "unavailable"];
 
 export const Tours = () => {
@@ -72,6 +72,12 @@ export const Tours = () => {
 
   return (
     <div className="tours-page">
+      <Seo
+        title={translations.hero?.title}
+        description={translations.hero?.subtitle}
+        keywords="yacht tours Mallorca, boat excursions Balearic Islands, luxury sea trips"
+        url="/tours"
+      />
       <header className="tours-hero">
         <div className="content-container">
           <h1>{translations.hero?.title}</h1>

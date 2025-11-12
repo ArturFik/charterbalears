@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.scss";
 import { useI18n } from "../../../i18n/I18nProvider";
-
+import Seo from "../../components/seo/Seo";
 export const Blog = () => {
   const { t } = useI18n();
   const blogCopy = t("blog") || {};
@@ -9,6 +9,12 @@ export const Blog = () => {
 
   return (
     <div className="blog-page">
+      <Seo
+        title={blogCopy.hero?.title}
+        description={blogCopy.hero?.subtitle}
+        keywords="yacht blog, Mallorca sailing stories, luxury travel experiences"
+        url="/blog"
+      />
       <header className="blog-hero">
         <div className="content-container">
           <h1>{blogCopy.hero?.title}</h1>

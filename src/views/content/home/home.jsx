@@ -2,7 +2,7 @@ import React from "react";
 import HeroSlider from "../../components/HeroSlider/HeroSlider";
 import "./styles.scss";
 import { useI18n } from "../../../i18n/I18nProvider";
-
+import Seo from "../../components/seo/Seo";
 export const Home = () => {
   const { t } = useI18n();
   const about = t("home.about") || {};
@@ -12,6 +12,12 @@ export const Home = () => {
   return (
     <div className="home">
       {/* Hero Slider Section */}
+      <Seo
+        title={about.title}
+        description={about.lead}
+        keywords="luxury yacht charter Mallorca, Azimut 50 EDENROC, Balearic Islands yacht rental"
+        url="/"
+      />
       <section className="home__hero">
         <HeroSlider />
       </section>

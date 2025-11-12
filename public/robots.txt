@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://www.charterbalears.com/sitemap.xml
+
+# Для поисковых систем
+Crawl-delay: 1

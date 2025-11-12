@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.scss";
 import { useI18n } from "../../../i18n/I18nProvider";
-
+import Seo from "../../components/seo/Seo";
 export const AboutYacht = () => {
   const { t } = useI18n();
   const about = t("about") || {};
@@ -12,6 +12,12 @@ export const AboutYacht = () => {
 
   return (
     <div className="about-yacht-page">
+      <Seo
+        title={about.hero?.title}
+        description={about.hero?.subtitle}
+        keywords="Azimut 50 specifications, EDENROC yacht features, luxury boat amenities"
+        url="/yacht"
+      />
       <header className="about-yacht-hero">
         <div className="content-container">
           <h1>{about.hero?.title}</h1>

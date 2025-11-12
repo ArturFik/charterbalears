@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styles.scss";
 import { useI18n } from "../../../i18n/I18nProvider";
-
+import Seo from "../../components/seo/Seo";
 export const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const { t } = useI18n();
@@ -14,6 +14,12 @@ export const FAQ = () => {
 
   return (
     <div className="faq-page">
+      <Seo
+        title={faqCopy.hero?.title}
+        description={faqCopy.hero?.subtitle}
+        keywords="yacht charter FAQ, Mallorca boat rental questions, luxury yacht services"
+        url="/faq"
+      />
       <header className="faq-hero">
         <div className="content-container">
           <h1>{faqCopy.hero?.title}</h1>

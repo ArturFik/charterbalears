@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./styles.scss";
 import { useI18n } from "../../../i18n/I18nProvider";
-
+import Seo from "../../components/seo/Seo";
 const DEFAULT_PLACEHOLDER = "/placeholder.jpg";
 
 const getCoveImages = (cove) => {
@@ -95,6 +95,8 @@ export const TourDetail = () => {
   if (!tour) {
     return (
       <div className="tour-detail">
+        {" "}
+        <Seo title="Tour Not Found" />
         <div className="content-container">
           <div className="not-found">
             <h2>{copy.notFound?.title}</h2>
@@ -109,6 +111,13 @@ export const TourDetail = () => {
 
   return (
     <div className="tour-detail">
+      {" "}
+      <Seo
+        title={tour.title}
+        description={tour.shortDescription}
+        keywords={tour.highlights?.join(", ")}
+        url={`/tours/${tour.id}`}
+      />
       <header className="tour-detail__hero">
         <div className="content-container">
           <nav className="breadcrumb" aria-label="Breadcrumb">
@@ -118,7 +127,6 @@ export const TourDetail = () => {
           </nav>
         </div>
       </header>
-
       <main className="content-container">
         <div className="tour-detail__content">
           <section

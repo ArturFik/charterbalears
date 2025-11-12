@@ -194,8 +194,6 @@
   }
 }
 
-// Updated button styles
-// Переопределяем стили кнопок с большей специфичностью
 .home__contact .btn-primary,
 .home__contact .btn-secondary {
   color: white !important;
@@ -209,7 +207,6 @@
   }
 }
 
-// Специфично для кнопки с телефоном
 .home__contact .btn-primary {
   background: #1a1a1a !important;
   border-color: #1a1a1a !important;
@@ -220,7 +217,6 @@
   }
 }
 
-// Специфично для второй кнопки
 .home__contact .btn-secondary {
   background: transparent !important;
   border-color: white !important;
@@ -231,7 +227,6 @@
   }
 }
 
-// Убираем возможные конфликты с глобальными стилями
 .home__contact-actions {
   .btn-primary,
   .btn-secondary {
@@ -248,7 +243,6 @@
   margin: 0 auto;
   padding: 0 2rem;
 }
-// ОЧЕНЬ специфичные стили для кнопок в секции контактов
 .home .home__contact .home__contact-actions .btn-primary.contact-phone-btn {
   color: white !important;
   background-color: #1a1a1a !important;

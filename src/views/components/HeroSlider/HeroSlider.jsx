@@ -12,7 +12,6 @@ const HeroSlider = () => {
   const phoneLabel = t("common.phoneDisplay");
   const phoneCta = t("heroSlider.phoneCta");
 
-  // Мемоизированные функции для навигации
   const nextSlide = useCallback(() => {
     if (!slidesCount) return;
     setCurrentSlide((prev) => (prev + 1) % slidesCount);
@@ -27,7 +26,6 @@ const HeroSlider = () => {
     setCurrentSlide(index);
   }, []);
 
-  // Автоплей с паузой при взаимодействии
   useEffect(() => {
     if (!slidesCount || !isAutoPlaying) return;
 
@@ -37,7 +35,6 @@ const HeroSlider = () => {
 
   const handleSliderInteraction = useCallback(() => {
     setIsAutoPlaying(false);
-    // Возобновляем автоплей через 10 секунд после взаимодействия
     setTimeout(() => setIsAutoPlaying(true), 10000);
   }, []);
 
@@ -59,7 +56,6 @@ const HeroSlider = () => {
     [handleSliderInteraction, nextSlide, prevSlide]
   );
 
-  // Клавиатурная навигация
   const handleKeyDown = useCallback(
     (e) => {
       switch (e.key) {
@@ -90,7 +86,6 @@ const HeroSlider = () => {
     [handleSliderInteraction, prevSlide, nextSlide, goToSlide, slidesCount]
   );
 
-  // Фокусировка на слайдере при монтировании
   useEffect(() => {
     const slider = document.querySelector(".hero-slider");
     if (slider) {

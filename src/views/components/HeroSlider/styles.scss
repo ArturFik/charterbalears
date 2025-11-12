@@ -2,7 +2,7 @@
   position: relative;
   min-height: 700px;
   overflow: hidden;
-  cursor: pointer; // Показываем, что можно кликать
+  cursor: pointer;
 
   @media (max-width: 768px) {
     min-height: 600px;
@@ -210,12 +210,10 @@
     border-color: rgba(255, 255, 255, 0.4);
   }
 
-  // Скрываем кнопки на мобильных устройствах
   @media (max-width: 768px) {
     display: none;
   }
 
-  // Показываем только на десктопе
   @media (min-width: 769px) {
     width: 30px;
     height: 30px;
@@ -271,7 +269,6 @@
   padding: 0 2rem;
 }
 
-// Добавляем индикаторы для мобильных (опционально)
 @media (max-width: 768px) {
   .hero-slider::before {
     content: "";
@@ -281,7 +278,6 @@
     width: 50%;
     height: 100%;
     z-index: 2;
-    // Левая часть для навигации назад
   }
 
   .hero-slider::after {
@@ -292,6 +288,5 @@
     width: 50%;
     height: 100%;
     z-index: 2;
-    // Правая часть для навигации вперед
   }
 }

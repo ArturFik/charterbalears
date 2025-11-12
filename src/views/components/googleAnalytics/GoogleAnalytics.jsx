@@ -3,12 +3,11 @@ import { useLocation } from "react-router-dom";
 
 const GoogleAnalytics = () => {
   const location = useLocation();
-  const GA_MEASUREMENT_ID = "G-7WPLSBZY06"; // Замени на свой ID
+  const GA_MEASUREMENT_ID = "G-7WPLSBZY06";
 
   useEffect(() => {
-    // Загрузка gtag script
     const loadGoogleAnalytics = () => {
-      if (window.gtag) return; // Уже загружен
+      if (window.gtag) return;
 
       const script1 = document.createElement("script");
       script1.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
@@ -32,7 +31,6 @@ const GoogleAnalytics = () => {
     loadGoogleAnalytics();
   }, []);
 
-  // Отслеживание переходов по страницам
   useEffect(() => {
     if (typeof gtag !== "undefined") {
       gtag("config", GA_MEASUREMENT_ID, {

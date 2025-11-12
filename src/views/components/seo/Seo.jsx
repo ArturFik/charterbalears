@@ -26,10 +26,8 @@ const Seo = ({
   const fullImageUrl = image.startsWith("http") ? image : `${baseUrl}${image}`;
 
   useEffect(() => {
-    // Обновляем title
     document.title = seoTitle;
 
-    // Обновляем meta-теги
     const updateMetaTag = (name, content) => {
       let meta = document.querySelector(`meta[name="${name}"]`);
       if (!meta) {
@@ -50,13 +48,11 @@ const Seo = ({
       meta.content = content;
     };
 
-    // Основные meta-теги
     updateMetaTag("description", seoDescription);
     if (keywords) {
       updateMetaTag("keywords", keywords);
     }
 
-    // Open Graph
     updateMetaProperty("og:title", seoTitle);
     updateMetaProperty("og:description", seoDescription);
     updateMetaProperty("og:image", fullImageUrl);
@@ -72,16 +68,13 @@ const Seo = ({
         : "en_US"
     );
 
-    // Twitter Card
     updateMetaTag("twitter:card", "summary_large_image");
     updateMetaTag("twitter:title", seoTitle);
     updateMetaTag("twitter:description", seoDescription);
     updateMetaTag("twitter:image", fullImageUrl);
 
-    // Robots
     updateMetaTag("robots", "index, follow");
 
-    // Canonical link
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     if (!canonicalLink) {
       canonicalLink = document.createElement("link");
@@ -90,7 +83,6 @@ const Seo = ({
     }
     canonicalLink.href = fullUrl;
 
-    // hreflang links
     ["x-default", "en", "es", "de"].forEach((lang) => {
       const href =
         lang === "x-default"
@@ -121,7 +113,6 @@ const Seo = ({
     url,
   ]);
 
-  // Этот компонент не рендерит ничего в DOM
   return null;
 };
 

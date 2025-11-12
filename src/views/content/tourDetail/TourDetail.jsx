@@ -3,6 +3,8 @@ import { useParams, Link } from "react-router-dom";
 import "./styles.scss";
 import { useI18n } from "../../../i18n/I18nProvider";
 import Seo from "../../components/seo/Seo";
+import { getWebpSource, getMimeType } from "../../../utils/image";
+
 const DEFAULT_PLACEHOLDER = "/placeholder.jpg";
 
 const getCoveImages = (cove) => {
@@ -49,6 +51,17 @@ export const TourDetail = () => {
 
   const currentCove = tour?.coves?.[activeCove];
   const currentImages = currentCove ? getCoveImages(currentCove) : [];
+  const activeImageSrc = currentImages[activeImageIndex] ?? null;
+  const activeImageWebp = getWebpSource(activeImageSrc);
+  const activeImageMimeType = getMimeType(activeImageSrc);
+  const activeImageAlt =
+    currentCove && activeImageSrc
+      ? `${currentCove.name} - ${copy.photoLabel || "Photo"} ${
+          activeImageIndex + 1
+        }`
+      : null;
+  const tourImageWebp = getWebpSource(tour?.image);
+  const tourImageMimeType = getMimeType(tour?.image);
 
   const nextSlide = () => {
     if (!tour?.coves?.length) return;
@@ -137,17 +150,30 @@ export const TourDetail = () => {
               <div className="coves-gallery">
                 <div className="gallery-main">
                   <figure className="main-image">
-                    {currentImages.length > 0 && (
-                      <img
-                        src={currentImages[activeImageIndex]}
-                        alt={`${currentCove.name} - ${
-                          copy.photoLabel || "Photo"
-                        } ${activeImageIndex + 1}`}
-                        onLoad={handleImageLoad}
-                        className={imageLoaded ? "loaded" : ""}
-                        loading={activeImageIndex === 0 ? "eager" : "lazy"}
-                      />
-                    )}
+                    {currentImages.length > 0 && activeImageSrc ? (
+                      <picture>
+                        {activeImageWebp ? (
+                          <source srcSet={activeImageWebp} type="image/webp" />
+                        ) : null}
+                        <source
+                          srcSet={activeImageSrc}
+                          type={activeImageMimeType}
+                        />
+                        <img
+                          src={activeImageSrc}
+                          alt={
+                            activeImageAlt ??
+                            `${currentCove.name} - ${
+                              copy.photoLabel || "Photo"
+                            }`
+                          }
+                          onLoad={handleImageLoad}
+                          className={imageLoaded ? "loaded" : ""}
+                          loading={activeImageIndex === 0 ? "eager" : "lazy"}
+                          decoding="async"
+                        />
+                      </picture>
+                    ) : null}
 
                     {!imageLoaded && (
                       <div className="image-loading">{copy.loading}</div>
@@ -218,11 +244,24 @@ export const TourDetail = () => {
                         aria-label={`View ${cove.name} - ${coveImages.length} photos`}
                         aria-pressed={index === activeCove}
                       >
-                        <img
-                          src={coveImages[0]}
-                          alt={`Thumbnail for ${cove.name}`}
-                          loading="lazy"
-                        />
+                        <picture>
+                          {getWebpSource(coveImages[0]) ? (
+                            <source
+                              srcSet={getWebpSource(coveImages[0])}
+                              type="image/webp"
+                            />
+                          ) : null}
+                          <source
+                            srcSet={coveImages[0]}
+                            type={getMimeType(coveImages[0])}
+                          />
+                          <img
+                            src={coveImages[0]}
+                            alt={`Thumbnail for ${cove.name}`}
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </picture>
                         <div className="thumbnail-overlay">
                           <span>{cove.name}</span>
                           <span className="thumbnail-count">
@@ -236,10 +275,24 @@ export const TourDetail = () => {
               </div>
             ) : (
               <figure className="main-image">
-                <img
-                  src={tour.image}
-                  alt={`${tour.title} - Luxury yacht tour in Mallorca`}
-                />
+                {tour.image ? (
+                  <picture>
+                    <source
+                      srcSet={getWebpSource(tour.image) ?? undefined}
+                      type="image/webp"
+                    />
+                    <source
+                      srcSet={tour.image}
+                      type={getMimeType(tour.image)}
+                    />
+                    <img
+                      src={tour.image}
+                      alt={`${tour.title} - Luxury yacht tour in Mallorca`}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </picture>
+                ) : null}
               </figure>
             )}
           </section>

@@ -27,8 +27,11 @@
       text-decoration: none;
       color: #1a1a1a;
       transition: all 0.3s ease;
+      display: block;
+      @media (max-width: 450px) {
+        display: none;
+      }
     }
-
     &-text {
       font-size: 1.5rem;
       font-weight: 300;

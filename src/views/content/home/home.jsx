@@ -3,6 +3,7 @@ import HeroSlider from "../../components/HeroSlider/HeroSlider";
 import "./styles.scss";
 import { useI18n } from "../../../i18n/I18nProvider";
 import Seo from "../../components/seo/Seo";
+import { getWebpSource, getMimeType } from "../../../utils/image";
 export const Home = () => {
   const { t } = useI18n();
   const about = t("home.about") || {};
@@ -45,11 +46,18 @@ export const Home = () => {
               ) : null}
             </div>
             <div className="home__about-image">
-              <img
-                src="/3.png"
-                alt={about.imageAlt || "Luxury yacht EDENROC interior"}
-                loading="lazy"
-              />
+              <picture>
+                {getWebpSource("/3.png") ? (
+                  <source srcSet={getWebpSource("/3.png")} type="image/webp" />
+                ) : null}
+                <source srcSet="/3.png" type={getMimeType("/3.png")} />
+                <img
+                  src="/3.png"
+                  alt={about.imageAlt || "Luxury yacht EDENROC interior"}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             </div>
           </div>
         </div>

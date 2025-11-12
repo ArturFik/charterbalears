@@ -2,6 +2,7 @@ import React from "react";
 import "./styles.scss";
 import { useI18n } from "../../../i18n/I18nProvider";
 import Seo from "../../components/seo/Seo";
+import { getWebpSource, getMimeType } from "../../../utils/image";
 export const AboutYacht = () => {
   const { t } = useI18n();
   const about = t("about") || {};
@@ -40,11 +41,24 @@ export const AboutYacht = () => {
               </div>
             </div>
             <div className="yacht-specs-image">
-              <img
-                src="/new 05/charter mallorca.jpg"
-                alt="Luxury motor yacht Azimut 50 EDENROC exterior view"
-                loading="lazy"
-              />
+              <picture>
+                {getWebpSource("/new 05/charter mallorca.jpg") ? (
+                  <source
+                    srcSet={getWebpSource("/new 05/charter mallorca.jpg")}
+                    type="image/webp"
+                  />
+                ) : null}
+                <source
+                  srcSet="/new 05/charter mallorca.jpg"
+                  type={getMimeType("/new 05/charter mallorca.jpg")}
+                />
+                <img
+                  src="/new 05/charter mallorca.jpg"
+                  alt="Luxury motor yacht Azimut 50 EDENROC exterior view"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             </div>
           </div>
         </section>

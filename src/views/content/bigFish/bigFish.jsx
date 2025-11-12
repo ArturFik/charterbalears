@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.scss";
+import { getWebpSource, getMimeType } from "../../../utils/image";
 
 export const BigFish = () => {
   return (
@@ -37,11 +38,24 @@ export const BigFish = () => {
             </div>
             <div className="big-game-image">
               {/* Место для фото: Большой тунец или рыбаки с уловом, эмоциональное фото */}
-              <img
-                src="/placeholder-big-fish.jpg"
-                alt="Big game fishing catch - large tuna in Mediterranean waters"
-                loading="lazy"
-              />
+              <picture>
+                {getWebpSource("/placeholder-big-fish.jpg") ? (
+                  <source
+                    srcSet={getWebpSource("/placeholder-big-fish.jpg")}
+                    type="image/webp"
+                  />
+                ) : null}
+                <source
+                  srcSet="/placeholder-big-fish.jpg"
+                  type={getMimeType("/placeholder-big-fish.jpg")}
+                />
+                <img
+                  src="/placeholder-big-fish.jpg"
+                  alt="Big game fishing catch - large tuna in Mediterranean waters"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             </div>
           </div>
         </section>

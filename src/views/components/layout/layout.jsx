@@ -1,10 +1,13 @@
 import { Header } from "../header/header";
 import { Footer } from "../footer/footer";
+
 export const Layout = ({ children }) => {
   return (
-    <div className="w-full">
+    <div className="app-shell">
       <Header />
-      <div className="">{children}</div>
+      <main className="app-content" id="main-content">
+        {children}
+      </main>
       <Footer />
     </div>
   );

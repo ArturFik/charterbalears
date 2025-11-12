@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./styles.scss";
 import { useI18n } from "../../../i18n/I18nProvider";
 import Seo from "../../components/seo/Seo";
+import { getWebpSource, getMimeType } from "../../../utils/image";
 const availabilityFilterOptions = ["all", "available", "unavailable"];
 
 export const Tours = () => {
@@ -164,88 +165,104 @@ export const Tours = () => {
 
         {/* Tours List */}
         <section className="tours-grid" aria-label="Available yacht tours">
-          {filteredTours.map((tour) => (
-            <article key={tour.id} className="tour-card">
-              <div className="tour-card__image">
-                <img
-                  src={tour.image}
-                  alt={tour.imageAlt || `${tour.title} - Luxury yacht tour`}
-                  loading="lazy"
-                />
-                {!tour.available && (
-                  <div
-                    className="tour-card__unavailable"
-                    aria-label={labels.unavailable}
-                  >
-                    {labels.unavailable}
-                  </div>
-                )}
-                <div className="tour-card__type">{tour.typeLabel}</div>
-              </div>
+          {filteredTours.map((tour) => {
+            const fallbackType = getMimeType(tour.image);
+            const webpSource = getWebpSource(tour.image);
+            const imageAlt =
+              tour.imageAlt || `${tour.title} - Luxury yacht tour in Mallorca`;
 
-              <div className="tour-card__content">
-                <h3>{tour.title}</h3>
-                <p className="tour-card__description">
-                  {tour.shortDescription}
-                </p>
-
-                <div className="tour-card__details">
-                  <div className="tour-card__detail">
-                    <span className="detail-label">
-                      {translations.detailLabels?.duration ?? "Duration:"}
-                    </span>
-                    <span>{tour.durationLabel || tour.duration}</span>
-                  </div>
-                  <div className="tour-card__detail">
-                    <span className="detail-label">
-                      {translations.detailLabels?.capacity ?? "Capacity:"}
-                    </span>
-                    <span>{tour.capacityLabel || tour.capacity}</span>
-                  </div>
-                  <div className="tour-card__detail">
-                    <span className="detail-label">
-                      {translations.detailLabels?.season ?? "Season:"}
-                    </span>
-                    <span>{tour.seasonLabel || tour.season}</span>
-                  </div>
-                </div>
-
-                <div className="tour-card__highlights">
-                  {tour.highlights?.map((highlight, index) => (
-                    <span key={index} className="highlight-tag">
-                      #{highlight}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="tour-card__price">
-                  <div className="price-main">{tour.price}</div>
-                  <div className="price-per-person">
-                    {tour.pricePerPerson} {labels.perPersonSuffix}
-                  </div>
-                </div>
-
-                <div className="tour-card__actions">
-                  <Link
-                    to={`/tours/${tour.id}`}
-                    className="btn-primary"
-                    aria-label={`${labels.viewDetails} ${tour.title}`}
-                  >
-                    {labels.viewDetails}
-                  </Link>
-                  {tour.available && (
-                    <a
-                      href={tour.bookingPhoneHref || t("common.phoneHref")}
-                      className="btn-secondary"
-                      aria-label={labels.bookNow}
+            return (
+              <article key={tour.id} className="tour-card">
+                <div className="tour-card__image">
+                  {tour.image ? (
+                    <picture>
+                      {webpSource ? (
+                        <source srcSet={webpSource} type="image/webp" />
+                      ) : null}
+                      <source srcSet={tour.image} type={fallbackType} />
+                      <img
+                        src={tour.image}
+                        alt={imageAlt}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </picture>
+                  ) : null}
+                  {!tour.available && (
+                    <div
+                      className="tour-card__unavailable"
+                      aria-label={labels.unavailable}
                     >
-                      {labels.bookNow}
-                    </a>
+                      {labels.unavailable}
+                    </div>
                   )}
+                  <div className="tour-card__type">{tour.typeLabel}</div>
                 </div>
-              </div>
-            </article>
-          ))}
+
+                <div className="tour-card__content">
+                  <h3>{tour.title}</h3>
+                  <p className="tour-card__description">
+                    {tour.shortDescription}
+                  </p>
+
+                  <div className="tour-card__details">
+                    <div className="tour-card__detail">
+                      <span className="detail-label">
+                        {translations.detailLabels?.duration ?? "Duration:"}
+                      </span>
+                      <span>{tour.durationLabel || tour.duration}</span>
+                    </div>
+                    <div className="tour-card__detail">
+                      <span className="detail-label">
+                        {translations.detailLabels?.capacity ?? "Capacity:"}
+                      </span>
+                      <span>{tour.capacityLabel || tour.capacity}</span>
+                    </div>
+                    <div className="tour-card__detail">
+                      <span className="detail-label">
+                        {translations.detailLabels?.season ?? "Season:"}
+                      </span>
+                      <span>{tour.seasonLabel || tour.season}</span>
+                    </div>
+                  </div>
+
+                  <div className="tour-card__highlights">
+                    {tour.highlights?.map((highlight, index) => (
+                      <span key={index} className="highlight-tag">
+                        #{highlight}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="tour-card__price">
+                    <div className="price-main">{tour.price}</div>
+                    <div className="price-per-person">
+                      {tour.pricePerPerson} {labels.perPersonSuffix}
+                    </div>
+                  </div>
+
+                  <div className="tour-card__actions">
+                    <Link
+                      to={`/tours/${tour.id}`}
+                      className="btn-primary"
+                      aria-label={`${labels.viewDetails} ${tour.title}`}
+                    >
+                      {labels.viewDetails}
+                    </Link>
+                    {tour.available && (
+                      <a
+                        href={tour.bookingPhoneHref || t("common.phoneHref")}
+                        className="btn-secondary"
+                        aria-label={labels.bookNow}
+                      >
+                        {labels.bookNow}
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </article>
+            );
+          })}
         </section>
 
         {filteredTours.length === 0 && (

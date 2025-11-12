@@ -2,6 +2,7 @@ import React from "react";
 import "./styles.scss";
 import { useI18n } from "../../../i18n/I18nProvider";
 import Seo from "../../components/seo/Seo";
+import { getWebpSource, getMimeType } from "../../../utils/image";
 export const Blog = () => {
   const { t } = useI18n();
   const blogCopy = t("blog") || {};
@@ -28,11 +29,28 @@ export const Blog = () => {
             {posts.map((post) => (
               <article key={post.id} className="blog-post-card">
                 <div className="post-image">
-                  <img
-                    src={post.image}
-                    alt={post.imageAlt || `Featured image for ${post.title}`}
-                    loading="lazy"
-                  />
+                  {post.image ? (
+                    <picture>
+                      {getWebpSource(post.image) ? (
+                        <source
+                          srcSet={getWebpSource(post.image)}
+                          type="image/webp"
+                        />
+                      ) : null}
+                      <source
+                        srcSet={post.image}
+                        type={getMimeType(post.image)}
+                      />
+                      <img
+                        src={post.image}
+                        alt={
+                          post.imageAlt || `Featured image for ${post.title}`
+                        }
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </picture>
+                  ) : null}
                   <div className="post-category">{post.category}</div>
                 </div>
 

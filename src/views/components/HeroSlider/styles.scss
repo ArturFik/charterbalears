@@ -163,6 +163,21 @@
   }
 }
 
+.btn-secondary-white {
+  color: #fff;
+  border-color: #fff;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid;
+  font-weight: 300;
+  text-align: center;
+  min-width: 160px;
+  &:hover {
+    background: transparent;
+    background: #9b9b9b;
+  }
+}
 .hero-slider__nav {
   position: absolute;
   top: 50%;

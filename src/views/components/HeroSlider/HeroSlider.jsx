@@ -91,7 +91,7 @@ const HeroSlider = () => {
                 {phoneHref && phoneLabel && (
                   <a
                     href={phoneHref}
-                    className="btn-secondary"
+                    className="btn-secondary-white"
                     aria-label={phoneCta}
                   >
                     {phoneLabel}

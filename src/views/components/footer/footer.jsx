@@ -12,30 +12,44 @@ export const Footer = () => {
               <div className="footer__yacht-name">Yacht EDENROC</div>
             </div>
             <p className="footer__description">
-              For a unique maritime experience in the heart of Mallorca, turn to
-              Charter Balears. Offering luxurious yacht charters on the
-              exquisite EDENROC, we cater to your every need. Whether you're
-              seeking a serene getaway, an unforgettable party, or a thrilling
-              adventure on the water, our professional crew is here to ensure
-              your day is perfect.
+              For a unique maritime experience in the heart of Majorca, take
+              advantage of Balears charter flights. By offering to rent a luxury
+              yacht on the exquisite EDENROC vessel, we will satisfy all your
+              needs. Regardless of whether you are Looking for a relaxing
+              vacation, an unforgettable party, or an exciting Adventures on the
+              water, our professional team is here to, your day is perfect.
             </p>
             <div className="footer__social">
-              <a
-                href="https://wa.me/34697726944"
-                className="footer__social-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                WhatsApp
-              </a>
-              <a
-                href="#"
-                className="footer__social-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Instagram
-              </a>
+              <div className="footer__view">
+                <img
+                  src="/logo/wts.png"
+                  alt=""
+                  className="footer__view--logo"
+                />
+                <a
+                  href="https://wa.me/34697726944"
+                  className="footer__social-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  WhatsApp
+                </a>
+              </div>
+              <div className="footer__view">
+                <img
+                  src="/logo/insta.png"
+                  alt=""
+                  className="footer__view--logo"
+                />
+                <a
+                  href="#"
+                  className="footer__social-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Instagram
+                </a>
+              </div>
             </div>
           </div>
 
@@ -46,7 +60,7 @@ export const Footer = () => {
                 <a href="/yacht">The Yacht EDENROC</a>
               </li>
               <li>
-                <a href="/routes">Routes & Charters</a>
+                <a href="/tours">Routes</a>
               </li>
               <li>
                 <a href="/services">Services</a>
@@ -56,24 +70,6 @@ export const Footer = () => {
               </li>
               <li>
                 <a href="/faq">FAQ</a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="footer__section">
-            <h4 className="footer__subtitle">Destinations</h4>
-            <ul className="footer__links">
-              <li>
-                <a href="/routes/mallorca">Mallorca</a>
-              </li>
-              <li>
-                <a href="/routes/ibiza">Ibiza</a>
-              </li>
-              <li>
-                <a href="/routes/menorca">Menorca</a>
-              </li>
-              <li>
-                <a href="/routes/formentera">Formentera</a>
               </li>
             </ul>
           </div>

@@ -84,7 +84,7 @@ export const Header = () => {
             </select>
           </div>
           {ctaLabel ? (
-            <button className="header__cta">{ctaLabel}</button>
+            <button className="header__cta">+34 (697) 726-944</button>
           ) : null}
           <button
             type="button"

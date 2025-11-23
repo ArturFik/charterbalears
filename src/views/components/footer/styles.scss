@@ -8,7 +8,15 @@
     margin: 0 auto;
     padding: 0 2rem;
   }
-
+  &__view {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    &--logo {
+      width: 20px;
+    }
+  }
   &__content {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;

@@ -53,7 +53,13 @@
     border-radius: 8px;
 
     @media (max-width: 768px) {
+      width: 100%;
       height: 300px;
+    }
+
+    @media (max-width: 374px) {
+      height: 250px;
+      border-radius: 4px;
     }
 
     img {
@@ -121,6 +127,13 @@
       padding: 0.75rem 1.5rem;
       font-size: 0.9rem;
     }
+
+    @media (max-width: 374px) {
+      bottom: 0.5rem;
+      right: 0.5rem;
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+    }
   }
 
   .progress-bar {
@@ -158,6 +171,13 @@
       font-size: 0.7rem;
       padding: 0.25rem 0.75rem;
     }
+
+    @media (max-width: 374px) {
+      top: 0.25rem;
+      right: 0.25rem;
+      font-size: 0.6rem;
+      padding: 0.2rem 0.5rem;
+    }
   }
 
   .cove-info {
@@ -166,11 +186,21 @@
     border: 1px solid #e5e5e5;
     border-radius: 8px;
 
+    @media (max-width: 374px) {
+      padding: 1rem;
+      border-radius: 4px;
+    }
+
     .cove-header {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
       margin-bottom: 1rem;
+
+      @media (max-width: 374px) {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
 
       h2 {
         font-size: 1.5rem;
@@ -178,6 +208,10 @@
         color: #1a1a1a;
         margin: 0;
         flex: 1;
+
+        @media (max-width: 374px) {
+          font-size: 1.2rem;
+        }
       }
 
       .cove-counter {
@@ -188,6 +222,11 @@
         font-size: 0.8rem;
         font-weight: 300;
         border: 1px solid #e9ecef;
+
+        @media (max-width: 374px) {
+          font-size: 0.7rem;
+          align-self: flex-start;
+        }
       }
     }
 
@@ -196,6 +235,11 @@
       line-height: 1.6;
       margin-bottom: 1.5rem;
       font-weight: 300;
+
+      @media (max-width: 374px) {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+      }
     }
 
     .cove-highlights {
@@ -213,6 +257,11 @@
         border: 1px solid #e9ecef;
         transition: all 0.3s ease;
 
+        @media (max-width: 374px) {
+          font-size: 0.7rem;
+          padding: 0.2rem 0.5rem;
+        }
+
         &:hover {
           background: #1a1a1a;
           color: white;
@@ -227,6 +276,11 @@
       font-size: 0.9rem;
       color: #666;
       border-left: 3px solid #1a1a1a;
+
+      @media (max-width: 374px) {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+      }
     }
   }
 
@@ -235,6 +289,11 @@
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 1rem;
     margin-bottom: 2rem;
+
+    @media (max-width: 374px) {
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+      gap: 0.5rem;
+    }
 
     .thumbnail {
       position: relative;
@@ -245,6 +304,11 @@
       border: 2px solid transparent;
       transition: all 0.3s ease;
       border-radius: 6px;
+
+      @media (max-width: 374px) {
+        height: 80px;
+        border-radius: 4px;
+      }
 
       &:hover {
         border-color: #1a1a1a;
@@ -310,6 +374,11 @@
     display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
+
+    @media (max-width: 374px) {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
   }
 
   .tour-type {
@@ -320,6 +389,11 @@
     text-transform: uppercase;
     letter-spacing: 0.5px;
     border-radius: 4px;
+
+    @media (max-width: 374px) {
+      font-size: 0.7rem;
+      padding: 0.4rem 0.8rem;
+    }
   }
 
   .tour-availability {
@@ -328,6 +402,11 @@
     padding: 0.5rem 1rem;
     font-size: 0.8rem;
     border-radius: 4px;
+
+    @media (max-width: 374px) {
+      font-size: 0.7rem;
+      padding: 0.4rem 0.8rem;
+    }
 
     &.unavailable {
       background: #dc3545;
@@ -343,6 +422,10 @@
     @media (max-width: 768px) {
       font-size: 2rem;
     }
+
+    @media (max-width: 374px) {
+      font-size: 1.5rem;
+    }
   }
 
   .tour-description {
@@ -350,6 +433,10 @@
     color: #666;
     line-height: 1.6;
     font-weight: 300;
+
+    @media (max-width: 374px) {
+      font-size: 0.9rem;
+    }
   }
 }
 
@@ -360,6 +447,11 @@
   border: 1px solid #e5e5e5;
   border-radius: 8px;
 
+  @media (max-width: 374px) {
+    padding: 1rem;
+    border-radius: 4px;
+  }
+
   .price-section {
     text-align: center;
   }
@@ -369,6 +461,10 @@
     font-weight: 300;
     color: #1a1a1a;
     margin-bottom: 0.5rem;
+
+    @media (max-width: 374px) {
+      font-size: 2rem;
+    }
   }
 
   .price-details {
@@ -378,6 +474,12 @@
     gap: 1rem;
     color: #666;
     font-size: 0.9rem;
+
+    @media (max-width: 374px) {
+      flex-direction: column;
+      gap: 0.25rem;
+      font-size: 0.8rem;
+    }
   }
 }
 
@@ -393,14 +495,29 @@
     padding: 1rem 0;
     border-bottom: 1px solid #f0f0f0;
 
+    @media (max-width: 374px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.25rem;
+      padding: 0.75rem 0;
+    }
+
     .feature-label {
       color: #666;
       font-weight: 300;
+
+      @media (max-width: 374px) {
+        font-size: 0.9rem;
+      }
     }
 
     .feature-value {
       font-weight: 400;
       color: #1a1a1a;
+
+      @media (max-width: 374px) {
+        font-size: 0.9rem;
+      }
     }
   }
 }
@@ -413,6 +530,11 @@
     font-weight: 300;
     margin-bottom: 1.5rem;
     color: #1a1a1a;
+
+    @media (max-width: 374px) {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
   }
 
   .highlights-grid {
@@ -428,6 +550,11 @@
     background: #fafafa;
     border: 1px solid #e5e5e5;
     border-radius: 6px;
+
+    @media (max-width: 374px) {
+      padding: 0.75rem;
+      gap: 0.75rem;
+    }
 
     .highlight-icon {
       color: #1a1a1a;
@@ -450,6 +577,11 @@
     .btn-large {
       padding: 1.25rem 2rem;
       font-size: 1.1rem;
+
+      @media (max-width: 374px) {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+      }
     }
   }
 
@@ -460,9 +592,17 @@
     border: 1px solid #e9ecef;
     border-radius: 8px;
 
+    @media (max-width: 374px) {
+      padding: 1rem;
+    }
+
     p {
       margin-bottom: 1rem;
       color: #666;
+
+      @media (max-width: 374px) {
+        font-size: 0.9rem;
+      }
     }
   }
 }
@@ -473,17 +613,30 @@
   border: 1px solid #e5e5e5;
   border-radius: 8px;
 
+  @media (max-width: 374px) {
+    padding: 1rem;
+  }
+
   h3 {
     font-size: 1.3rem;
     font-weight: 300;
     margin-bottom: 1rem;
     color: #1a1a1a;
+
+    @media (max-width: 374px) {
+      font-size: 1.1rem;
+    }
   }
 
   p {
     color: #666;
     margin-bottom: 1.5rem;
     font-weight: 300;
+
+    @media (max-width: 374px) {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
   }
 
   .contact-methods {
@@ -500,6 +653,11 @@
     background: white;
     transition: all 0.3s ease;
     border-radius: 6px;
+
+    @media (max-width: 374px) {
+      padding: 0.6rem 0.8rem;
+      font-size: 0.9rem;
+    }
 
     &:hover {
       border-color: #1a1a1a;
@@ -530,6 +688,11 @@
   font-weight: 300;
   border-radius: 6px;
   cursor: pointer;
+
+  @media (max-width: 374px) {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
 }
 
 .btn-primary {
@@ -557,4 +720,9 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+
+  /* Исправление для маленьких экранов */
+  @media (max-width: 374px) {
+    padding: 0 1rem;
+  }
 }

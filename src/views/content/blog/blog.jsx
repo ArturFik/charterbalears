@@ -3,6 +3,7 @@ import "./styles.scss";
 import { useI18n } from "../../../i18n/I18nProvider";
 import Seo from "../../components/seo/Seo";
 import { getWebpSource, getMimeType } from "../../../utils/image";
+
 export const Blog = () => {
   const { t } = useI18n();
   const blogCopy = t("blog") || {};
@@ -16,10 +17,13 @@ export const Blog = () => {
         keywords="yacht blog, Mallorca sailing stories, luxury travel experiences"
         url="/blog"
       />
+
       <header className="blog-hero">
         <div className="content-container">
-          <h1>{blogCopy.hero?.title}</h1>
-          <p>{blogCopy.hero?.subtitle}</p>
+          <div className="hero-content">
+            <h1>{blogCopy.hero?.title}</h1>
+            <p>{blogCopy.hero?.subtitle}</p>
+          </div>
         </div>
       </header>
 
@@ -50,7 +54,9 @@ export const Blog = () => {
                         decoding="async"
                       />
                     </picture>
-                  ) : null}
+                  ) : (
+                    <div className="image-placeholder"></div>
+                  )}
                   <div className="post-category">{post.category}</div>
                 </div>
 
@@ -65,10 +71,12 @@ export const Blog = () => {
                     <div className="meta-details">
                       <span className="post-date">{post.date}</span>
                       <span className="post-read-time">{post.readTime}</span>
-                      <span className="post-views">{post.views}</span>
-                      {post.likes ? (
+                      {post.views && (
+                        <span className="post-views">{post.views}</span>
+                      )}
+                      {post.likes && (
                         <span className="post-likes">{post.likes}</span>
-                      ) : null}
+                      )}
                     </div>
                   </div>
                 </div>

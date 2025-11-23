@@ -33,7 +33,7 @@ const en = {
           "Sail past Portals Vells, Cala Fornells and Sa Dragonera with time for swimming, snorkeling and sunset aperitifs.",
         price: "from €89 per guest",
         duration: "3 hours",
-        capacity: "Up to 10 guests",
+        capacity: "Up to 11 guests",
         buttonLabel: "Book Southwest Tour",
         buttonLink: "/tours/1",
       },
@@ -47,7 +47,7 @@ const en = {
           "Admire La Seu from the sea and swim the crystal waters of Cala Blava, Cala Vella and the picture-perfect Cala Pi.",
         price: "from €95 per guest",
         duration: "4 hours",
-        capacity: "Up to 10 guests",
+        capacity: "Up to 11 guests",
         buttonLabel: "Book Landmarks Tour",
         buttonLink: "/tours/2",
       },
@@ -126,6 +126,56 @@ const en = {
       subtitle:
         "16-metre luxury flybridge yacht for premium experiences in the Balearic Islands",
     },
+    contentBlocks: [
+      {
+        type: "text-first",
+        title: "Elegant Design and Excellence",
+        description:
+          "Azimut 50 EDENROC embodies Italian style and engineering mastery. With a length of 15.54 metres and a beam of 4.55 metres, this yacht delivers the perfect blend of comfort and performance.",
+        image: "/new 05/charter mallorca.jpg",
+        imageAlt: "Side view of the Azimut 50 EDENROC yacht",
+      },
+      {
+        type: "image-first",
+        title: "Spacious Deck for Leisure",
+        description:
+          "The generous cockpit with plush sofas and a dining area is perfect for hosting guests. The integrated galley module and bar make unforgettable celebrations on the water effortless.",
+        image: "/gallery/3.jpg",
+        imageAlt: "Spacious deck of the Azimut 50 yacht",
+      },
+      {
+        type: "text-first",
+        title: "Power and Speed",
+        description:
+          "Twin 715 hp engines deliver a cruising speed of 26 knots and a top speed of up to 32 knots. The 2,200-litre fuel tank supports extended voyages.",
+        image: "/gallery/2.jpg",
+        imageAlt: "Engines of the Azimut 50 yacht",
+      },
+      {
+        type: "image-first",
+        title: "Luxurious Interior",
+        description:
+          "The interior is styled in a contemporary design using premium materials. Three comfortable cabins accommodate up to 11 guests for an unforgettable escape.",
+        image: "/gallery/10.jpg",
+        imageAlt: "Luxurious interior of the Azimut 50 yacht",
+      },
+      {
+        type: "text-first",
+        title: "Innovative Technologies",
+        description:
+          "A state-of-the-art navigation suite, climate control in every space and a stabilisation system ensure maximum comfort and safety while cruising.",
+        image: "/gallery/spisok1.jpg",
+        imageAlt: "Technological equipment aboard the yacht",
+      },
+      {
+        type: "image-first",
+        title: "Water Entertainment",
+        description:
+          "The yacht is fully equipped for water fun: a bathing platform, swim ladder and generous storage for toys are ready for action.",
+        image: "/sea scooter/sea scooter infinity (1).jpg",
+        imageAlt: "Water entertainment from the yacht",
+      },
+    ],
     specs: {
       title: "Technical Specifications",
       items: [
@@ -138,7 +188,7 @@ const en = {
         { label: "Maximum speed", value: "32 knots" },
         { label: "Fuel capacity", value: "2200 L" },
         { label: "Fresh water capacity", value: "590 L" },
-        { label: "Passenger capacity", value: "10 guests" },
+        { label: "Passenger capacity", value: "11 guests" },
         { label: "Cabins", value: "3" },
       ],
     },
@@ -242,8 +292,8 @@ const en = {
         durationLabel: "3 hours",
         price: "€890",
         pricePerPerson: "€89",
-        capacity: "10 guests",
-        capacityLabel: "Up to 10 guests",
+        capacity: "11 guests",
+        capacityLabel: "Up to 11 guests",
         minCapacityLabel: "Minimum 8 guests",
         maxCapacityLabel: "Maximum 11 guests",
         available: true,
@@ -334,8 +384,8 @@ const en = {
         durationLabel: "4 hours",
         price: "€950",
         pricePerPerson: "€95",
-        capacity: "10 guests",
-        capacityLabel: "Up to 10 guests",
+        capacity: "11 guests",
+        capacityLabel: "Up to 11 guests",
         minCapacityLabel: "Minimum 8 guests",
         maxCapacityLabel: "Maximum 12 guests",
         available: true,
@@ -422,7 +472,7 @@ const en = {
         capacity: "8 guests",
         capacityLabel: "Up to 8 guests",
         minCapacityLabel: "Minimum 6 guests",
-        maxCapacityLabel: "Maximum 10 guests",
+        maxCapacityLabel: "Maximum 11 guests",
         available: true,
         highlights: [
           "National park access",
@@ -534,7 +584,7 @@ const en = {
       {
         question: "What is included in the yacht charter price?",
         answer:
-          "The charter covers yacht rental with full equipment, crew services, fuel for the planned route, insurance and port fees. Optional extras such as catering, specialist activities or extended fuel are available at additional cost.",
+          "The charter price includes the rental of a yacht with full equipment, crew services, insurance and port fees. Fuel is included in the price for short routes, and fuel is charged separately for daytime charters. A water board is also included in the price. Refreshing drinks (water, cola, beer), snacks, chips and kuroketas are also provided for your comfort on board.",
       },
       {
         question: "If I have a motorboat licence, can I steer the yacht?",
@@ -554,12 +604,12 @@ const en = {
       {
         question: "What is the minimum group size for 3–4 hour tours?",
         answer:
-          "Shared tours of 3–4 hours depart once at least 7–8 guests confirm their booking. Private charters can run with smaller groups, but shared departures may be rescheduled until we reach the minimum.",
+          "Group tours lasting 3-4 hours are sent with a minimum number of participants (7-8 guests). The cost of the tour is calculated per person when this minimum is reached. For booking a private charter or if your group is less than the minimum, a fixed tour price applies. In this case, you do not pay for each guest, but for the full charter price, which is indicated for each route. Thus, we can guarantee the shipment both for group recruitment and for small companies. Group shipments can be rescheduled if the minimum number of participants is not reached.",
       },
       {
         question: "What should I bring for the fishing tour?",
         answer:
-          "We supply all fishing gear, licences and safety equipment. Bring sunscreen, sunglasses, non-slip shoes, a light jacket, camera and necessary medication. If prone to seasickness, consider preventative medication.",
+          "We provide all guests with basic fishing gear and all necessary safety equipment that meets the standards. For experienced fishermen who prefer to fish with their usual gear, we will be happy to help with the use of your personal gear.",
       },
       {
         question: "Are children allowed on board?",
@@ -584,7 +634,7 @@ const en = {
       {
         question: "What payment methods do you accept?",
         answer:
-          "We accept bank transfer, Visa, MasterCard and cash (EUR). A 30% deposit secures the booking with balance due 14 days prior. Last-minute bookings may require full payment.",
+          "We accept bank transfers, Bizum or cash (EUR). To guarantee the booking, you must make an advance payment of 30% of the amount that must be paid 14 days before the booking. Full payment may be required for last-minute bookings.  At the beginning of the trip, we will also ask you to make a refundable deposit of $200 in cash or by card transfer. This amount will be fully refunded to you at the end of the tour, subject to the safety of all provided yacht equipment and property.",
       },
     ],
     contact: {
@@ -799,6 +849,232 @@ const en = {
         image: "/gallery/4.jpg",
         imageAlt: "Romantic sunset moment on a yacht bow",
       },
+      {
+        id: 7,
+        title: "Best Time to Visit Mallorca by Yacht",
+        excerpt:
+          "Discover the perfect seasons for yacht charters in Mallorca - from spring blossoms to golden autumn days.",
+        author: "Marina Lopez",
+        date: "April 15",
+        readTime: "4 min read",
+        views: "12 views",
+        likes: "2 likes",
+        category: "Travel Tips",
+        image: "/blog/seasonal-guide.jpeg",
+        imageAlt: "Yacht sailing during golden hour in Mallorca",
+      },
+      {
+        id: 8,
+        title: "Top 5 Hidden Coves Only Accessible by Boat",
+        excerpt:
+          "Explore secret swimming spots and untouched beaches that remain Mallorca's best-kept secrets.",
+        author: "Carlos Mendez",
+        date: "April 10",
+        readTime: "5 min read",
+        views: "18 views",
+        likes: "5 likes",
+        category: "Discovery",
+        image: "/blog/hidden-coves.jpeg",
+        imageAlt:
+          "Secluded cove with crystal clear water accessible only by yacht",
+      },
+      {
+        id: 9,
+        title: "Gourmet Dining Onboard: Mediterranean Cuisine",
+        excerpt:
+          "How we craft exceptional culinary experiences with local ingredients and professional chefs.",
+        author: "Sophie Laurent",
+        date: "April 5",
+        readTime: "3 min read",
+        views: "15 views",
+        likes: "3 likes",
+        category: "Gastronomy",
+        image: "/blog/onboard-dining.jpeg",
+        imageAlt:
+          "Elegant table setting with Mediterranean cuisine on yacht deck",
+      },
+      {
+        id: 10,
+        title: "Family Yacht Charter: Creating Memories",
+        excerpt:
+          "Why a luxury yacht is the perfect setting for unforgettable family vacations in the Balearics.",
+        author: "Anna Schmidt",
+        date: "March 28",
+        readTime: "4 min read",
+        views: "22 views",
+        likes: "7 likes",
+        category: "Family",
+        image: "/blog/family-charter.jpeg",
+        imageAlt: "Happy family enjoying water activities from yacht",
+      },
+      {
+        id: 11,
+        title: "Sunset Cruises: Magic Hours in Mediterranean",
+        excerpt:
+          "Experience the most breathtaking sunsets from the water - a photographer's dream come true.",
+        author: "Luca Bianchi",
+        date: "March 22",
+        readTime: "3 min read",
+        views: "25 views",
+        likes: "8 likes",
+        category: "Experiences",
+        image: "/blog/sunset-cruise.jpeg",
+        imageAlt: "Stunning Mediterranean sunset viewed from yacht flybridge",
+      },
+      {
+        id: 12,
+        title: "Corporate Events on Yacht EDENROC",
+        excerpt:
+          "Transform business meetings into extraordinary experiences with our premium corporate charters.",
+        author: "Thomas Weber",
+        date: "March 18",
+        readTime: "4 min read",
+        views: "14 views",
+        likes: "2 likes",
+        category: "Business",
+        image: "/blog/corporate-event.jpeg",
+        imageAlt: "Professional business meeting setup on yacht deck",
+      },
+      {
+        id: 13,
+        title: "Underwater Photography from Your Charter",
+        excerpt:
+          "Capture stunning marine life and crystal waters with our photography tips and equipment.",
+        author: "Elena Rodriguez",
+        date: "March 12",
+        readTime: "5 min read",
+        views: "19 views",
+        likes: "6 likes",
+        category: "Photography",
+        image: "/blog/underwater-photo.jpeg",
+        imageAlt: "Vibrant underwater photography of Mediterranean marine life",
+      },
+      {
+        id: 14,
+        title: "Weekend Getaway: 48 Hours of Luxury",
+        excerpt:
+          "How to make the most of a short but spectacular yacht charter weekend in Mallorca.",
+        author: "Isabelle Moreau",
+        date: "March 8",
+        readTime: "3 min read",
+        views: "16 views",
+        likes: "4 likes",
+        category: "Weekend",
+        image: "/blog/weekend-getaway.jpeg",
+        imageAlt: "Relaxing weekend scene on yacht with cocktails",
+      },
+      {
+        id: 15,
+        title: "Sustainable Yachting: Our Eco-Friendly Approach",
+        excerpt:
+          "Learn about our commitment to preserving Mediterranean marine ecosystems while delivering luxury.",
+        author: "David Green",
+        date: "March 3",
+        readTime: "4 min read",
+        views: "21 views",
+        likes: "9 likes",
+        category: "Sustainability",
+        image: "/blog/eco-yachting.jpeg",
+        imageAlt: "Yacht using eco-friendly practices in clean blue waters",
+      },
+      {
+        id: 16,
+        title: "Birthday Celebrations at Sea",
+        excerpt:
+          "Why a yacht charter creates the most memorable birthday parties with stunning backdrops.",
+        author: "Maria Santos",
+        date: "February 26",
+        readTime: "3 min read",
+        views: "17 views",
+        likes: "5 likes",
+        category: "Celebrations",
+        image: "/blog/birthday-sea.jpeg",
+        imageAlt: "Birthday celebration with cake and decorations on yacht",
+      },
+      {
+        id: 17,
+        title: "Navigating Mallorca's Marine Reserves",
+        excerpt:
+          "A guide to protected areas and how to enjoy them responsibly during your charter.",
+        author: "Captain Marco",
+        date: "February 20",
+        readTime: "4 min read",
+        views: "13 views",
+        likes: "3 likes",
+        category: "Navigation",
+        image: "/blog/marine-reserve.jpeg",
+        imageAlt: "Yacht approaching beautiful marine protected area",
+      },
+      {
+        id: 18,
+        title: "Luxury Amenities: What Makes EDENROC Special",
+        excerpt:
+          "From premium sound systems to climate control - discover the features that define luxury.",
+        author: "Oliver James",
+        date: "February 15",
+        readTime: "4 min read",
+        views: "20 views",
+        likes: "6 likes",
+        category: "Luxury",
+        image: "/blog/luxury-amenities.jpeg",
+        imageAlt: "Premium amenities and interior features of EDENROC yacht",
+      },
+      {
+        id: 19,
+        title: "Fishing in Balearic Waters: Complete Guide",
+        excerpt:
+          "Everything you need to know about sport fishing opportunities during your Mallorca charter.",
+        author: "Fisherman Pete",
+        date: "February 10",
+        readTime: "5 min read",
+        views: "24 views",
+        likes: "7 likes",
+        category: "Fishing",
+        image: "/blog/sport-fishing.jpeg",
+        imageAlt: "Sport fishing action with catch on yacht",
+      },
+      {
+        id: 20,
+        title: "Honeymoon on Water: Romantic Charter Ideas",
+        excerpt:
+          "Create the perfect romantic escape with our honeymoon and anniversary charter packages.",
+        author: "Claire Bennett",
+        date: "February 5",
+        readTime: "4 min read",
+        views: "28 views",
+        likes: "12 likes",
+        category: "Romantic",
+        image: "/blog/honeymoon.jpeg",
+        imageAlt: "Romantic setup for honeymoon couple on yacht at sunset",
+      },
+      {
+        id: 21,
+        title: "Water Sports Equipment: Our Complete Fleet",
+        excerpt:
+          "From Sea Scooters to paddle boards - all the equipment available for your aquatic adventures.",
+        author: "Water Sports Pro",
+        date: "January 30",
+        readTime: "3 min read",
+        views: "15 views",
+        likes: "4 likes",
+        category: "Activities",
+        image: "/blog/watersports-equipment.jpeg",
+        imageAlt: "Collection of water sports equipment on yacht platform",
+      },
+      {
+        id: 22,
+        title: "Day Trip to Cabrera: What to Expect",
+        excerpt:
+          "Your complete guide to visiting the stunning Cabrera National Park from Mallorca.",
+        author: "Nature Guide",
+        date: "January 25",
+        readTime: "5 min read",
+        views: "19 views",
+        likes: "5 likes",
+        category: "Destinations",
+        image: "/blog/cabrera-guide.jpeg",
+        imageAlt: "Beautiful landscape of Cabrera National Park from sea",
+      },
     ],
   },
   footer: {
@@ -1006,6 +1282,57 @@ es.home.contact = {
   },
 };
 
+es.about.contentBlocks = [
+  {
+    type: "text-first",
+    title: "Diseño elegante y excelencia",
+    description:
+      "Azimut 50 EDENROC encarna el estilo italiano y la maestría en ingeniería. Con 15,54 metros de eslora y 4,55 metros de manga, ofrece el equilibrio perfecto entre confort y rendimiento.",
+    image: "/new 05/charter mallorca.jpg",
+    imageAlt: "Vista lateral del yate Azimut 50 EDENROC",
+  },
+  {
+    type: "image-first",
+    title: "Cubierta espaciosa para el relax",
+    description:
+      "El generoso cockpit con sofás acolchados y zona de comedor es perfecto para recibir invitados. El módulo de cocina integrado y el bar facilitan celebraciones inolvidables sobre el agua.",
+    image: "/images/yacht-deck.jpg",
+    imageAlt: "Cubierta espaciosa del yate Azimut 50",
+  },
+  {
+    type: "text-first",
+    title: "Potencia y velocidad",
+    description:
+      "Dos motores de 715 CV proporcionan una velocidad de crucero de 26 nudos y una máxima de hasta 32 nudos. El depósito de 2.200 litros permite travesías prolongadas.",
+    image: "/images/yacht-engines.jpg",
+    imageAlt: "Motores del yate Azimut 50",
+  },
+  {
+    type: "image-first",
+    title: "Interior de lujo",
+    description:
+      "El interior presenta un estilo contemporáneo con materiales premium. Tres cabinas confortables acogen hasta 11 invitados para una escapada inolvidable.",
+    image: "/images/yacht-interior.jpg",
+    imageAlt: "Interior de lujo del yate Azimut 50",
+  },
+  {
+    type: "text-first",
+    title: "Tecnología innovadora",
+    description:
+      "La suite de navegación de última generación, el control de clima en todos los espacios y la estabilización garantizan el máximo confort y seguridad durante la travesía.",
+    image: "/images/yacht-technology.jpg",
+    imageAlt: "Equipamiento tecnológico del yate",
+  },
+  {
+    type: "image-first",
+    title: "Diversión en el agua",
+    description:
+      "El yate está completamente equipado para la diversión acuática: plataforma de baño, escalera y amplio almacenamiento para juguetes náuticos.",
+    image: "/images/yacht-water-sports.jpg",
+    imageAlt: "Actividades acuáticas desde el yate",
+  },
+];
+
 es.tours.hero = {
   title: "Excursiones exclusivas y charters en Mallorca",
   subtitle: "Encuentra la travesía perfecta a bordo del EDENROC.",
@@ -1212,7 +1539,7 @@ es.faq.items = [
   {
     question: "¿Qué incluye el precio del charter?",
     answer:
-      "Incluye alquiler del yate con equipamiento completo, tripulación profesional, combustible del itinerario planificado, seguros y tasas portuarias. Servicios extra como catering o actividades especiales tienen suplemento.",
+      "El precio del Alquiler incluye el Alquiler de un yate completo, servicios de tripulación, seguros y tarifas portuarias. El combustible está incluido en el precio para vuelos cortos, y para los chárter de un día, el combustible se paga por separado. El precio también incluye una tabla de agua. Para su comodidad, a bordo también se proporcionan bebidas refrescantes (agua, cola, cerveza), aperitivos, papas fritas y pollos.",
   },
   {
     question:
@@ -1233,12 +1560,12 @@ es.faq.items = [
   {
     question: "¿Cuál es el tamaño mínimo de grupo para tours de 3–4 horas?",
     answer:
-      "Las salidas compartidas de 3–4 horas se confirman cuando hay al menos 7–8 invitados reservados. Los charters privados pueden realizarse con grupos más pequeños, pero las salidas estándar pueden reprogramarse hasta alcanzar el mínimo.",
+      "Los tours en grupo de 3-4 horas se envían con un número mínimo de participantes (7-8 invitados). El costo del Tour se calcula por persona cuando se alcanza este mínimo. Para reservar un chárter privado o si su grupo es menor que el mínimo, se aplica un costo fijo para el Tour. En este caso, no paga por cada huésped, sino por el precio total de la carta, que se muestra para cada itinerario. Por lo tanto, podemos garantizar el envío tanto en la contratación del grupo como para pequeñas empresas. Los envíos grupales se pueden reprogramar si no se ha reclutado un número mínimo de participantes.",
   },
   {
     question: "¿Qué debo llevar a la excursión de pesca?",
     answer:
-      "Proporcionamos equipo de pesca, licencias y material de seguridad. Recomendamos protector solar, gafas, calzado antideslizante, chaqueta ligera, cámara y medicación personal. Si eres propenso al mareo, trae medicación preventiva.",
+      "Proporcionamos a todos los huéspedes con aparejos de Pesca básicos y todo el kit de seguridad necesario que cumple con los estándares. Para los pescadores experimentados que prefieren pescar con su equipo habitual, estaremos encantados de ayudarlo con el uso de sus aparejos personales.",
   },
   {
     question: "¿Pueden venir niños?",
@@ -1263,7 +1590,7 @@ es.faq.items = [
   {
     question: "¿Qué métodos de pago aceptan?",
     answer:
-      "Aceptamos transferencia bancaria, Visa, MasterCard y efectivo en euros. El 30% de depósito confirma la reserva y el saldo se abona 14 días antes. En reservas de última hora puede requerirse el pago completo.",
+      "Aceptamos transferencias bancarias, Bizum o efectivo (EUR). Para garantizar la reserva, se debe abonar un anticipo del 30% del importe abonado 14 días antes de la reserva. Las reservas de Última hora pueden requerir el pago completo.  Al comienzo del viaje, también solicitaremos un depósito reembolsable de $200 en efectivo o transferencia a la tarjeta. Esta cantidad se le reembolsará en su totalidad al final del recorrido, siempre que se conserven todos los equipos y propiedades del yate proporcionados.",
   },
 ];
 
@@ -1437,6 +1764,150 @@ const esBlogOverrides = {
     likes: "11 me gusta",
     category: "Escapadas románticas",
   },
+  7: {
+    title: "Mejor época para visitar Mallorca en yate",
+    excerpt:
+      "Descubre las temporadas perfectas para charters en Mallorca - desde la primavera florida hasta los dorados días de otoño.",
+    readTime: "4 min de lectura",
+    views: "12 lecturas",
+    likes: "2 me gusta",
+    category: "Consejos de viaje",
+  },
+  8: {
+    title: "Top 5 calas escondidas solo accesibles en barco",
+    excerpt:
+      "Explora lugares secretos para nadar y playas vírgenes que siguen siendo los mejores secretos de Mallorca.",
+    readTime: "5 min de lectura",
+    views: "18 lecturas",
+    likes: "5 me gusta",
+    category: "Descubrimiento",
+  },
+  9: {
+    title: "Gastronomía a bordo: Cocina mediterránea",
+    excerpt:
+      "Cómo creamos experiencias culinarias excepcionales con ingredientes locales y chefs profesionales.",
+    readTime: "3 min de lectura",
+    views: "15 lecturas",
+    likes: "3 me gusta",
+    category: "Gastronomía",
+  },
+  10: {
+    title: "Charter familiar: Creando recuerdos",
+    excerpt:
+      "Por qué un yate de lujo es el escenario perfecto para vacaciones familiares inolvidables en Baleares.",
+    readTime: "4 min de lectura",
+    views: "22 lecturas",
+    likes: "7 me gusta",
+    category: "Familia",
+  },
+  11: {
+    title: "Cruceros al atardecer: Horas mágicas en el Mediterráneo",
+    excerpt:
+      "Vive las puestas de sol más impresionantes desde el agua - el sueño de todo fotógrafo hecho realidad.",
+    readTime: "3 min de lectura",
+    views: "25 lecturas",
+    likes: "8 me gusta",
+    category: "Experiencias",
+  },
+  12: {
+    title: "Eventos corporativos en el yate EDENROC",
+    excerpt:
+      "Transforma reuniones de negocios en experiencias extraordinarias con nuestros charters corporativos premium.",
+    readTime: "4 min de lectura",
+    views: "14 lecturas",
+    likes: "2 me gusta",
+    category: "Empresas",
+  },
+  13: {
+    title: "Fotografía submarina desde tu charter",
+    excerpt:
+      "Captura la impresionante vida marina y aguas cristalinas con nuestros consejos y equipo de fotografía.",
+    readTime: "5 min de lectura",
+    views: "19 lecturas",
+    likes: "6 me gusta",
+    category: "Fotografía",
+  },
+  14: {
+    title: "Escapada de fin de semana: 48 horas de lujo",
+    excerpt:
+      "Cómo aprovechar al máximo un fin de semana corto pero espectacular de charter en Mallorca.",
+    readTime: "3 min de lectura",
+    views: "16 lecturas",
+    likes: "4 me gusta",
+    category: "Fin de semana",
+  },
+  15: {
+    title: "Navegación sostenible: Nuestro enfoque ecológico",
+    excerpt:
+      "Conoce nuestro compromiso con la preservación de los ecosistemas marinos mediterráneos mientras ofrecemos lujo.",
+    readTime: "4 min de lectura",
+    views: "21 lecturas",
+    likes: "9 me gusta",
+    category: "Sostenibilidad",
+  },
+  16: {
+    title: "Celebraciones de cumpleaños en el mar",
+    excerpt:
+      "Por qué un charter en yate crea las fiestas de cumpleaños más memorables con fondos impresionantes.",
+    readTime: "3 min de lectura",
+    views: "17 lecturas",
+    likes: "5 me gusta",
+    category: "Celebraciones",
+  },
+  17: {
+    title: "Navegando por las reservas marinas de Mallorca",
+    excerpt:
+      "Una guía de áreas protegidas y cómo disfrutarlas responsablemente durante tu charter.",
+    readTime: "4 min de lectura",
+    views: "13 lecturas",
+    likes: "3 me gusta",
+    category: "Navegación",
+  },
+  18: {
+    title: "Amenidades de lujo: Lo que hace especial al EDENROC",
+    excerpt:
+      "Desde sistemas de sonido premium hasta control climático - descubre las características que definen el lujo.",
+    readTime: "4 min de lectura",
+    views: "20 lecturas",
+    likes: "6 me gusta",
+    category: "Lujo",
+  },
+  19: {
+    title: "Pesca en aguas baleares: Guía completa",
+    excerpt:
+      "Todo lo que necesitas saber sobre oportunidades de pesca deportiva durante tu charter en Mallorca.",
+    readTime: "5 min de lectura",
+    views: "24 lecturas",
+    likes: "7 me gusta",
+    category: "Pesca",
+  },
+  20: {
+    title: "Luna de miel en el agua: Ideas de charter romántico",
+    excerpt:
+      "Crea la escapada romántica perfecta con nuestros paquetes de charter para lunas de miel y aniversarios.",
+    readTime: "4 min de lectura",
+    views: "28 lecturas",
+    likes: "12 me gusta",
+    category: "Romántico",
+  },
+  21: {
+    title: "Equipo de deportes acuáticos: Nuestra flota completa",
+    excerpt:
+      "Desde scooters marinos hasta tablas de paddle - todo el equipo disponible para tus aventuras acuáticas.",
+    readTime: "3 min de lectura",
+    views: "15 lecturas",
+    likes: "4 me gusta",
+    category: "Actividades",
+  },
+  22: {
+    title: "Excursión a Cabrera: Qué esperar",
+    excerpt:
+      "Tu guía completa para visitar el impresionante Parque Nacional de Cabrera desde Mallorca.",
+    readTime: "5 min de lectura",
+    views: "19 lecturas",
+    likes: "5 me gusta",
+    category: "Destinos",
+  },
 };
 es.blog.hero = {
   title: "Blog - Información de primera mano",
@@ -1609,6 +2080,57 @@ de.home.contact = {
     ariaLabel: "E-Mail an das Charter-Team senden",
   },
 };
+
+de.about.contentBlocks = [
+  {
+    type: "text-first",
+    title: "Elegantes Design und Spitzenleistung",
+    description:
+      "Die Azimut 50 EDENROC verkörpert italienischen Stil und Ingenieurskunst. Mit 15,54 Metern Länge und 4,55 Metern Breite bietet sie die ideale Balance aus Komfort und Performance.",
+    image: "/new 05/charter mallorca.jpg",
+    imageAlt: "Seitenansicht der Yacht Azimut 50 EDENROC",
+  },
+  {
+    type: "image-first",
+    title: "Großzügiges Deck zum Entspannen",
+    description:
+      "Ein weitläufiges Cockpit mit bequemen Sofas und Essbereich ist ideal für Gäste. Die integrierte Pantry und Bar machen unvergessliche Feiern auf dem Wasser möglich.",
+    image: "/images/yacht-deck.jpg",
+    imageAlt: "Geräumiges Deck der Yacht Azimut 50",
+  },
+  {
+    type: "text-first",
+    title: "Leistung und Geschwindigkeit",
+    description:
+      "Zwei 715-PS-Motoren liefern 26 Knoten Reisegeschwindigkeit und bis zu 32 Knoten Spitze. Der 2.200-Liter-Tank ermöglicht ausgedehnte Fahrten.",
+    image: "/images/yacht-engines.jpg",
+    imageAlt: "Motoren der Yacht Azimut 50",
+  },
+  {
+    type: "image-first",
+    title: "Luxuriöses Interieur",
+    description:
+      "Das Interieur ist modern gestaltet und mit Premium-Materialien ausgestattet. Drei komfortable Kabinen bieten bis zu 11 Gästen unvergessliche Aufenthalte.",
+    image: "/images/yacht-interior.jpg",
+    imageAlt: "Luxuriöses Interieur der Yacht Azimut 50",
+  },
+  {
+    type: "text-first",
+    title: "Innovative Technologien",
+    description:
+      "Eine moderne Navigationssuite, Klimatisierung in allen Bereichen und ein Stabilisatorsystem gewährleisten maximalen Komfort und Sicherheit auf See.",
+    image: "/images/yacht-technology.jpg",
+    imageAlt: "Technische Ausstattung der Yacht",
+  },
+  {
+    type: "image-first",
+    title: "Wasserspaß an Bord",
+    description:
+      "Die Yacht ist bestens für Wasserspaß ausgestattet: Badeplattform, Leiter und viel Stauraum für Wasserspielzeug stehen bereit.",
+    image: "/images/yacht-water-sports.jpg",
+    imageAlt: "Wasserspaß von der Yacht aus",
+  },
+];
 
 de.tours.hero = {
   title: "Exklusive Seetouren & Yachtcharter auf Mallorca",
@@ -1816,7 +2338,7 @@ de.faq.items = [
   {
     question: "Was ist im Charterpreis enthalten?",
     answer:
-      "Der Preis umfasst Yachtmiete mit kompletter Ausstattung, professionelle Crew, Treibstoff für die geplante Route, Versicherung und Hafenabgaben. Zusatzleistungen wie Catering oder spezielle Aktivitäten sind optional buchbar.",
+      "Der Charterpreis beinhaltet die Vermietung einer voll ausgestatteten Yacht, Besatzungsdienste, Versicherung und Hafengebühren. Kraftstoff ist für Kurzflüge im Preis enthalten und für Tagescharter wird Kraftstoff separat berechnet. Ein Wasserbrett ist ebenfalls im Preis enthalten. Erfrischende Getränke (Wasser, Cola, Bier), Snacks, Chips und ein Abzug sind ebenfalls für Ihren Komfort an Bord erhältlich.",
   },
   {
     question:
@@ -1838,12 +2360,12 @@ de.faq.items = [
     question:
       "Wie groß muss die Gruppe für 3–4-stündige Touren mindestens sein?",
     answer:
-      "Gemeinschaftstouren über 3–4 Stunden finden statt, sobald mindestens 7–8 Gäste gebucht haben. Private Charter können auch mit kleineren Gruppen fahren, doch Sammelausfahrten werden gegebenenfalls verschoben, bis die Mindestanzahl erreicht ist.",
+      "Gruppenreisen mit einer Dauer von 3-4 Stunden werden mit der Mindestteilnehmerzahl (7-8 Personen) durchgeführt. Die Kosten für die Tour werden pro Person berechnet, wenn dieses Minimum erreicht wird.Für die Buchung eines privaten Charters oder wenn Ihre Gruppe unter dem Mindestpreis liegt, gilt ein fester Reisepreis. In diesem Fall zahlen Sie nicht für jeden Gast, sondern den vollen Charterpreis, der für jede Route angegeben ist. Auf diese Weise können wir die Sendung sowohl bei der Rekrutierung von Gruppen als auch bei kleineren Unternehmen garantieren. Gruppensendungen können verschoben werden, wenn die Mindestteilnehmerzahl nicht erreicht wurde.",
   },
   {
     question: "Was sollte ich zur Angeltour mitbringen?",
     answer:
-      "Wir stellen Angelgerät, Lizenzen und Sicherheitsausrüstung. Empfohlen sind Sonnenschutz, Sonnenbrille, rutschfeste Schuhe, leichte Jacke, Kamera und persönliche Medikamente. Reisekrankheitsmittel bei Bedarf mitbringen.",
+      "Wir versorgen alle Gäste mit grundlegenden Angelgeräten und allen notwendigen Sicherheitseinrichtungen, die den Standards entsprechen. Für erfahrene Fischer, die sich für ihre gewohnte Ausrüstung entscheiden, helfen wir Ihnen gerne bei der Verwendung Ihrer persönlichen Ausrüstung.",
   },
   {
     question: "Dürfen Kinder mitfahren?",
@@ -1868,7 +2390,7 @@ de.faq.items = [
   {
     question: "Welche Zahlungsmethoden gibt es?",
     answer:
-      "Akzeptiert werden Banküberweisung, Visa, MasterCard und Bargeld (EUR). 30 % Anzahlung sichern die Buchung, Restzahlung 14 Tage vor Abfahrt. Kurzfristige Buchungen können Vollzahlung erfordern.",
+      "Wir akzeptieren Banküberweisungen, Bizum oder Bargeld (EUR). Als Buchungsgarantie ist eine Anzahlung in Höhe von 30% des Betrags erforderlich, der 14 Tage vor der Buchung zu bezahlen ist. Bei einer Last-Minute-Buchung kann eine vollständige Zahlung erforderlich sein.  Zu Beginn der Reise werden wir auch um eine Rückerstattung in Höhe von $200 in bar oder per Überweisung auf eine Karte bitten. Dieser Betrag wird Ihnen am Ende der Tour vollständig zurückerstattet, sofern die gesamte Ausrüstung und das Eigentum der Yacht erhalten bleiben.",
   },
 ];
 
@@ -2038,6 +2560,150 @@ const deBlogOverrides = {
     views: "23 Aufrufe",
     likes: "11 Likes",
     category: "Romantik-Auszeit",
+  },
+  7: {
+    title: "Beste Reisezeit für Mallorca per Yacht",
+    excerpt:
+      "Entdecken Sie die perfekten Jahreszeiten für Yachtcharter auf Mallorca - von Frühlingsblüten bis zu goldenen Herbsttagen.",
+    readTime: "4 Min. Lesezeit",
+    views: "12 Aufrufe",
+    likes: "2 Likes",
+    category: "Reisetipps",
+  },
+  8: {
+    title: "Top 5 versteckte Buchten nur per Boot erreichbar",
+    excerpt:
+      "Erkunden Sie geheime Schwimmplätze und unberührte Strände, die Mallorcas bestgehütete Geheimnisse bleiben.",
+    readTime: "5 Min. Lesezeit",
+    views: "18 Aufrufe",
+    likes: "5 Likes",
+    category: "Entdeckung",
+  },
+  9: {
+    title: "Gourmet-Küche an Bord: Mittelmeerküche",
+    excerpt:
+      "Wie wir außergewöhnliche kulinarische Erlebnisse mit lokalen Zutaten und Profi-Köchen kreieren.",
+    readTime: "3 Min. Lesezeit",
+    views: "15 Aufrufe",
+    likes: "3 Likes",
+    category: "Gastronomie",
+  },
+  10: {
+    title: "Familien-Yachtcharter: Erinnerungen schaffen",
+    excerpt:
+      "Warum eine Luxusyacht die perfekte Kulisse für unvergessliche Familienurlaube auf den Balearen ist.",
+    readTime: "4 Min. Lesezeit",
+    views: "22 Aufrufe",
+    likes: "7 Likes",
+    category: "Familie",
+  },
+  11: {
+    title: "Sonnenuntergang-Kreuzfahrten: Magische Stunden im Mittelmeer",
+    excerpt:
+      "Erleben Sie atemberaubende Sonnenuntergänge vom Wasser aus - der Traum jedes Fotografen wird wahr.",
+    readTime: "3 Min. Lesezeit",
+    views: "25 Aufrufe",
+    likes: "8 Likes",
+    category: "Erlebnisse",
+  },
+  12: {
+    title: "Firmenevents auf der Yacht EDENROC",
+    excerpt:
+      "Verwandeln Sie Geschäftstreffen in außergewöhnliche Erlebnisse mit unseren Premium-Firmencharter.",
+    readTime: "4 Min. Lesezeit",
+    views: "14 Aufrufe",
+    likes: "2 Likes",
+    category: "Business",
+  },
+  13: {
+    title: "Unterwasserfotografie von Ihrem Charter",
+    excerpt:
+      "Fangen Sie atemberaubende Meereslebewesen und kristallklares Wasser mit unseren Fototipps und Equipment ein.",
+    readTime: "5 Min. Lesezeit",
+    views: "19 Aufrufe",
+    likes: "6 Likes",
+    category: "Fotografie",
+  },
+  14: {
+    title: "Wochenendausflug: 48 Stunden Luxus",
+    excerpt:
+      "Wie Sie ein kurzes aber spektakuläres Yachtcharter-Wochenende auf Mallorca optimal nutzen.",
+    readTime: "3 Min. Lesezeit",
+    views: "16 Aufrufe",
+    likes: "4 Likes",
+    category: "Wochenende",
+  },
+  15: {
+    title: "Nachhaltiges Yachten: Unser ökologischer Ansatz",
+    excerpt:
+      "Erfahren Sie mehr über unser Engagement zum Schutz mediterraner Meeresökosysteme bei gleichzeitiger Luxusvermittlung.",
+    readTime: "4 Min. Lesezeit",
+    views: "21 Aufrufe",
+    likes: "9 Likes",
+    category: "Nachhaltigkeit",
+  },
+  16: {
+    title: "Geburtstagsfeiern auf See",
+    excerpt:
+      "Warum ein Yachtcharter die denkwürdigsten Geburtstagspartys mit atemberaubenden Kulissen schafft.",
+    readTime: "3 Min. Lesezeit",
+    views: "17 Aufrufe",
+    likes: "5 Likes",
+    category: "Feiern",
+  },
+  17: {
+    title: "Durch Mallorcas Meeresschutzgebiete navigieren",
+    excerpt:
+      "Ein Leitfaden zu geschützten Gebieten und wie Sie sie während Ihres Charters verantwortungsvoll genießen.",
+    readTime: "4 Min. Lesezeit",
+    views: "13 Aufrufe",
+    likes: "3 Likes",
+    category: "Navigation",
+  },
+  18: {
+    title: "Luxus-Ausstattung: Was die EDENROC besonders macht",
+    excerpt:
+      "Von Premium-Soundsystemen bis Klimaanlage - entdecken Sie die Features, die Luxus definieren.",
+    readTime: "4 Min. Lesezeit",
+    views: "20 Aufrufe",
+    likes: "6 Likes",
+    category: "Luxus",
+  },
+  19: {
+    title: "Angeln in balearischen Gewässern: Kompletter Guide",
+    excerpt:
+      "Alles, was Sie über Sportangelmöglichkeiten während Ihres Mallorca-Charters wissen müssen.",
+    readTime: "5 Min. Lesezeit",
+    views: "24 Aufrufe",
+    likes: "7 Likes",
+    category: "Angeln",
+  },
+  20: {
+    title: "Flitterwochen auf dem Wasser: Romantische Charter-Ideen",
+    excerpt:
+      "Kreieren Sie die perfekte romantische Auszeit mit unseren Flitterwochen- und Jubiläums-Charterpaketen.",
+    readTime: "4 Min. Lesezeit",
+    views: "28 Aufrufe",
+    likes: "12 Likes",
+    category: "Romantik",
+  },
+  21: {
+    title: "Wassersport-Ausrüstung: Unsere komplette Flotte",
+    excerpt:
+      "Von Sea-Scootern bis Paddle-Boards - alle verfügbaren Geräte für Ihre Wassersportabenteuer.",
+    readTime: "3 Min. Lesezeit",
+    views: "15 Aufrufe",
+    likes: "4 Likes",
+    category: "Aktivitäten",
+  },
+  22: {
+    title: "Tagesausflug nach Cabrera: Was Sie erwartet",
+    excerpt:
+      "Ihr kompletter Guide zum Besuch des atemberaubenden Cabrera-Nationalparks von Mallorca aus.",
+    readTime: "5 Min. Lesezeit",
+    views: "19 Aufrufe",
+    likes: "5 Likes",
+    category: "Reiseziele",
   },
 };
 de.blog.hero = {

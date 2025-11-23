@@ -10,6 +10,33 @@ export const Home = () => {
   const activities = t("home.activities") || {};
   const activityCards = activities.cards || [];
   const contact = t("home.contact") || {};
+
+  const handleCopyEmail = async () => {
+    const email = "charterbalears@gmail.com";
+
+    try {
+      await navigator.clipboard.writeText(email);
+      alert("Email copy!");
+    } catch (err) {
+      console.error("Error email: ", err);
+      copyToClipboardFallback(email);
+    }
+  };
+
+  const copyToClipboardFallback = (text) => {
+    const textArea = document.createElement("textarea");
+    textArea.value = text;
+    document.body.appendChild(textArea);
+    textArea.select();
+    try {
+      document.execCommand("copy");
+      alert("Email copy!");
+    } catch (err) {
+      console.error("Fallback: error email: ", err);
+      alert("Error copy email" + text);
+    }
+    document.body.removeChild(textArea);
+  };
   return (
     <div className="home">
       {/* Hero Slider Section */}
@@ -104,13 +131,16 @@ export const Home = () => {
                 </a>
               ) : null}
               {contact.secondary ? (
-                <a
-                  href={contact.secondary.href}
+                <button
+                  onClick={handleCopyEmail}
                   className="btn-secondary"
-                  aria-label={contact.secondary.ariaLabel}
+                  aria-label={
+                    contact.secondary.ariaLabel || "Скопировать email адрес"
+                  }
+                  type="button"
                 >
                   {contact.secondary.label}
-                </a>
+                </button>
               ) : null}
             </div>
           </div>

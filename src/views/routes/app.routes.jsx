@@ -8,6 +8,7 @@ import { AboutYacht } from "../content/about/about";
 import { Blog } from "../content/blog/blog";
 import { BigFish } from "../content/bigFish/bigFish";
 import { FAQ } from "../content/faq/faq";
+import { DayTour } from "../content/dayCharter/dayCharter";
 
 export const appRoutesDefinition = [
   {
@@ -53,6 +54,10 @@ export const appRoutesDefinition = [
       {
         path: "/faq",
         element: <FAQ />,
+      },
+      {
+        path: "/day_charter",
+        element: <DayTour />,
       },
     ],
   },

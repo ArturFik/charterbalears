@@ -1,0 +1,408 @@
+.day-tour {
+  margin-top: 80px;
+
+  &__hero {
+    padding: 8rem 0 6rem;
+    background: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #e5e5e5, transparent);
+    }
+
+    &-content {
+      max-width: 800px;
+      margin: 0 auto;
+
+      h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        color: #fff;
+        font-weight: 300;
+        letter-spacing: -1px;
+
+        @media (max-width: 768px) {
+          font-size: 2.5rem;
+        }
+      }
+
+      &-subtitle {
+        font-size: 1.5rem;
+        color: #fff;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+
+  &__intro {
+    padding: 6rem 0;
+    background: #ffffff;
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 6rem;
+      align-items: start;
+
+      @media (max-width: 992px) {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+      }
+    }
+
+    &-text {
+      margin-left: auto;
+      margin-right: auto;
+      h2 {
+        font-size: 2.25rem;
+        margin-bottom: 3rem;
+        color: #1a1a1a;
+        font-weight: 300;
+        line-height: 1.4;
+
+        @media (max-width: 768px) {
+          font-size: 1.875rem;
+        }
+      }
+    }
+
+    &-image {
+      position: relative;
+      height: 600px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        right: 20px;
+        bottom: 20px;
+        border: 1px solid #e5e5e5;
+        z-index: -1;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
+  }
+
+  &__activities {
+    display: grid;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  &__note {
+    padding: 2rem;
+    background: #fafafa;
+    border-left: 3px solid #1a1a1a;
+    font-style: italic;
+    color: #555;
+
+    p {
+      margin: 0;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      font-weight: 300;
+    }
+  }
+
+  &__pricing {
+    padding: 6rem 0;
+    background: #fafafa;
+
+    h2 {
+      font-size: 2.75rem;
+      margin-bottom: 1rem;
+      color: #1a1a1a;
+      font-weight: 300;
+      text-align: center;
+      letter-spacing: -0.5px;
+
+      @media (max-width: 768px) {
+        font-size: 2.25rem;
+      }
+    }
+
+    &-subtitle {
+      font-size: 1.2rem;
+      color: #666;
+      text-align: center;
+      margin-bottom: 4rem;
+      font-weight: 300;
+    }
+
+    &-tables {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 4rem;
+      max-width: 1200px;
+      margin: 0 auto;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+    }
+  }
+
+  &__gallery {
+    padding: 6rem 0;
+    background: #ffffff;
+
+    h2 {
+      font-size: 2.75rem;
+      margin-bottom: 4rem;
+      color: #1a1a1a;
+      font-weight: 300;
+      text-align: center;
+      letter-spacing: -0.5px;
+
+      @media (max-width: 768px) {
+        font-size: 2.25rem;
+      }
+    }
+
+    &-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+  }
+
+  &__cta {
+    padding: 6rem 0;
+    background: #1a1a1a;
+    color: white;
+    text-align: center;
+
+    h2 {
+      font-size: 2.75rem;
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+      letter-spacing: -0.5px;
+
+      @media (max-width: 768px) {
+        font-size: 2.25rem;
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 3rem;
+      color: #ccc;
+      font-weight: 300;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &-actions {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.activity-card {
+  background: white;
+  padding: 2.5rem 2rem;
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-3px);
+    border-color: #1a1a1a;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  &__icon {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+    font-weight: 300;
+  }
+
+  h3 {
+    font-size: 1.375rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+    font-weight: 400;
+  }
+
+  p {
+    color: #666;
+    line-height: 1.7;
+    font-weight: 300;
+    margin: 0;
+  }
+}
+
+.pricing-table {
+  background: white;
+
+  border: 1px solid #f0f0f0;
+  @media (min-width: 768px) {
+    padding: 3rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-weight: 300;
+
+    thead {
+      border-bottom: 2px solid #e5e5e5;
+    }
+
+    th {
+      padding: 1rem;
+      text-align: left;
+      font-weight: 400;
+      color: #1a1a1a;
+      font-size: 1.1rem;
+    }
+
+    td {
+      padding: 1.25rem 1rem;
+      border-bottom: 1px solid #f0f0f0;
+      color: #555;
+
+      &:first-child {
+        font-weight: 400;
+        color: #1a1a1a;
+      }
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+  }
+}
+
+.gallery-item {
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #f0f0f0;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+// Reuse buttons from main styles
+.btn-primary,
+.btn-secondary {
+  min-width: 160px;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 1px solid;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary {
+  background: #1a1a1a;
+  color: white;
+  border-color: #1a1a1a;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #1a1a1a;
+  border-color: #1a1a1a;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+// Dark theme buttons for CTA section
+.day-tour__cta {
+  .btn-primary,
+  .btn-secondary {
+    color: white;
+    border-color: white;
+    background: transparent;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .btn-primary {
+    background: white;
+    color: #1a1a1a;
+    border-color: white;
+
+    &:hover {
+      background: white;
+      color: #1a1a1a;
+    }
+  }
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  @media (max-width: 768px) {
+    padding: 0 1.5rem;
+  }
+}

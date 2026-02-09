@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import "./styles.scss";
 import { useI18n } from "../../../i18n/I18nProvider";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isPromotionVisible, setIsPromotionVisible] = useState(true);
   const { t, language, setLanguage, languages } = useI18n();
 
   const navItems = [
     { href: "/main", label: t("header.nav.home") },
     { href: "/tours", label: t("header.nav.tours") },
+    { href: "/day_charter", label: t("header.nav.day_charter") },
     { href: "/yacht", label: t("header.nav.yacht") },
     { href: "/blog", label: t("header.nav.blog") },
     { href: "/faq", label: t("header.nav.faq") },
@@ -21,6 +23,8 @@ export const Header = () => {
     "header.navigationToggle",
     "Toggle navigation"
   );
+  const promotionText = t("header.promotion");
+  const promotionLinkText = t("header.promotionLinkText");
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
@@ -36,8 +40,22 @@ export const Header = () => {
     setLanguage(event.target.value);
   };
 
+  const handleClosePromotion = () => {
+    setIsPromotionVisible(false);
+    // Можно сохрать в localStorage, чтобы не показывать повторно
+    localStorage.setItem("promotionClosed", "true");
+  };
+
+  useEffect(() => {
+    const promotionClosed = localStorage.getItem("promotionClosed");
+    if (promotionClosed === "true") {
+      setIsPromotionVisible(false);
+    }
+  }, []);
+
   return (
     <header className="header">
+      {/* Основной header */}
       <div className="header__container">
         <div className="header__logo">
           <a href="/main" className="header__logo-link" onClick={closeMenu}>
@@ -100,6 +118,20 @@ export const Header = () => {
             <span></span>
             <span></span>
           </button>
+        </div>
+      </div>
+      <div className="header__promotion">
+        <div className="header__promotion-container">
+          <div className="header__promotion-content">
+            <span className="header__promotion-text">{promotionText}</span>
+            <a
+              href="/tours"
+              className="header__promotion-link"
+              onClick={closeMenu}
+            >
+              {promotionLinkText}
+            </a>
+          </div>
         </div>
       </div>
     </header>

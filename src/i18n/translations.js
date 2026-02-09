@@ -12,6 +12,7 @@ const en = {
     nav: {
       home: "Home",
       tours: "Tours",
+      day_charter: "Day charter",
       yacht: "The Yacht",
       blog: "Blog",
       faq: "FAQ",
@@ -19,6 +20,8 @@ const en = {
     actions: { cta: "Charter Now" },
     language: { ariaLabel: "Select language" },
     navigationToggle: "Toggle navigation",
+    promotion: "SPECIAL OFFER! Get 15% discount on all tours this week!",
+    promotionLinkText: "Book Now",
   },
   heroSlider: {
     phoneCta: "Call CharterBalears",
@@ -120,6 +123,86 @@ const en = {
       },
     },
   },
+  day_tour: {
+    hero: {
+      title: "Day Tour Experience",
+      subtitle: "8-Hour & 4-Hour Luxury Yacht Tours",
+    },
+    intro: {
+      title: "You can organize any holiday on EDENROC yacht to fit any taste:",
+      activities: {
+        party: {
+          title: "A Party",
+          description:
+            "Hire the boat with a group of friends with your favorite drinks and food, hot dancing and an endless fun.",
+        },
+        family: {
+          title: "Family Bonding",
+          description:
+            "Children will be delighted to swim in the open sea while love birds enjoy the time spent in private.",
+        },
+        fishing: {
+          title: "Leisure for a Real Man",
+          description:
+            "Professional gear, a huge catch, and your best friends with whom you can share a storm of emotions!",
+        },
+      },
+      note: "We always meet our customers' needs and try to embrace all your wishes. Therefore, each order is nearly always individual.",
+    },
+    pricing: {
+      title: "Pricing Information",
+      subtitle: "In general, our prices are as follows:",
+      charter: {
+        title: "Charter Pricing",
+        table: {
+          headers: ["Period", "Full Day (8 hours)", "Half Day (4 hours)"],
+          rows: [
+            ["July, August", "2 200€", "1 500€"],
+            ["June, September", "2 000€", "1 400€"],
+            ["May, October", "1 800€", "1 100€"],
+            ["November - April", "1 500€", "1 000€"],
+          ],
+        },
+      },
+      fishing: {
+        title: "Fishing Pricing",
+        table: {
+          headers: ["Duration", "Price"],
+          rows: [
+            ["Full Day (8 hours)", "1 500€"],
+            ["Half Day (4 hours)", "1 000€"],
+          ],
+        },
+      },
+    },
+    gallery: {
+      title: "Day Tour Experience",
+      images: [
+        {
+          alt: "Yacht party experience",
+          src: "/photo/family-charter.jpeg",
+        },
+        {
+          alt: "Family day on yacht",
+          src: "/photo/birthday-sea.jpeg",
+        },
+        {
+          alt: "Fishing adventure",
+          src: "/photo/WhatsApp Image 2025-11-14 at 15.42.18.jpeg",
+        },
+      ],
+    },
+    cta: {
+      title: "Book Your Day Tour",
+      description:
+        "Ready to create unforgettable memories? Contact us to book your perfect day tour on EDENROC yacht.",
+      buttons: {
+        contact: "Contact Us",
+        copyEmail: "Copy Email",
+      },
+      emailCopied: "Email copied!",
+    },
+  },
   about: {
     hero: {
       title: "Motor Yacht EDENROC - Azimut 50",
@@ -155,7 +238,7 @@ const en = {
         type: "image-first",
         title: "Luxurious Interior",
         description:
-          "The interior is styled in a contemporary design using premium materials. Three comfortable cabins accommodate up to 11 guests for an unforgettable escape.",
+          "The interior is decorated in a modern style using premium materials. The three comfortable cabins can accommodate up to 11 guests for an unforgettable stay. There are two toilets on board for your convenience.",
         image: "/gallery/10.jpg",
         imageAlt: "Luxurious interior of the Azimut 50 yacht",
       },
@@ -171,7 +254,7 @@ const en = {
         type: "image-first",
         title: "Water Entertainment",
         description:
-          "The yacht is fully equipped for water fun: a bathing platform, swim ladder and generous storage for toys are ready for action.",
+          "The yacht is fully equipped for water activities: a bathing platform, a ramp for launching into the water and a spacious toy storage are ready for use. You will also have a swimming board at your disposal.",
         image: "/sea scooter/sea scooter infinity (1).jpg",
         imageAlt: "Water entertainment from the yacht",
       },
@@ -529,6 +612,262 @@ const en = {
           },
         ],
       },
+      {
+        id: 4,
+        slug: "sunset-cruise",
+        image: "/sunset/1.png",
+        imageAlt: "Sunset cruise yacht tour Mallorca",
+        title: "Sunset Cruise to Cala Major",
+        shortDescription:
+          "Romantic evening cruise along Palma coastline with sunset views and illuminated Bellver Castle",
+        type: "standard",
+        typeLabel: "Standard charter",
+        season: "year-round",
+        seasonLabel: "Year-round",
+        duration: "2.5 hours",
+        durationLabel: "2.5 hours",
+        price: "€750",
+        pricePerPerson: "€75",
+        capacity: "12 guests",
+        capacityLabel: "Up to 12 guests",
+        minCapacityLabel: "Minimum 6 guests",
+        maxCapacityLabel: "Maximum 12 guests",
+        available: true,
+        highlights: [
+          "Panoramic sunset views",
+          "Castell de Bellver from sea",
+          "Champagne & tapas",
+          "Relaxing evening atmosphere",
+        ],
+        departure: "Real Club Náutico de Palma",
+        fuelSurcharge: "€15-30 per person",
+        included: [
+          "Spanish tapas (jamón, cheese, olives)",
+          "Cava (Spanish sparkling wine)",
+          "Soft drinks & water",
+          "Light blankets",
+        ],
+        extraServices: [
+          { name: "Bottle of premium cava", price: "€40" },
+          { name: "Romantic photo package", price: "€30" },
+        ],
+        coves: [
+          {
+            id: "bellver",
+            name: "Castell de Bellver (Sea View)",
+            description:
+              "Unique 14th-century Gothic circular fortress overlooking Palma. From the sea you get an unusual and most photogenic angle of this city symbol. Evening lighting illuminates the castle walls, creating a magical silhouette against the darkening sky. The castle's history connected to the Kings of Majorca adds atmosphere to the moment.",
+            highlights: [
+              "Gothic castle",
+              "Historic symbol",
+              "Night illumination",
+            ],
+            visitType: "Scenic pass by & photo stop",
+            images: ["/sunset/bellver1.jpg", "/sunset/bellver2.jpg"],
+          },
+          {
+            id: "calaMajor",
+            name: "Cala Major & Illetes Coast",
+            description:
+              "Upscale area of Palma with luxury hotels and villas. The coastline here features a series of small sandy coves (caletas) and headlands. The cruise passes close to shore, allowing you to admire the elegant architecture and enjoy the calm atmosphere of the exclusive coastline at sunset. The water takes on golden and pink hues.",
+            highlights: [
+              "Upscale neighborhood",
+              "Sandy coves",
+              "Golden hour on water",
+            ],
+            visitType: "Cruising along coast",
+            images: ["/sunset/calamajor1.jpg", "/sunset/calamajor2.jpg"],
+          },
+          {
+            id: "sunsetPoint",
+            name: "Western Headland & Sunset Spot",
+            description:
+              "The most spectacular part of the tour. The captain selects the perfect spot in open water west of Palma with unobstructed horizon views. Guests enjoy breathtaking spectacle as the sun slowly dips into Mediterranean waters, painting the sky orange, pink and purple. Cava and snacks are served. After sunset, watch city lights and Bellver Castle begin to twinkle in the dusk.",
+            highlights: [
+              "Panoramic sunset",
+              "Photo session",
+              "Romantic atmosphere",
+            ],
+            visitType: "Sunset stop - 40 minutes",
+            images: ["/sunset/sunset1.jpg", "/sunset/sunset2.jpg"],
+          },
+        ],
+      },
+      {
+        id: 5,
+        slug: "mysterious-caves",
+        image: "/caves/1.png",
+        imageAlt: "Sea caves exploration yacht tour Cala d'Or",
+        title: "The Mysterious Coves & Caves of Cala d'Or",
+        shortDescription:
+          "Exploration of hidden coves, sea caves and grottos in Cala d'Or area with swimming and snorkeling stops",
+        type: "active",
+        typeLabel: "Active adventure",
+        season: "May-September",
+        seasonLabel: "May–September",
+        duration: "5 hours",
+        durationLabel: "5 hours",
+        price: "€1100",
+        pricePerPerson: "€110",
+        capacity: "8 guests",
+        capacityLabel: "Up to 8 guests",
+        minCapacityLabel: "Minimum 6 guests",
+        maxCapacityLabel: "Maximum 10 guests",
+        available: true,
+        highlights: [
+          "Sea cave exploration",
+          "Hidden coves",
+          "Best snorkeling spots",
+          "Adventure swimming",
+        ],
+        departure: "Port de Palma",
+        fuelSurcharge: "€25-45 per person",
+        included: [
+          "Picnic lunch",
+          "Local wine & soft drinks",
+          "Fruits",
+          "Snorkeling masks & fins",
+          "Waterproof flashlights",
+        ],
+        extraServices: [
+          { name: "Seascooter", price: "€55" },
+          { name: "Underwater camera rental", price: "€45" },
+          { name: "Private cave guide", price: "Upon request" },
+        ],
+        coves: [
+          {
+            id: "esmeralda",
+            name: "Cala Esmeralda & Cala Gran",
+            description:
+              "Famous twin coves of Cala d'Or resort, connected by walking trail and appearing from sea as a single winding bay. Known for emerald water color (especially Esmeralda), perfect for first swim. Surrounding rocks feature numerous small niches and ledges. Ideal spot to get accustomed to water and snorkeling gear.",
+            highlights: ["Emerald water", "Connected coves", "Rock niches"],
+            visitType: "Swimming & snorkeling intro - 45 minutes",
+            images: ["/caves/esmeralda1.jpg", "/caves/esmeralda2.jpg"],
+          },
+          {
+            id: "cavesEstec",
+            name: "Caves of Cap des Estec",
+            description:
+              "Series of natural sea grottos and arches in rocky headland. With boat you can carefully enter some caves where mysterious semi-darkness reigns and light play on water creates hypnotic reflections on cave walls. Water here is crystal clear and underwater life at cave entrances is particularly interesting due to lighting conditions and currents.",
+            highlights: ["Sea grottos", "Cave entry", "Light play"],
+            visitType: "Cave exploration by boat & snorkeling - 60 minutes",
+            images: ["/caves/cave1.jpg", "/caves/cave2.jpg"],
+          },
+          {
+            id: "secretCala",
+            name: "Secret Cala Marçal",
+            description:
+              "Small, rarely visited cove accessible mainly by sea. Completely surrounded by pine-covered cliffs. Small pebble beach and gentle water entry make it perfect for onboard picnic and relaxation. This place for those wanting to feel like explorers and enjoy tranquility away from main tourist routes.",
+            highlights: ["Seclusion", "Sea access only", "Pebble beach"],
+            visitType: "Picnic & relaxation stop - 60 minutes",
+            images: ["/caves/secret1.jpg", "/caves/secret2.jpg"],
+          },
+          {
+            id: "lighthouse",
+            name: "Cala d'Or Lighthouse & Final Cliffs",
+            description:
+              "Final part of route passes Cala d'Or lighthouse and along most impressive rock formations of this coastline. High, wind- and wave-carved cliffs demonstrate nature's power. Last chance for epic panoramic photos of rocky coast before returning to port.",
+            highlights: ["Lighthouse", "Majestic cliffs", "Farewell views"],
+            visitType: "Scenic pass by",
+            images: ["/caves/cliffs1.jpg", "/caves/cliffs2.jpg"],
+          },
+        ],
+      },
+      {
+        id: 6,
+        slug: "tramuntana-safari",
+        image: "/jeep/1.png",
+        imageAlt: "Jeep safari Tramuntana Mountains Mallorca",
+        title: "Tramuntana Mountains Jeep Safari",
+        shortDescription:
+          "Exciting jeep safari through Serra de Tramuntana mountain range, UNESCO World Heritage site",
+        type: "active",
+        typeLabel: "Active adventure",
+        season: "year-round",
+        seasonLabel: "Year-round",
+        duration: "6-7 hours",
+        durationLabel: "6-7 hours",
+        price: "€950",
+        pricePerPerson: "€95",
+        capacity: "6 guests",
+        capacityLabel: "Up to 6 guests",
+        minCapacityLabel: "Minimum 4 guests",
+        maxCapacityLabel: "Maximum 8 guests",
+        available: true,
+        highlights: [
+          "UNESCO mountain roads",
+          "Traditional villages",
+          "Mountain lunch",
+          "Spectacular viewpoints",
+        ],
+        departure: "Hotel pickup in Palma area",
+        fuelSurcharge: "Included",
+        included: [
+          "Professional driver-guide",
+          "Transport in 4x4 Jeep",
+          "Traditional Mallorcan lunch in mountain village",
+          "Water",
+          "Insurance",
+        ],
+        extraServices: [
+          { name: "Wine tasting at vineyard", price: "€25 per person" },
+          { name: "Private group (up to 6)", price: "€600 (total)" },
+        ],
+        coves: [
+          {
+            id: "valldemossa",
+            name: "Valldemossa Village",
+            description:
+              "Charming mountain village famous for its Carthusian Monastery (Real Cartuja) where Frédéric Chopin and George Sand spent a winter. Narrow stone streets draped with bougainvillea create incredibly picturesque atmosphere. Here you'll walk through historic center, try local sweets (coca de patata) and feel spirit of old Majorca.",
+            highlights: [
+              "Historic monastery",
+              "Cobbled streets",
+              "Chopin atmosphere",
+            ],
+            visitType: "Guided walk - 75 minutes",
+            images: ["/jeep/valldemossa1.jpg", "/jeep/valldemossa2.jpg"],
+          },
+          {
+            id: "sacalobra",
+            name: "Sa Calobra Serpentine & Torrent de Pareis Gorge",
+            description:
+              "Most thrilling part of journey along one of Europe's most impressive mountain roads. Winding serpentine road descends from 800m altitude to sea, consisting of countless turns and tunnels carved into rock. Below awaits unique natural wonder - Torrent de Pareis gorge where mountain river carved path to sea, creating stone tunnel with freshwater lake inside.",
+            highlights: [
+              "Legendary serpentine",
+              "Engineering marvel",
+              "Stone gorge",
+            ],
+            visitType: "Drive & visit to gorge - 90 minutes",
+            images: ["/jeep/sacalobra1.jpg", "/jeep/sacalobra2.jpg"],
+          },
+          {
+            id: "viewpoint",
+            name: "Mirador de ses Barques Viewpoint & Coll de Sóller Pass",
+            description:
+              "Stop at one of highest points on route with panoramic views of entire mountain range, coastline and orange valleys below. Perfect place to appreciate Tramuntana's scale. Path continues through scenic pass with new perspectives on terraces of ancient olive groves, some trees over 500 years old.",
+            highlights: [
+              "Panoramic mountain views",
+              "Photo stop",
+              "Olive terraces",
+            ],
+            visitType: "Photo stop - 30 minutes",
+            images: ["/jeep/mirador1.jpg", "/jeep/mirador2.jpg"],
+          },
+          {
+            id: "lunchVillage",
+            name: "Lunch in Sóller or Deià Village",
+            description:
+              "Lunch at authentic restaurant in one of mountain villages. Depending on day and availability, this could be Sóller with its orange valley atmosphere or picturesque Deià nestled between mountain and sea, known for its artists and poets. Menu features traditional Mallorcan dishes like tumbet, frit de porc or fresh fish.",
+            highlights: [
+              "Village restaurant",
+              "Local cuisine",
+              "Atmospheric location",
+            ],
+            visitType: "Lunch stop - 90 minutes",
+            images: ["/jeep/lunch1.jpg", "/jeep/lunch2.jpg"],
+          },
+        ],
+      },
     ],
   },
   tourDetail: {
@@ -634,7 +973,7 @@ const en = {
       {
         question: "What payment methods do you accept?",
         answer:
-          "We accept bank transfers, Bizum or cash (EUR). To guarantee the booking, you must make an advance payment of 30% of the amount that must be paid 14 days before the booking. Full payment may be required for last-minute bookings.  At the beginning of the trip, we will also ask you to make a refundable deposit of $200 in cash or by card transfer. This amount will be fully refunded to you at the end of the tour, subject to the safety of all provided yacht equipment and property.",
+          "We accept bank transfers, Bizum or cash (EUR). To guarantee the booking, you must make an advance payment of 30% of the amount that must be paid 14 days before the booking. Full payment may be required for last-minute bookings.  At the beginning of the trip, we will also ask you to make a refundable deposit of €200 in cash or by card transfer. This amount will be fully refunded to you at the end of the tour, subject to the safety of all provided yacht equipment and property.",
       },
     ],
     contact: {
@@ -860,7 +1199,7 @@ const en = {
         views: "12 views",
         likes: "2 likes",
         category: "Travel Tips",
-        image: "/blog/seasonal-guide.jpeg",
+        image: "/photo/seasonal-guide.jpeg",
         imageAlt: "Yacht sailing during golden hour in Mallorca",
       },
       {
@@ -874,7 +1213,7 @@ const en = {
         views: "18 views",
         likes: "5 likes",
         category: "Discovery",
-        image: "/blog/hidden-coves.jpeg",
+        image: "/photo/hidden-coves.jpeg",
         imageAlt:
           "Secluded cove with crystal clear water accessible only by yacht",
       },
@@ -889,7 +1228,7 @@ const en = {
         views: "15 views",
         likes: "3 likes",
         category: "Gastronomy",
-        image: "/blog/onboard-dining.jpeg",
+        image: "/photo/onboard-dining.jpeg",
         imageAlt:
           "Elegant table setting with Mediterranean cuisine on yacht deck",
       },
@@ -904,7 +1243,7 @@ const en = {
         views: "22 views",
         likes: "7 likes",
         category: "Family",
-        image: "/blog/family-charter.jpeg",
+        image: "/photo/family-charter.jpeg",
         imageAlt: "Happy family enjoying water activities from yacht",
       },
       {
@@ -918,7 +1257,7 @@ const en = {
         views: "25 views",
         likes: "8 likes",
         category: "Experiences",
-        image: "/blog/sunset-cruise.jpeg",
+        image: "/photo/sunset-cruise.jpeg",
         imageAlt: "Stunning Mediterranean sunset viewed from yacht flybridge",
       },
       {
@@ -932,7 +1271,7 @@ const en = {
         views: "14 views",
         likes: "2 likes",
         category: "Business",
-        image: "/blog/corporate-event.jpeg",
+        image: "/photo/corporate-event.jpeg",
         imageAlt: "Professional business meeting setup on yacht deck",
       },
       {
@@ -946,7 +1285,7 @@ const en = {
         views: "19 views",
         likes: "6 likes",
         category: "Photography",
-        image: "/blog/underwater-photo.jpeg",
+        image: "/photo/underwater-photo.jpeg",
         imageAlt: "Vibrant underwater photography of Mediterranean marine life",
       },
       {
@@ -960,7 +1299,7 @@ const en = {
         views: "16 views",
         likes: "4 likes",
         category: "Weekend",
-        image: "/blog/weekend-getaway.jpeg",
+        image: "/photo/weekend-getaway.jpeg",
         imageAlt: "Relaxing weekend scene on yacht with cocktails",
       },
       {
@@ -974,7 +1313,7 @@ const en = {
         views: "21 views",
         likes: "9 likes",
         category: "Sustainability",
-        image: "/blog/eco-yachting.jpeg",
+        image: "/photo/eco-yachting.jpeg",
         imageAlt: "Yacht using eco-friendly practices in clean blue waters",
       },
       {
@@ -988,7 +1327,7 @@ const en = {
         views: "17 views",
         likes: "5 likes",
         category: "Celebrations",
-        image: "/blog/birthday-sea.jpeg",
+        image: "/photo/birthday-sea.jpeg",
         imageAlt: "Birthday celebration with cake and decorations on yacht",
       },
       {
@@ -1002,7 +1341,7 @@ const en = {
         views: "13 views",
         likes: "3 likes",
         category: "Navigation",
-        image: "/blog/marine-reserve.jpeg",
+        image: "/photo/marine-reserve.jpeg",
         imageAlt: "Yacht approaching beautiful marine protected area",
       },
       {
@@ -1016,7 +1355,7 @@ const en = {
         views: "20 views",
         likes: "6 likes",
         category: "Luxury",
-        image: "/blog/luxury-amenities.jpeg",
+        image: "/photo/luxury-amenities.jpeg",
         imageAlt: "Premium amenities and interior features of EDENROC yacht",
       },
       {
@@ -1030,7 +1369,7 @@ const en = {
         views: "24 views",
         likes: "7 likes",
         category: "Fishing",
-        image: "/blog/sport-fishing.jpeg",
+        image: "/photo/sport-fishing.jpeg",
         imageAlt: "Sport fishing action with catch on yacht",
       },
       {
@@ -1044,7 +1383,7 @@ const en = {
         views: "28 views",
         likes: "12 likes",
         category: "Romantic",
-        image: "/blog/honeymoon.jpeg",
+        image: "/photo/honeymoon.jpeg",
         imageAlt: "Romantic setup for honeymoon couple on yacht at sunset",
       },
       {
@@ -1058,7 +1397,7 @@ const en = {
         views: "15 views",
         likes: "4 likes",
         category: "Activities",
-        image: "/blog/watersports-equipment.jpeg",
+        image: "/photo/watersports-equipment.jpeg",
         imageAlt: "Collection of water sports equipment on yacht platform",
       },
       {
@@ -1072,7 +1411,7 @@ const en = {
         views: "19 views",
         likes: "5 likes",
         category: "Destinations",
-        image: "/blog/cabrera-guide.jpeg",
+        image: "/photo/cabrera-guide.jpeg",
         imageAlt: "Beautiful landscape of Cabrera National Park from sea",
       },
     ],
@@ -1175,6 +1514,7 @@ es.header = {
   nav: {
     home: "Inicio",
     tours: "Excursiones",
+    day_charter: "Chárter diario",
     yacht: "El Yate",
     blog: "Blog",
     faq: "FAQ",
@@ -1182,6 +1522,9 @@ es.header = {
   actions: { cta: "Reservar ahora" },
   language: { ariaLabel: "Seleccionar idioma" },
   navigationToggle: "Abrir o cerrar navegación",
+  promotion:
+    "¡OFERTA ESPECIAL! Obtén 15% de descuento en todas las excursiones esta semana!",
+  promotionLinkText: "Reservar Ahora",
 };
 
 const esHeroSlideOverrides = {
@@ -1236,6 +1579,89 @@ es.home.about = {
   ctaAria: "Ver detalles del yate de lujo EDENROC",
   imageAlt:
     "Interior del yate de lujo EDENROC con diseño italiano y comodidades premium",
+};
+
+es.day_tour = {
+  ...es.day_tour,
+  hero: {
+    title: "Experiencia de Tour Diario",
+    subtitle: "Tours de yate de lujo de 8 y 4 horas",
+  },
+  intro: {
+    title:
+      "Puedes organizar cualquier tipo de celebración en el yate EDENROC para satisfacer todos los gustos:",
+    activities: {
+      party: {
+        title: "Una Fiesta",
+        description:
+          "Alquila el barco con un grupo de amigos con tus bebidas y comida favoritas, baile y diversión sin fin.",
+      },
+      family: {
+        title: "En Familia",
+        description:
+          "Los niños estarán encantados de nadar en mar abierto mientras las parejas disfrutan de tiempo privado.",
+      },
+      fishing: {
+        title: "Ocio para Hombres",
+        description:
+          "Equipo profesional, una gran captura y tus mejores amigos con quienes compartir una tormenta de emociones.",
+      },
+    },
+    note: "Siempre atendemos las necesidades de nuestros clientes e intentamos abrazar todos sus deseos. Por lo tanto, cada pedido es casi siempre individual.",
+  },
+  pricing: {
+    title: "Información de Precios",
+    subtitle: "En general, nuestros precios son los siguientes:",
+    charter: {
+      title: "Precios de Charter",
+      table: {
+        headers: ["Periodo", "Día completo (8 horas)", "Medio día (4 horas)"],
+        rows: [
+          ["Julio, Agosto", "2 200€", "1 500€"],
+          ["Junio, Septiembre", "2 000€", "1 400€"],
+          ["Mayo, Octubre", "1 800€", "1 100€"],
+          ["Noviembre - Abril", "1 500€", "1 000€"],
+        ],
+      },
+    },
+    fishing: {
+      title: "Precios de Pesca",
+      table: {
+        headers: ["Duración", "Precio"],
+        rows: [
+          ["Día completo (8 horas)", "1 500€"],
+          ["Medio día (4 horas)", "1 000€"],
+        ],
+      },
+    },
+  },
+  gallery: {
+    title: "Experiencia de Tour Diario",
+    images: [
+      {
+        alt: "Experiencia de fiesta en yate",
+        src: "/photo/family-charter.jpeg",
+      },
+      {
+        alt: "Día familiar en yate",
+        src: "/photo/birthday-sea.jpeg",
+      },
+      {
+        alt: "Aventura de pesca",
+        src: "/photo/WhatsApp Image 2025-11-14 at 15.42.18.jpeg",
+      },
+    ],
+  },
+  cta: {
+    title: "Reserva tu Tour Diario",
+    description:
+      "¿Listo para crear recuerdos inolvidables? Contáctanos para reservar tu tour diario perfecto en el yate EDENROC.",
+    buttons: {
+      contact: "Contáctanos",
+      copyEmail: "Copiar Email",
+    },
+    emailCopied: "¡Email copiado!",
+  },
 };
 
 es.home.activities = {
@@ -1296,7 +1722,7 @@ es.about.contentBlocks = [
     title: "Cubierta espaciosa para el relax",
     description:
       "El generoso cockpit con sofás acolchados y zona de comedor es perfecto para recibir invitados. El módulo de cocina integrado y el bar facilitan celebraciones inolvidables sobre el agua.",
-    image: "/images/yacht-deck.jpg",
+    image: "/gallery/3.jpg",
     imageAlt: "Cubierta espaciosa del yate Azimut 50",
   },
   {
@@ -1304,15 +1730,15 @@ es.about.contentBlocks = [
     title: "Potencia y velocidad",
     description:
       "Dos motores de 715 CV proporcionan una velocidad de crucero de 26 nudos y una máxima de hasta 32 nudos. El depósito de 2.200 litros permite travesías prolongadas.",
-    image: "/images/yacht-engines.jpg",
+    image: "/gallery/2.jpg",
     imageAlt: "Motores del yate Azimut 50",
   },
   {
     type: "image-first",
     title: "Interior de lujo",
     description:
-      "El interior presenta un estilo contemporáneo con materiales premium. Tres cabinas confortables acogen hasta 11 invitados para una escapada inolvidable.",
-    image: "/images/yacht-interior.jpg",
+      "El interior está decorado en un estilo moderno con materiales de primera calidad. Las tres cómodas cabañas pueden acomodar hasta 11 personas para una estancia inolvidable. Hay dos aseos a bordo para su comodidad.",
+    image: "/gallery/10.jpg",
     imageAlt: "Interior de lujo del yate Azimut 50",
   },
   {
@@ -1320,15 +1746,15 @@ es.about.contentBlocks = [
     title: "Tecnología innovadora",
     description:
       "La suite de navegación de última generación, el control de clima en todos los espacios y la estabilización garantizan el máximo confort y seguridad durante la travesía.",
-    image: "/images/yacht-technology.jpg",
+    image: "/gallery/spisok1.jpg",
     imageAlt: "Equipamiento tecnológico del yate",
   },
   {
     type: "image-first",
     title: "Diversión en el agua",
     description:
-      "El yate está completamente equipado para la diversión acuática: plataforma de baño, escalera y amplio almacenamiento para juguetes náuticos.",
-    image: "/images/yacht-water-sports.jpg",
+      "El yate está totalmente equipado para practicar deportes acuáticos: una zona de baño, una escalera de descenso y un gran almacén de juguetes están listos para usar. También hay una tabla de natación a su disposición.",
+    image: "/sea scooter/sea scooter infinity (1).jpg",
     imageAlt: "Actividades acuáticas desde el yate",
   },
 ];
@@ -1482,6 +1908,102 @@ const esTourOverrides = {
       { name: "Sesión fotográfica", price: "80 €" },
     ],
   },
+  "sunset-cruise": {
+    // Используем slug как ключ
+    title: "Crucero al Atardecer a Cala Major",
+    shortDescription:
+      "Crucero romántico nocturno por la costa de Palma con vistas al atardecer y el Castillo de Bellver iluminado",
+    typeLabel: "Charter estándar",
+    seasonLabel: "Todo el año",
+    durationLabel: "2.5 horas",
+    price: "750 €",
+    pricePerPerson: "75 €",
+    capacityLabel: "Hasta 12 invitados",
+    minCapacityLabel: "Mínimo 6 invitados",
+    maxCapacityLabel: "Máximo 12 invitados",
+    highlights: [
+      "Vistas panorámicas del atardecer",
+      "Castell de Bellver desde el mar",
+      "Cava y tapas",
+      "Ambiente relajado nocturno",
+    ],
+    fuelSurcharge: "15-30 € por persona",
+    included: [
+      "Tapas españolas (jamón, queso, aceitunas)",
+      "Cava (vino espumoso español)",
+      "Refrescos y agua",
+      "Mantas ligeras",
+    ],
+    extraServices: [
+      { name: "Botella de cava premium", price: "40 €" },
+      { name: "Paquete de fotos romántico", price: "30 €" },
+    ],
+  },
+
+  "mysterious-caves": {
+    title: "Las Calas y Cuevas Misteriosas de Cala d'Or",
+    shortDescription:
+      "Exploración de calas escondidas, cuevas marinas y grutas en zona Cala d'Or con paradas para nadar y hacer snorkel",
+    typeLabel: "Aventura activa",
+    seasonLabel: "Mayo–Septiembre",
+    durationLabel: "5 horas",
+    price: "1.100 €",
+    pricePerPerson: "110 €",
+    capacityLabel: "Hasta 8 invitados",
+    minCapacityLabel: "Mínimo 6 invitados",
+    maxCapacityLabel: "Máximo 10 invitados",
+    highlights: [
+      "Exploración de cuevas marinas",
+      "Calas escondidas",
+      "Mejores puntos de snorkel",
+      "Natación aventurera",
+    ],
+    fuelSurcharge: "25-45 € por persona",
+    included: [
+      "Picnic almuerzo",
+      "Vino local y refrescos",
+      "Frutas",
+      "Máscaras y aletas de snorkel",
+      "Linternas impermeables",
+    ],
+    extraServices: [
+      { name: "Scooter marino", price: "55 €" },
+      { name: "Alquiler cámara subacuática", price: "45 €" },
+      { name: "Guía privado de cuevas", price: "A consultar" },
+    ],
+  },
+
+  "tramuntana-safari": {
+    title: "Safari en Jeep por las Montañas de Tramuntana",
+    shortDescription:
+      "Emocionante safari en jeep por la Sierra de Tramuntana, Patrimonio Mundial de la UNESCO",
+    typeLabel: "Aventura activa",
+    seasonLabel: "Todo el año",
+    durationLabel: "6-7 horas",
+    price: "950 €",
+    pricePerPerson: "95 €",
+    capacityLabel: "Hasta 6 invitados",
+    minCapacityLabel: "Mínimo 4 invitados",
+    maxCapacityLabel: "Máximo 8 invitados",
+    highlights: [
+      "Carreteras de montaña UNESCO",
+      "Pueblos tradicionales",
+      "Almuerzo de montaña",
+      "Miradores espectaculares",
+    ],
+    fuelSurcharge: "Incluido",
+    included: [
+      "Conductor-guía profesional",
+      "Transporte en Jeep 4x4",
+      "Almuerzo mallorquín tradicional en pueblo de montaña",
+      "Agua",
+      "Seguro",
+    ],
+    extraServices: [
+      { name: "Cata de vinos en viñedo", price: "25 € por persona" },
+      { name: "Grupo privado (hasta 6)", price: "600 € (total)" },
+    ],
+  },
 };
 es.tours.list = overrideTourList(es.tours.list, esTourOverrides);
 
@@ -1590,7 +2112,7 @@ es.faq.items = [
   {
     question: "¿Qué métodos de pago aceptan?",
     answer:
-      "Aceptamos transferencias bancarias, Bizum o efectivo (EUR). Para garantizar la reserva, se debe abonar un anticipo del 30% del importe abonado 14 días antes de la reserva. Las reservas de Última hora pueden requerir el pago completo.  Al comienzo del viaje, también solicitaremos un depósito reembolsable de $200 en efectivo o transferencia a la tarjeta. Esta cantidad se le reembolsará en su totalidad al final del recorrido, siempre que se conserven todos los equipos y propiedades del yate proporcionados.",
+      "Aceptamos transferencias bancarias, Bizum o efectivo (EUR). Para garantizar la reserva, se debe abonar un anticipo del 30% del importe abonado 14 días antes de la reserva. Las reservas de Última hora pueden requerir el pago completo.  Al comienzo del viaje, también solicitaremos un depósito reembolsable de €200 en efectivo o transferencia a la tarjeta. Esta cantidad se le reembolsará en su totalidad al final del recorrido, siempre que se conserven todos los equipos y propiedades del yate proporcionados.",
   },
 ];
 
@@ -1974,6 +2496,7 @@ de.header = {
   nav: {
     home: "Startseite",
     tours: "Touren",
+    day_charter: "Tagescharter",
     yacht: "Die Yacht",
     blog: "Blog",
     faq: "FAQ",
@@ -1981,6 +2504,9 @@ de.header = {
   actions: { cta: "Jetzt chartern" },
   language: { ariaLabel: "Sprache auswählen" },
   navigationToggle: "Navigation ein- oder ausblenden",
+  promotion:
+    "SPEZIALANGEBOT! Erhalten Sie 15% Rabatt auf alle Touren diese Woche!",
+  promotionLinkText: "Jetzt Buchen",
 };
 
 const deHeroSlideOverrides = {
@@ -2095,7 +2621,7 @@ de.about.contentBlocks = [
     title: "Großzügiges Deck zum Entspannen",
     description:
       "Ein weitläufiges Cockpit mit bequemen Sofas und Essbereich ist ideal für Gäste. Die integrierte Pantry und Bar machen unvergessliche Feiern auf dem Wasser möglich.",
-    image: "/images/yacht-deck.jpg",
+    image: "/gallery/3.jpg",
     imageAlt: "Geräumiges Deck der Yacht Azimut 50",
   },
   {
@@ -2103,15 +2629,15 @@ de.about.contentBlocks = [
     title: "Leistung und Geschwindigkeit",
     description:
       "Zwei 715-PS-Motoren liefern 26 Knoten Reisegeschwindigkeit und bis zu 32 Knoten Spitze. Der 2.200-Liter-Tank ermöglicht ausgedehnte Fahrten.",
-    image: "/images/yacht-engines.jpg",
+    image: "/gallery/2.jpg",
     imageAlt: "Motoren der Yacht Azimut 50",
   },
   {
     type: "image-first",
     title: "Luxuriöses Interieur",
     description:
-      "Das Interieur ist modern gestaltet und mit Premium-Materialien ausgestattet. Drei komfortable Kabinen bieten bis zu 11 Gästen unvergessliche Aufenthalte.",
-    image: "/images/yacht-interior.jpg",
+      "Das Interieur ist in einem modernen Stil mit hochwertigen Materialien eingerichtet. Die drei komfortablen Kabinen bieten Platz für bis zu 11 Gäste für einen unvergesslichen Urlaub. An Bord sind zwei Toiletten für Ihren Komfort verfügbar",
+    image: "/gallery/10.jpg",
     imageAlt: "Luxuriöses Interieur der Yacht Azimut 50",
   },
   {
@@ -2119,15 +2645,15 @@ de.about.contentBlocks = [
     title: "Innovative Technologien",
     description:
       "Eine moderne Navigationssuite, Klimatisierung in allen Bereichen und ein Stabilisatorsystem gewährleisten maximalen Komfort und Sicherheit auf See.",
-    image: "/images/yacht-technology.jpg",
+    image: "/gallery/spisok1.jpg",
     imageAlt: "Technische Ausstattung der Yacht",
   },
   {
     type: "image-first",
     title: "Wasserspaß an Bord",
     description:
-      "Die Yacht ist bestens für Wasserspaß ausgestattet: Badeplattform, Leiter und viel Stauraum für Wasserspielzeug stehen bereit.",
-    image: "/images/yacht-water-sports.jpg",
+      "Die Yacht ist komplett für Wasseraktivitäten ausgestattet: Eine Badeplattform, eine Abstiegsleiter und ein großer Spielzeugspeicher sind einsatzbereit. Ein Schwimmbrett steht Ihnen ebenfalls zur Verfügung.",
+    image: "/sea scooter/sea scooter infinity (1).jpg",
     imageAlt: "Wasserspaß von der Yacht aus",
   },
 ];
@@ -2171,6 +2697,90 @@ de.tours.filters.duration = {
     "8 hours": "8 Stunden",
   }),
 };
+
+de.day_tour = {
+  ...de.day_tour,
+  hero: {
+    title: "Tagesausflug-Erlebnis",
+    subtitle: "Luxus-Yacht-Touren für 8 und 4 Stunden",
+  },
+  intro: {
+    title:
+      "Sie können jeden Urlaub auf der Yacht EDENROC nach Ihrem Geschmack organisieren:",
+    activities: {
+      party: {
+        title: "Eine Party",
+        description:
+          "Mieten Sie das Boot mit einer Gruppe von Freunden mit Ihren Lieblingsgetränken und Essen, heißem Tanz und endlosem Spaß.",
+      },
+      family: {
+        title: "Familienzeit",
+        description:
+          "Kinder werden begeistert im offenen Meer schwimmen, während Verliebte die private Zeit genießen.",
+      },
+      fishing: {
+        title: "Freizeit für echte Männer",
+        description:
+          "Professionelle Ausrüstung, ein großer Fang und Ihre besten Freunde, mit denen Sie einen Sturm der Emotionen teilen können!",
+      },
+    },
+    note: "Wir erfüllen immer die Bedürfnisse unserer Kunden und versuchen, alle Ihre Wünsche zu erfüllen. Daher ist jede Bestellung fast immer individuell.",
+  },
+  pricing: {
+    title: "Preisinformationen",
+    subtitle: "Im Allgemeinen sind unsere Preise wie folgt:",
+    charter: {
+      title: "Charter-Preise",
+      table: {
+        headers: ["Zeitraum", "Ganztag (8 Stunden)", "Halbtag (4 Stunden)"],
+        rows: [
+          ["Juli, August", "2 200€", "1 500€"],
+          ["Juni, September", "2 000€", "1 400€"],
+          ["Mai, Oktober", "1 800€", "1 100€"],
+          ["November - April", "1 500€", "1 000€"],
+        ],
+      },
+    },
+    fishing: {
+      title: "Angel-Preise",
+      table: {
+        headers: ["Dauer", "Preis"],
+        rows: [
+          ["Ganztag (8 Stunden)", "1 500€"],
+          ["Halbtag (4 Stunden)", "1 000€"],
+        ],
+      },
+    },
+  },
+  gallery: {
+    title: "Tagesausflug-Erlebnis",
+    images: [
+      {
+        alt: "Yacht-Party-Erlebnis",
+        src: "/photo/family-charter.jpeg",
+      },
+      {
+        alt: "Familientag auf der Yacht",
+        src: "/photo/birthday-sea.jpeg",
+      },
+      {
+        alt: "Angelabenteuer",
+        src: "/photo/WhatsApp Image 2025-11-14 at 15.42.18.jpeg",
+      },
+    ],
+  },
+  cta: {
+    title: "Buchen Sie Ihren Tagesausflug",
+    description:
+      "Bereit, unvergessliche Erinnerungen zu schaffen? Kontaktieren Sie uns, um Ihren perfekten Tagesausflug auf der Yacht EDENROC zu buchen.",
+    buttons: {
+      contact: "Kontaktieren Sie uns",
+      copyEmail: "E-Mail kopieren",
+    },
+    emailCopied: "E-Mail kopiert!",
+  },
+};
+
 de.tours.filters.availability = {
   ...de.tours.filters.availability,
   label: "Verfügbarkeit",
@@ -2279,6 +2889,101 @@ const deTourOverrides = {
       { name: "Sea-Scooter", price: "60 €" },
       { name: "SUP-Board", price: "60 €" },
       { name: "Fotoshooting", price: "80 €" },
+    ],
+  },
+  "sunset-cruise": {
+    title: "Sonnenuntergang-Kreuzfahrt nach Cala Major",
+    shortDescription:
+      "Romantische Abendkreuzfahrt entlang Palmas Küste mit Sonnenuntergangsblicken und beleuchteter Bellver-Festung",
+    typeLabel: "Standard-Charter",
+    seasonLabel: "Ganzjährig",
+    durationLabel: "2.5 Stunden",
+    price: "750 €",
+    pricePerPerson: "75 €",
+    capacityLabel: "Bis zu 12 Gäste",
+    minCapacityLabel: "Mindestens 6 Gäste",
+    maxCapacityLabel: "Maximal 12 Gäste",
+    highlights: [
+      "Panoramablick bei Sonnenuntergang",
+      "Castell de Bellver vom Meer",
+      "Champagner & Tapas",
+      "Entspannende Abendatmosphäre",
+    ],
+    fuelSurcharge: "15–30 € pro Person",
+    included: [
+      "Spanische Tapas (Schinken, Käse, Oliven)",
+      "Cava (spanischer Sekt)",
+      "Softdrinks & Wasser",
+      "Leichte Decken",
+    ],
+    extraServices: [
+      { name: "Flasche Premium-Cava", price: "40 €" },
+      { name: "Romantisches Fotopaket", price: "30 €" },
+    ],
+  },
+
+  "mysterious-caves": {
+    title: "Die Geheimnisvollen Buchten & Höhlen von Cala d'Or",
+    shortDescription:
+      "Erkundung versteckter Buchten, Meereshöhlen und Grotten in Cala d'Or mit Schwimm- und Schnorchelstopps",
+    typeLabel: "Aktiv-Erlebnis",
+    seasonLabel: "Mai–September",
+    durationLabel: "5 Stunden",
+    price: "1.100 €",
+    pricePerPerson: "110 €",
+    capacityLabel: "Bis zu 8 Gäste",
+    minCapacityLabel: "Mindestens 6 Gäste",
+    maxCapacityLabel: "Maximal 10 Gäste",
+    highlights: [
+      "Höhlenerkundung im Meer",
+      "Versteckte Buchten",
+      "Beste Schnorchelspots",
+      "Abenteuerliches Schwimmen",
+    ],
+    fuelSurcharge: "25–45 € pro Person",
+    included: [
+      "Picknick-Mittagessen",
+      "Lokaler Wein & Softdrinks",
+      "Früchte",
+      "Schnorchelausrüstung",
+      "Wasserdichte Taschenlampen",
+    ],
+    extraServices: [
+      { name: "Sea-Scooter", price: "55 €" },
+      { name: "Unterwasserkamera-Verleih", price: "45 €" },
+      { name: "Privater Höhlenführer", price: "Auf Anfrage" },
+    ],
+  },
+
+  "tramuntana-safari": {
+    title: "Tramuntana-Gebirge Jeep Safari",
+    shortDescription:
+      "Spannende Jeep-Safari durch das Serra de Tramuntana-Gebirge, UNESCO-Welterbe",
+    typeLabel: "Aktiv-Erlebnis",
+    seasonLabel: "Ganzjährig",
+    durationLabel: "6-7 Stunden",
+    price: "950 €",
+    pricePerPerson: "95 €",
+    capacityLabel: "Bis zu 6 Gäste",
+    minCapacityLabel: "Mindestens 4 Gäste",
+    maxCapacityLabel: "Maximal 8 Gäste",
+    highlights: [
+      "UNESCO-Gebirgsstraßen",
+      "Traditionelle Dörfer",
+      "Berg-Mittagessen",
+      "Spektakuläre Aussichtspunkte",
+    ],
+    fuelSurcharge: "Inklusive",
+    included: [
+      "Professioneller Fahrer-Guide",
+      "Transport im 4x4 Jeep",
+      "Traditionelles mallorquinisches Mittagessen im Bergdorf",
+      "Wasser",
+      "Versicherung",
+    ],
+    extraServices: [
+      { name: "Weinprobe im Weinberg", price: "25 € pro Person" },
+      { name: "Private Gruppe (bis zu 6)", price: "600 € (gesamt)" },
     ],
   },
 };
@@ -2390,7 +3095,7 @@ de.faq.items = [
   {
     question: "Welche Zahlungsmethoden gibt es?",
     answer:
-      "Wir akzeptieren Banküberweisungen, Bizum oder Bargeld (EUR). Als Buchungsgarantie ist eine Anzahlung in Höhe von 30% des Betrags erforderlich, der 14 Tage vor der Buchung zu bezahlen ist. Bei einer Last-Minute-Buchung kann eine vollständige Zahlung erforderlich sein.  Zu Beginn der Reise werden wir auch um eine Rückerstattung in Höhe von $200 in bar oder per Überweisung auf eine Karte bitten. Dieser Betrag wird Ihnen am Ende der Tour vollständig zurückerstattet, sofern die gesamte Ausrüstung und das Eigentum der Yacht erhalten bleiben.",
+      "Wir akzeptieren Banküberweisungen, Bizum oder Bargeld (EUR). Als Buchungsgarantie ist eine Anzahlung in Höhe von 30% des Betrags erforderlich, der 14 Tage vor der Buchung zu bezahlen ist. Bei einer Last-Minute-Buchung kann eine vollständige Zahlung erforderlich sein.  Zu Beginn der Reise werden wir auch um eine Rückerstattung in Höhe von €200 in bar oder per Überweisung auf eine Karte bitten. Dieser Betrag wird Ihnen am Ende der Tour vollständig zurückerstattet, sofern die gesamte Ausrüstung und das Eigentum der Yacht erhalten bleiben.",
   },
 ];
 

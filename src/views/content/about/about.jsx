@@ -22,7 +22,15 @@ export const AboutYacht = () => {
         url="/yacht"
       />
 
-      <header className="about-yacht-hero">
+      <header
+        className="about-yacht-hero"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('/gallery/2.jpg')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
         <div className="content-container">
           <h1>{about.hero?.title}</h1>
           <p>{about.hero?.subtitle}</p>

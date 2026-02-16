@@ -34,7 +34,7 @@ export const NotFound = () => {
           <div className="not-found__contact">
             <p>Can't find what you're looking for?</p>
             <div className="contact-links">
-              <a href="tel:+34697726944" className="contact-link">
+              <a href="https://wa.me/34697726944" className="contact-link">
                 +34 (697) 726-944
               </a>
               <a

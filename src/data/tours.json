@@ -364,169 +364,63 @@
     },
     {
       "id": 5,
-      "title": "The Mysterious Coves & Caves of Cala d'Or",
-      "shortDescription": "Исследование скрытых бухт, морских пещер и гротов в районе Кала-д'Ор с остановками для купания и сноркелинга",
-      "duration": "5 hours",
-      "price": "€1100",
-      "pricePerPerson": "€110",
-      "capacity": "8 people",
-      "minCapacity": "6 people",
+      "title": "EDENROC Private Day Experience",
+      "shortDescription": "Private luxury yacht charter: create your perfect day on the water with complete freedom of choice",
+      "duration": "4 or 8 hours",
+      "price": "€1000 - €2200",
+      "pricePerPerson": "Custom",
+      "capacity": "10 people",
+      "minCapacity": "1 person",
       "maxCapacity": "10 people",
-      "type": "active",
-      "season": "May-September",
-      "image": "/caves/1.png",
+      "type": "premium",
+      "season": "year-round",
+      "image": "/edenroc/1.jpg",
       "available": true,
       "highlights": [
-        "Sea cave exploration",
-        "Hidden coves",
-        "Best snorkeling spots",
-        "Adventure swimming"
+        "Private charter for your group only",
+        "Fully customizable itinerary",
+        "Professional fishing gear available",
+        "Perfect for parties or family bonding"
       ],
-      "departure": "Port de Palma",
-      "fuelSurcharge": "€25-45 per person",
+      "departure": "Real Club Náutico de Palma / Port de Palma",
+      "fuelSurcharge": "Included in price",
       "included": [
-        "Picnic lunch",
-        "Local wine & soft drinks",
-        "Fruits",
-        "Snorkeling masks & fins",
-        "Waterproof flashlights"
+        "Private captain & host",
+        "Snorkeling equipment",
+        "Stand Up Paddle (SUP)",
+        "Onboard fridge for your drinks",
+        "Bluetooth speaker"
       ],
       "extraServices": [
         {
-          "name": "Seascooter",
-          "price": "€55"
+          "name": "Full catering (lunch)",
+          "price": "From €30/person"
         },
         {
-          "name": "Underwater camera rental",
-          "price": "€45"
-        },
-        {
-          "name": "Private cave guide",
+          "name": "Premium bar package",
           "price": "Upon request"
+        },
+        {
+          "name": "Professional fishing gear",
+          "price": "€100"
+        },
+        {
+          "name": "Seascooter rental",
+          "price": "€50"
         }
       ],
       "coves": [
         {
           "id": 1,
-          "name": "Cala Esmeralda & Cala Gran",
-          "description": "Знаменитые бухты-близнецы курорта Кала-д'Ор, соединенные между собой пешеходной тропой и с моря выглядящие как единый извилистый залив. Бухты известны изумрудным оттенком воды (особенно Esmeralda), идеально подходящим для первого заплыва. Скалы вокруг изобилуют небольшими нишами и уступами. Это идеальное место, чтобы привыкнуть к воде и оборудованию для сноркелинга.",
-          "images": ["/caves/esmeralda1.jpg", "/caves/esmeralda2.jpg"],
-          "highlights": ["Изумрудная вода", "Связанные бухты", "Скальные ниши"],
-          "visitType": "Swimming & snorkeling intro - 45 minutes"
-        },
-        {
-          "id": 2,
-          "name": "Пещеры мыса Кап-де-с-Эстекс (Coves of Cap des Estec)",
-          "description": "Серия естественных морских гротов и арок в скалистом мысе. На катере можно аккуратно заплыть внутрь некоторых из них, где царит таинственный полумрак, а игра света на воде создает гипнотические блики на стенах пещеры. Вода здесь кристально чистая, а подводный мир у входа в пещеры особенно интересен из-за особенностей освещения и течений.",
-          "images": ["/caves/cave1.jpg", "/caves/cave2.jpg"],
-          "highlights": ["Морские гроты", "Заплыв внутрь пещер", "Игра света"],
-          "visitType": "Cave exploration by boat & snorkeling - 60 minutes"
-        },
-        {
-          "id": 3,
-          "name": "Секретная бухта Кальма-Марсия (Secret Cala Marçal)",
-          "description": "Небольшая, редко посещаемая бухта, доступная в основном с моря. Полностью окружена скалами, покрытыми соснами. Небольшой галечный пляж и пологий вход в воду делают ее идеальным местом для пикника на борту и отдыха. Это место для тех, кто хочет почувствовать себя первооткрывателем и насладиться тишиной вдали от основных туристических маршрутов.",
-          "images": ["/caves/secret1.jpg", "/caves/secret2.jpg"],
-          "highlights": ["Уединение", "Доступ только с моря", "Галечный пляж"],
-          "visitType": "Picnic & relaxation stop - 60 minutes"
-        },
-        {
-          "id": 4,
-          "name": "Cala d'Or Lighthouse & Final Cliffs",
-          "description": "Завершающая часть маршрута проходит мимо маяка на мысе Кала-д'Ор и вдоль самых впечатляющих скальных формаций этого побережья. Высокие, изрезанные ветром и волнами утесы демонстрируют мощь природы. Это последняя возможность сделать эпические панорамные фотографии скалистого побережья перед возвращением в порт.",
-          "images": ["/caves/cliffs1.jpg", "/caves/cliffs2.jpg"],
-          "highlights": ["Маяк", "Величественные скалы", "Прощальные виды"],
-          "visitType": "Scenic pass by"
-        }
-      ]
-    },
-    {
-      "id": 6,
-      "title": "Tramuntana Mountains Jeep Safari",
-      "shortDescription": "Захватывающее джип-сафари по серпантинам горного хребта Серра-де-Трамонтана, объекту Всемирного наследия ЮНЕСКО",
-      "duration": "6-7 hours",
-      "price": "€950",
-      "pricePerPerson": "€95",
-      "capacity": "6 people",
-      "minCapacity": "4 people",
-      "maxCapacity": "8 people",
-      "type": "active",
-      "season": "year-round",
-      "image": "/jeep/1.png",
-      "available": true,
-      "highlights": [
-        "UNESCO mountain roads",
-        "Traditional villages",
-        "Mountain lunch",
-        "Spectacular viewpoints"
-      ],
-      "departure": "Hotel pickup in Palma area",
-      "fuelSurcharge": "Included",
-      "included": [
-        "Professional driver-guide",
-        "Transport in 4x4 Jeep",
-        "Traditional Mallorcan lunch in mountain village",
-        "Water",
-        "Insurance"
-      ],
-      "extraServices": [
-        {
-          "name": "Wine tasting at vineyard",
-          "price": "€25 per person"
-        },
-        {
-          "name": "Private group (up to 6)",
-          "price": "€600 (total)"
-        }
-      ],
-      "stops": [
-        {
-          "id": 1,
-          "name": "Деревня Вальдемоса (Valldemossa)",
-          "description": "Очаровательная горная деревня, знаменитая своим Картезианским монастырем (Real Cartuja), где зимовали Фредерик Шопен и Жорж Санд. Узкие каменные улочки, увитые бугенвиллеями, создают невероятно живописную атмосферу. Здесь вы прогуляетесь по историческому центру, попробуете местные сладости (кока-де-патота) и ощутите дух старой Майорки.",
-          "images": ["/jeep/valldemossa1.jpg", "/jeep/valldemossa2.jpg"],
+          "name": "Your Choice of Destination",
+          "description": "This tour is designed for those who want to spend time on the water exactly as they dream. Head southwest to the island of Dragonera, explore the pristine coves of Cabrera National Park, or throw an unforgettable party with friends stopping at the first scenic bay you find. Everything depends only on your wishes!",
+          "images": ["/edenroc/custom1.jpg", "/edenroc/custom2.jpg"],
           "highlights": [
-            "Исторический монастырь",
-            "Мощеные улочки",
-            "Атмосфера Шопена"
+            "Complete freedom of choice",
+            "Private space",
+            "Personalized approach"
           ],
-          "visitType": "Guided walk - 75 minutes"
-        },
-        {
-          "id": 2,
-          "name": "Серпантин Sa Calobra & Ущелье Торрент-де-Пареис",
-          "description": "Самая захватывающая часть поездки по одной из самых впечатляющих горных дорог Европы. Извилистый серпантин, спускающийся с высоты 800 метров к морю, состоит из бесчисленных поворотов и тоннелей, вырубленных в скале. Внизу вас ждет уникальное природное чудо — ущелье Торрент-де-Пареис, где горная река пробила себе путь к морю, создав каменный тоннель с пресноводным озером внутри.",
-          "images": ["/jeep/sacalobra1.jpg", "/jeep/sacalobra2.jpg"],
-          "highlights": [
-            "Легендарный серпантин",
-            "Дорога-чудо",
-            "Каменное ущелье"
-          ],
-          "visitType": "Drive & visit to gorge - 90 minutes"
-        },
-        {
-          "id": 3,
-          "name": "Смотровая площадка Mirador de ses Barques & Перевал Кол-де-Соллер",
-          "description": "Остановка на одной из самых высоких точек маршрута с панорамным видом на весь горный хребет, побережье и апельсиновые долины внизу. Это идеальное место для осознания масштабов Трамонтаны. Далее путь лежит через живописный перевал, откуда открываются новые ракурсы на террасы древних оливковых рощ, возраст некоторых деревьев превышает 500 лет.",
-          "images": ["/jeep/mirador1.jpg", "/jeep/mirador2.jpg"],
-          "highlights": [
-            "Панорамный вид на хребет",
-            "Фотостоп",
-            "Оливковые террасы"
-          ],
-          "visitType": "Photo stop - 30 minutes"
-        },
-        {
-          "id": 4,
-          "name": "Обед в деревне Сольер (Sóller) или Дейя (Deià)",
-          "description": "Обед в аутентичном ресторане одной из горных деревень. В зависимости от дня неделя и загрузки, это может быть Сольер с его атмосферой центра долины апельсинов или живописная Дейя, приютившаяся между горой и морем, известная своими художниками и поэтами. В меню — традиционные блюда майоркинской кухни, такие как тумбет, фрит-де-порк или свежая рыба.",
-          "images": ["/jeep/lunch1.jpg", "/jeep/lunch2.jpg"],
-          "highlights": [
-            "Деревенский ресторан",
-            "Местная кухня",
-            "Атмосферное место"
-          ],
-          "visitType": "Lunch stop - 90 minutes"
+          "visitType": "Custom: anchor, swim, party or fish"
         }
       ]
     }

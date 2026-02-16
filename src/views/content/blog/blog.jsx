@@ -18,7 +18,15 @@ export const Blog = () => {
         url="/blog"
       />
 
-      <header className="blog-hero">
+      <header
+        className="blog-hero"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('/gallery/5.jpg')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
         <div className="content-container">
           <div className="hero-content">
             <h1>{blogCopy.hero?.title}</h1>

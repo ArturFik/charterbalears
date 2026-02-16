@@ -20,7 +20,15 @@ export const FAQ = () => {
         keywords="yacht charter FAQ, Mallorca boat rental questions, luxury yacht services"
         url="/faq"
       />
-      <header className="faq-hero">
+      <header
+        className="faq-hero"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('/gallery/8.jpg')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
         <div className="content-container">
           <h1>{faqCopy.hero?.title}</h1>
           <p>{faqCopy.hero?.subtitle}</p>
@@ -69,7 +77,7 @@ export const FAQ = () => {
             <h2>{faqCopy.contact?.title}</h2>
             <p>{faqCopy.contact?.description}</p>
             <div className="cta-actions">
-              <a href={t("common.phoneHref")} className="btn-primary">
+              <a href="https://wa.me/34697726944" className="btn-primary">
                 {faqCopy.contact?.phoneCta}
               </a>
               <a href={t("common.emailHref")} className="btn-secondary">

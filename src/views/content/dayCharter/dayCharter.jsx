@@ -29,7 +29,16 @@ export const DayTour = () => {
       />
 
       {/* Hero Section */}
-      <section className="day-tour__hero" aria-labelledby="daytour-heading">
+      <section
+        className="day-tour__hero"
+        aria-labelledby="daytour-heading"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('/gallery/4.jpg')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
         <div className="content-container">
           <div className="day-tour__hero-content">
             <h1 id="daytour-heading">{t("day_tour.hero.title")}</h1>
@@ -105,33 +114,6 @@ export const DayTour = () => {
                 </thead>
                 <tbody>
                   {t("day_tour.pricing.charter.table.rows", [], {
-                    returnObjects: true,
-                  }).map((row, index) => (
-                    <tr key={index}>
-                      {row.map((cell, cellIndex) => (
-                        <td key={cellIndex}>{cell}</td>
-                      ))}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-
-            {/* Fishing Pricing */}
-            <div className="pricing-table">
-              <h3>{t("day_tour.pricing.fishing.title")}</h3>
-              <table>
-                <thead>
-                  <tr>
-                    {t("day_tour.pricing.fishing.table.headers", [], {
-                      returnObjects: true,
-                    }).map((header, index) => (
-                      <th key={index}>{header}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {t("day_tour.pricing.fishing.table.rows", [], {
                     returnObjects: true,
                   }).map((row, index) => (
                     <tr key={index}>

@@ -7,8 +7,18 @@
   right: 0;
   z-index: 1000;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-
-  // Строка с акцией - добавляем сверху
+  &__flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #1a1a1a;
+    background-color: rgba(255, 255, 255, 0.95);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    &:hover {
+      background: #eeeeee;
+    }
+  }
   &__promotion {
     background: linear-gradient(90deg, #1a1a1a, #333);
     color: white;
@@ -33,7 +43,8 @@
       justify-content: space-between;
       align-items: center;
       gap: 1rem;
-
+      color: white;
+      text-decoration: none;
       @media (max-width: 768px) {
         padding: 0 1rem;
       }
@@ -124,16 +135,23 @@
       text-decoration: none;
       color: #1a1a1a;
       transition: all 0.3s ease;
-      display: block;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    &-ico {
+      width: 30%;
       @media (max-width: 450px) {
-        display: none;
+        width: 50%;
       }
     }
     &-text {
       font-size: 1.5rem;
       font-weight: 300;
       letter-spacing: 2px;
-      text-transform: uppercase;
+      @media (max-width: 450px) {
+        display: none;
+      }
     }
   }
 
@@ -175,7 +193,7 @@
     &-link {
       color: #1a1a1a;
       text-decoration: none;
-      font-weight: 300;
+      font-weight: 500;
       font-size: 0.9rem;
       letter-spacing: 1px;
       text-transform: uppercase;
@@ -259,21 +277,16 @@
   }
 
   &__cta {
-    background: #1a1a1a;
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
+    background: none;
+    color: #1a1a1a;
+
     font-weight: 300;
     font-size: 0.8rem;
     cursor: pointer;
     transition: all 0.3s ease;
     letter-spacing: 1px;
     text-transform: uppercase;
-
-    &:hover {
-      background: #333;
-    }
-
+    border: none;
     @media (max-width: 1160px) {
       display: none;
     }
@@ -338,6 +351,7 @@
       &-link {
         padding: 0.2rem 0.5rem;
         font-size: 0.65rem;
+        display: none;
       }
 
       &-close {

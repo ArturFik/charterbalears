@@ -79,7 +79,15 @@ export const Tours = () => {
         keywords="yacht tours Mallorca, boat excursions Balearic Islands, luxury sea trips"
         url="/tours"
       />
-      <header className="tours-hero">
+      <header
+        className="tours-hero"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('/gallery/3.jpg')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
         <div className="content-container">
           <h1>{translations.hero?.title}</h1>
           <p>{translations.hero?.subtitle}</p>
@@ -243,7 +251,7 @@ export const Tours = () => {
 
                   <div className="tour-card__actions">
                     <Link
-                      to={`/tours/${tour.id}`}
+                      to={tour.id === 5 ? "/day_charter" : `/tours/${tour.id}`}
                       className="btn-primary"
                       aria-label={`${labels.viewDetails} ${tour.title}`}
                     >

@@ -398,8 +398,9 @@ export const TourDetail = () => {
               <h3>{copy.contact?.title}</h3>
               <p>{copy.contact?.description}</p>
               <div className="contact-methods">
-                <a href={t("common.phoneHref")} className="contact-link">
-                  📞 {copy.contact?.phoneLabel}
+                <a href="https://wa.me/34697726944" className="contact-link">
+                  <img src="/logo/wts.png" alt="wts" />
+                  {copy.contact?.phoneLabel}
                 </a>
                 <a href={t("common.emailHref")} className="contact-link">
                   ✉️ {copy.contact?.emailLabel}

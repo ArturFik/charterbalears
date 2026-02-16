@@ -40,12 +40,6 @@ export const Header = () => {
     setLanguage(event.target.value);
   };
 
-  const handleClosePromotion = () => {
-    setIsPromotionVisible(false);
-    // Можно сохрать в localStorage, чтобы не показывать повторно
-    localStorage.setItem("promotionClosed", "true");
-  };
-
   useEffect(() => {
     const promotionClosed = localStorage.getItem("promotionClosed");
     if (promotionClosed === "true") {
@@ -55,10 +49,10 @@ export const Header = () => {
 
   return (
     <header className="header">
-      {/* Основной header */}
       <div className="header__container">
         <div className="header__logo">
           <a href="/main" className="header__logo-link" onClick={closeMenu}>
+            <img src="/logo/logo.png" alt="logo" className="header__logo-ico" />
             <span className="header__logo-text">{brandLabel}</span>
           </a>
         </div>
@@ -102,7 +96,10 @@ export const Header = () => {
             </select>
           </div>
           {ctaLabel ? (
-            <button className="header__cta">+34 (697) 726-944</button>
+            <a href="https://wa.me/34697726944" className="header__flex">
+              <img alt="" class="footer__view--logo" src="/logo/wts.png" />
+              <div className="header__cta">+34 (697) 726-944</div>
+            </a>
           ) : null}
           <button
             type="button"
@@ -121,7 +118,7 @@ export const Header = () => {
         </div>
       </div>
       <div className="header__promotion">
-        <div className="header__promotion-container">
+        <a href="/tours" className="header__promotion-container">
           <div className="header__promotion-content">
             <span className="header__promotion-text">{promotionText}</span>
             <a
@@ -132,7 +129,7 @@ export const Header = () => {
               {promotionLinkText}
             </a>
           </div>
-        </div>
+        </a>
       </div>
     </header>
   );

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo, useRef  } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./styles.scss";
 import { useI18n } from "../../../i18n/I18nProvider";
@@ -26,6 +26,11 @@ export const TourDetail = () => {
   const { t } = useI18n();
   const copy = t("tourDetail") || {};
   const tours = t("tours.list") || [];
+
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [showButton, setShowButton] = useState(false);
+  const textRef = useRef(null);
+
   const perPersonSuffix =
     copy.perPersonSuffix || t("tours.labels.perPersonSuffix", "per guest");
 
@@ -103,6 +108,23 @@ export const TourDetail = () => {
     if (progress < 0.3) return "#1a1a1a";
     if (progress < 0.7) return "#2d5bff";
     return "#ff6b35";
+  };
+
+  useEffect(() => {
+    setIsExpanded(false);
+
+    if (textRef.current) {
+      const lineHeight = parseInt(
+        window.getComputedStyle(textRef.current).lineHeight
+      );
+      const height = textRef.current.scrollHeight;
+      const lines = height / lineHeight;
+      setShowButton(lines > 3.5);
+    }
+  }, [currentCove]);
+
+  const toggleExpand = () => {
+    setIsExpanded(!isExpanded);
   };
 
   if (!tour) {
@@ -213,9 +235,25 @@ export const TourDetail = () => {
                         {currentImages.length}
                       </div>
                     </div>
-                    <p className="cove-description">
-                      {currentCove.description}
-                    </p>
+                    <div className="description-container">
+                      <p
+                        ref={textRef}
+                        className={`cove-description ${
+                          !isExpanded ? "collapsed" : ""
+                        }`}
+                      >
+                        {currentCove.description}
+                      </p>
+
+                      {showButton && (
+                        <button
+                          className="expand-button"
+                          onClick={toggleExpand}
+                        >
+                          {isExpanded ? "Show less" : "Show more"}
+                        </button>
+                      )}
+                    </div>
                     <div className="cove-highlights">
                       {currentCove.highlights?.map((highlight, index) => (
                         <span key={index} className="highlight-tag">

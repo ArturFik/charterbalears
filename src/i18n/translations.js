@@ -443,7 +443,7 @@ const en = {
             id: "dragonera",
             name: "Sa Dragonera",
             description:
-              "Dragon-shaped natural park delivering a striking finale with towering cliffs.",
+              "Dragon-shaped Natural Park delivers a striking finale with its towering cliffs that rise sharply from the ocean, resembling the spine of a slumbering beast. The island’s unique landscape is home to resilient wildlife, including cliff-nesting puffins with vibrant beaks, feral goats known as 'Dragon Goats' with amber eyes, and color-shifting geckos hiding among the rocks. The harsh, windswept terrain supports hardy vegetation such as the legendary 'Dragon’s Tears' flowers—red poppies blooming from volcanic cracks—along with dense cushions of moss and creeping juniper that cling to the cliffs, creating a dramatic and untouched natural masterpiece.",
             highlights: ["Natural park", "Unique silhouette", "Wild coastline"],
             visitType: "Panoramic pass",
             images: ["/12.jpg", "/13.jpg"],
@@ -582,7 +582,7 @@ const en = {
             id: "routeToCabrera",
             name: "Voyage to Cabrera",
             description:
-              "Blue-water crossing where Mallorca fades away and the silhouettes of Cabrera emerge.",
+              "The Cabrera Archipelago National Park is a pristine refuge for Mediterranean wildlife. Its waters host dense meadows of Posidonia oceanica, a seagrass endemic to the Mediterranean that is crucial for oxygen production and carbon capture. The rocky coastline is home to colonies of the endemic Balearic lizard (Podarcis lilfordi), which is found nowhere else in the world and has evolved unique subspecies on different islets. The skies above the archipelago are patrolled by the majestic Eleonora's falcon (Falco eleonorae), which nests on the cliffs, alongside Audouin's gulls and cormorants. The terrestrial flora is adapted to harsh, windy conditions, featuring wild olive trees (Olea europaea var. sylvestris), mastic shrubs (Pistacia lentiscus), and abundant wild fennel, which carpets the main island with its fragrant yellow blooms in late summer.",
             highlights: [
               "Open sea adventure",
               "Panoramic views",

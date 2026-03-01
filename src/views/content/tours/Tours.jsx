@@ -95,7 +95,6 @@ export const Tours = () => {
       </header>
 
       <main className="content-container">
-        {/* Filters */}
         <section className="tours-filters" aria-labelledby="filters-heading">
           <h2 id="filters-heading">{filtersDefinition.heading}</h2>
           <div className="filters-grid">
@@ -171,7 +170,6 @@ export const Tours = () => {
           </button>
         </section>
 
-        {/* Tours List */}
         <section className="tours-grid" aria-label="Available yacht tours">
           {filteredTours.map((tour) => {
             const fallbackType = getMimeType(tour.image);

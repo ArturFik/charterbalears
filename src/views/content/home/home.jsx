@@ -39,7 +39,6 @@ export const Home = () => {
   };
   return (
     <div className="home">
-      {/* Hero Slider Section */}
       <Seo
         title={about.title}
         description={about.lead}
@@ -50,7 +49,6 @@ export const Home = () => {
         <HeroSlider />
       </section>
 
-      {/* About Yacht Section */}
       <section className="home__about" aria-labelledby="yacht-heading">
         <div className="content-container">
           <div className="home__about-content">
@@ -90,7 +88,6 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* Activities Section */}
       <section
         className="home__activities"
         aria-labelledby="activities-heading"
@@ -114,7 +111,6 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* Quick Contact Section */}
       <section className="home__contact" aria-labelledby="contact-heading">
         <div className="content-container">
           <div className="home__contact-content">

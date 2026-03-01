@@ -37,7 +37,6 @@ export const BigFish = () => {
               </p>
             </div>
             <div className="big-game-image">
-              {/* Место для фото: Большой тунец или рыбаки с уловом, эмоциональное фото */}
               <picture>
                 {getWebpSource("/placeholder-big-fish.jpg") ? (
                   <source

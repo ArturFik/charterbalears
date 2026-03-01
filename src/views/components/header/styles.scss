@@ -328,7 +328,6 @@
   }
 }
 
-// Адаптивность для строки акции
 @media (max-width: 768px) {
   .header {
     &__promotion {
@@ -382,9 +381,8 @@
   }
 }
 
-// Для поддержки fixed header с акцией
 body {
-  padding-top: calc(80px + 2rem); // высота header + высота промо
+  padding-top: calc(80px + 2rem);
 
   @media (max-width: 768px) {
     padding-top: calc(70px + 1.8rem);

@@ -175,7 +175,6 @@ const HeroSlider = () => {
         </div>
       ))}
 
-      {/* Navigation arrows */}
       <button
         className="hero-slider__nav hero-slider__nav--prev"
         onClick={(e) => {
@@ -202,7 +201,6 @@ const HeroSlider = () => {
         ›<span className="sr-only"></span>
       </button>
 
-      {/* Dots indicator */}
       <div
         className="hero-slider__dots"
         role="tablist"
@@ -229,7 +227,6 @@ const HeroSlider = () => {
         ))}
       </div>
 
-      {/* Screen reader status */}
       <div className="sr-only" aria-live="polite" aria-atomic="true"></div>
     </section>
   );

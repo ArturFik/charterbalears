@@ -241,7 +241,6 @@
   }
 }
 
-// Loading state for better UX
 .posts-grid:empty::before {
   content: "Loading posts...";
   display: block;
@@ -251,7 +250,6 @@
   font-size: 1.1rem;
 }
 
-// Focus styles for accessibility
 .blog-post-card:focus-within {
   outline: 2px solid #1a1a1a;
   outline-offset: 2px;

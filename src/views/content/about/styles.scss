@@ -41,7 +41,6 @@
   }
 }
 
-// Основные технические характеристики
 .yacht-specs-main {
   padding: 5rem 0;
   text-align: center;
@@ -91,7 +90,6 @@
   font-weight: 400;
 }
 
-// Чередующиеся блоки контента
 .content-block {
   padding: 6rem 0;
   position: relative;
@@ -168,7 +166,6 @@
   }
 }
 
-// Особенности
 .yacht-features {
   padding: 6rem 0;
   background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 100%);
@@ -242,7 +239,6 @@
   }
 }
 
-// Анимации
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -258,7 +254,6 @@
   animation: fadeInUp 0.8s ease-out;
 }
 
-// Декоративные элементы
 .spec-highlight-item {
   position: relative;
 

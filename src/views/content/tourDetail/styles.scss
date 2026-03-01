@@ -38,7 +38,6 @@
   }
 }
 
-/* Стили для галереи бухт */
 .coves-gallery {
   .gallery-main {
     margin-bottom: 2rem;
@@ -367,7 +366,6 @@
   }
 }
 
-/* Остальные стили */
 .tour-detail__info {
   .tour-header {
     margin-bottom: 2rem;
@@ -729,7 +727,6 @@
   margin: 0 auto;
   padding: 0 2rem;
 
-  /* Исправление для маленьких экранов */
   @media (max-width: 374px) {
     padding: 0 1rem;
   }

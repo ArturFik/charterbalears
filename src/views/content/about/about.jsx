@@ -38,7 +38,6 @@ export const AboutYacht = () => {
       </header>
 
       <main className="content-container">
-        {/* Чередующиеся блоки контента */}
         {contentBlocks.map((block, index) => (
           <section
             key={index}
@@ -106,7 +105,6 @@ export const AboutYacht = () => {
             </div>
           </section>
         ))}
-        {/* Блок с техническими характеристиками */}
         <section className="yacht-specs-main" aria-labelledby="specs-heading">
           <h2 id="specs-heading">{specs.title}</h2>
           <div className="specs-highlight-grid">

@@ -28,7 +28,6 @@ export const DayTour = () => {
         url="/day-tour"
       />
 
-      {/* Hero Section */}
       <section
         className="day-tour__hero"
         aria-labelledby="daytour-heading"
@@ -49,7 +48,6 @@ export const DayTour = () => {
         </div>
       </section>
 
-      {/* Introduction Section */}
       <section className="day-tour__intro" aria-labelledby="intro-heading">
         <div className="content-container">
           <div className="day-tour__intro-content">
@@ -90,7 +88,6 @@ export const DayTour = () => {
         </div>
       </section>
 
-      {/* Pricing Section */}
       <section className="day-tour__pricing" aria-labelledby="pricing-heading">
         <div className="content-container">
           <h2 id="pricing-heading">{t("day_tour.pricing.title")}</h2>
@@ -99,7 +96,6 @@ export const DayTour = () => {
           </p>
 
           <div className="day-tour__pricing-tables">
-            {/* Charter Pricing */}
             <div className="pricing-table">
               <h3>{t("day_tour.pricing.charter.title")}</h3>
               <table>
@@ -129,7 +125,6 @@ export const DayTour = () => {
         </div>
       </section>
 
-      {/* Gallery Section */}
       <section className="day-tour__gallery" aria-labelledby="gallery-heading">
         <div className="content-container">
           <h2 id="gallery-heading">{t("day_tour.gallery.title")}</h2>
@@ -157,7 +152,6 @@ export const DayTour = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="day-tour__cta" aria-labelledby="cta-heading">
         <div className="content-container">
           <div className="day-tour__cta-content">
